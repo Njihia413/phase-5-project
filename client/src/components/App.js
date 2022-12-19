@@ -1,17 +1,15 @@
-import { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import SignUp from "./Signup";
+import { useEffect } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+  
 
   return (
     <div className="App">
-      <h1>Page Count: {count}</h1>
+       <Routes>
+       <Route path="/signup" element={<SignUp />} />
+       </Routes>
     </div>
   );
 }
