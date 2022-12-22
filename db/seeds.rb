@@ -16,11 +16,6 @@
 #                teacher_id: teacher_id)
 # end
 
-puts "seeding  roles"
-Role.create(category: "Teacher")
-Role.create(category: "Student")
-
-puts "complete"
-
+# 
 
 
