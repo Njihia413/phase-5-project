@@ -20,6 +20,7 @@ function Login({ setUser }) {
       }
     });
     navigate('/')
+    
   }
 
   return (

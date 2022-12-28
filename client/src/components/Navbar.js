@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 function Navbar({ user, setUser }) {
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
@@ -14,6 +15,7 @@ function Navbar({ user, setUser }) {
     <header>
       <div>
         <Link to="/">Home</Link>
+        
       </div>
       <div>
         {user ? (
@@ -25,6 +27,7 @@ function Navbar({ user, setUser }) {
           </>
         )}
       </div>
+   
     </header>
   );
 }

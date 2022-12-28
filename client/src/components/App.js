@@ -1,9 +1,10 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Signup from "./Signup";
+import UserNavbar from "./UserNavbar";
 
 
 function App() {
@@ -14,32 +15,45 @@ function App() {
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
+
       }
+      
     });
   }, []);
 
-   
-    
+
+
   return (
+
     <div className="App">
 
-     <Navbar user={user} setUser={setUser} />
+      <Navbar user={user} setUser={setUser} />
+
       <main>
-        {user ? (
-          <Routes>
-            <Route path="/" element={<Home user={user}/>} />
-          
-          </Routes>
+        
+        { console.log(user)
+         
+        }
+        { user ? (
+          <div>
+            
+             <Routes>
+              <Route path="/" element={<Home user={user} />} />
+            </Routes>  
+           <UserNavbar/> 
+          </div>
+
         ) : (
           <Routes>
             <Route path="/signup" element={<Signup setUser={setUser} />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
-            
-            <Route path="/" element={<Home />}/>
+
+            <Route path="/" element={<Home />} />
           </Routes>
+
         )}
       </main>
-      
+
     </div>
   );
 }

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :courses
   resources :roles, only: [:show, :create]
   #resources :users
   #resources :teachers
