@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reviews
+  resources :assessments
   resources :courses
   resources :roles, only: [:show, :create]
   #resources :users

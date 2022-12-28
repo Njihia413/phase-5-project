@@ -15,13 +15,13 @@ class CoursesController < ApplicationController
   
     # GET /courses/:id
     def show
-      course = find_course
-      render json: course
+      course =  Course.find(params[:id])
+      render json: course, include: ['review']
     end
   
     # PATCH /courses/:id
     def update
-      course = find_course
+      course =  Course.find(params[:id])
       course.update(course_params)
       render json: course
     end
@@ -29,17 +29,12 @@ class CoursesController < ApplicationController
    
     # DELETE /courses/:id
     def destroy
-      course = find_course
+      course =  Course.find(params[:id])
       course.destroy
       head :no_content
     end
   
     private
-  
-    def find_course
-      Course.find(params[:id])
-    end
-  
     def course_params
       params.permit(:name, :videos, :books)
     end

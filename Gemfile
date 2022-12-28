@@ -50,6 +50,4 @@ end
 
 gem 'active_model_serializers'
 
-gem "serializer", "~> 1.0"
-
 gem "faker", "~> 3.0"
