@@ -5,6 +5,11 @@ import Home from "./Home";
 import Navbar from "./Navbar";
 import Signup from "./Signup";
 import UserNavbar from "./UserNavbar";
+import Assessments from "../pages/Assessments";
+import Reviews from "../pages/Reviews";
+import Courses from "../pages/Courses";
+import Course from "../pages/Course"
+import Profile from "../pages/Profile";
 
 
 function App() {
@@ -17,7 +22,7 @@ function App() {
         r.json().then((user) => setUser(user));
 
       }
-      
+
     });
   }, []);
 
@@ -28,19 +33,28 @@ function App() {
     <div className="App">
 
       <Navbar user={user} setUser={setUser} />
+      {console.log(user)}
 
       <main>
-        
-        { console.log(user)
-         
-        }
-        { user ? (
+        {user ? (
           <div>
+                
+              <Routes>
+                <Route path="*" element={<Home user={user} />} />
+              </Routes>
             
-             <Routes>
-              <Route path="/" element={<Home user={user} />} />
-            </Routes>  
-           <UserNavbar/> 
+              <Routes>
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/reviews" element={<Reviews />} />
+                <Route path="/assessments" element={<Assessments />} />
+                <Route path="/courses" element={<Courses />} />
+                <Route path="/courses/:courseId" element={<Course />} />
+               
+                
+              </Routes>
+            <UserNavbar/>
+
+
           </div>
 
         ) : (
@@ -52,6 +66,7 @@ function App() {
           </Routes>
 
         )}
+
       </main>
 
     </div>

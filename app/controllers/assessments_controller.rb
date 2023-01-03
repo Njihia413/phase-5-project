@@ -6,11 +6,6 @@ class AssessmentsController < ApplicationController
       assessments = Assessment.all
       render json: assessments
     end
-    # POST
-    def create
-      assessment = Assessment.create!(assessment_params)
-      render json: assessment, status: :created
-    end
     # GET
     def show
       assessment = find_assessment

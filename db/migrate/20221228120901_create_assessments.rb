@@ -3,7 +3,7 @@ class CreateAssessments < ActiveRecord::Migration[7.0]
     create_table :assessments do |t|
       t.string :assessment_name
       t.string :date
-      t.string :questions, array:true, default: []
+      t.string :questions, array: true, default: []
       t.integer :user_id
 
       t.timestamps

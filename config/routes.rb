@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :reviews
-  resources :assessments
+  resources :books
+  resources :videos
   resources :courses
+  resources :assessments, only:[:show, :index, :update, :destroy]
   resources :roles, only: [:show, :create]
   #resources :users
   #resources :teachers

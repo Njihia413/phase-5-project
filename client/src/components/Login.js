@@ -19,7 +19,7 @@ function Login({ setUser }) {
         r.json().then((user) => setUser(user));
       }
     });
-    navigate('/')
+    navigate(`/dashboard`)
     
   }
 

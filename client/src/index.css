@@ -96,3 +96,34 @@ main{
 .icon, .link_text{
   font-size: 20px;
 }
+.courses {
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+} 
+.course{
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.assessment{
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.review{
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.profile {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}

@@ -16,6 +16,7 @@ function Navbar({ user, setUser }) {
       <div>
         <Link to="/">Home</Link>
         
+        
       </div>
       <div>
         {user ? (

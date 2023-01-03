@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_28_122526) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_03_083243) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,10 +23,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_122526) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.string "category"
+    t.string "author"
+    t.string "description"
+    t.string "image_url"
+    t.integer "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name"
-    t.string "videos", default: [], array: true
-    t.string "books", default: [], array: true
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_122526) do
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.string "description"
-    t.integer "course_id"
+    t.integer "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,6 +54,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_122526) do
     t.string "email"
     t.string "password_digest"
     t.integer "role", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "name"
+    t.string "video_url"
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
