@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # route to test your configuration
-  get '/hello', to: 'application#hello_world'
-end
+  devise_for :users,controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+  
+  get '/member_details' => 'members#index'
+end 
