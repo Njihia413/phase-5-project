@@ -10,6 +10,19 @@ class User < ApplicationRecord
 
          has_many :courses
 
+  ROLES = %w{teacher student}
+
+
+  ROLES.each do |role_name|
+    define_method "#{role_name}?"   do
+       role == role_name
+    end
+  end
+
+  
+
+
+
   def jwt_payload
      super
   end
