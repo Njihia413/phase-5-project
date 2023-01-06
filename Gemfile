@@ -50,7 +50,9 @@ group :development do
 end
 
 
-gem "serializer", "~> 1.0"
+
 gem 'active_model_serializers'
 
 gem "faker", "~> 3.0"
+
+gem "cancancan", "~> 3.4"
