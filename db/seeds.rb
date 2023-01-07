@@ -1,7 +1,7 @@
 
 puts 'seeding user'
-user1 = User.create!(email:"julia@gmail.com",password:"zxcvbnm", role:'teacher') 
-user2 = User.create!(email:"leo@gmail.com",password:"zxcvbnm", role:'teacher')
+user1 = User.create!(username: "julia", email:"julia@gmail.com",password:"zxcvbnm", password_confirmation: "zxcvbnm", role:"teacher") 
+user2 = User.create!( username: "leo", email:"leo@gmail.com",password:"zxcvbnm",  password_confirmation:"zxcvbnm", role:"teacher")
 
 puts 'Done'
 
