@@ -1,3 +1,11 @@
+
+import { Route, Routes } from "react-router-dom";
+import SignUp from "./Signup";
+import { useEffect } from "react";
+
+function App() {
+  
+
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
@@ -28,9 +36,14 @@ function App() {
 
 
 
+
   return (
 
     <div className="App">
+       <Routes>
+       <Route path="/signup" element={<SignUp />} />
+       </Routes>
+
 
       <Navbar user={user} setUser={setUser} />
       {console.log(user)}
@@ -68,6 +81,7 @@ function App() {
         )}
 
       </main>
+
 
     </div>
   );
