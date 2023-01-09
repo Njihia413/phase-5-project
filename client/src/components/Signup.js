@@ -49,8 +49,9 @@ function SignUp() {
           <br/>
           <div className="create">create an Account</div>
            <br/>
-        <div className="role">
-        <label>
+           <div className= "border">
+           <div className="role">
+        <label id= "roles">
         Role
         </label>
         <br/>
@@ -59,6 +60,7 @@ function SignUp() {
           id="role"
           onChange={(e) => handleChange(e)}
           value={data.role}>
+            <option value="">Select</option>
           <option onChange={(e) => handleChange(e)} value="Teacher">
             Teacher
           </option>
@@ -68,7 +70,7 @@ function SignUp() {
         </select>
         </div>
                 <div className="user">
-                    <label>Username</label>  <br/>
+                    <label id= "user">Username</label>  <br/>
                     <input
                     onChange={(e) => handleChange(e)}
                     id="name"
@@ -79,7 +81,7 @@ function SignUp() {
                     />
                 </div>
                 <div className="email">
-                    <label htmlFor="customer-email">Email Address</label>  <br/>
+                    <label id= "emails">Email Address</label>  <br/>
                     <input
                     onChange={(e) => handleChange(e)}
                     placeholder="   Email"
@@ -91,7 +93,7 @@ function SignUp() {
                 </div>
 
                 <div className="password">
-                    <label htmlFor="customer-password">Password</label>  <br/>
+                    <label id= "passwords">Password</label>  <br/>
                     <input
                     onChange={(e) => handleChange(e)}
                     placeholder="Password"
@@ -102,7 +104,7 @@ function SignUp() {
                     />
                 </div>
                 <div className="password">
-                    <label htmlFor="password">Password Confirmation </label>  <br/>
+                    <label id= "passw">Password Confirmation </label>  <br/>
                     <input
                     onChange={(e) => handleChange(e)}
                     placeholder=" Password Confirmation"
@@ -115,6 +117,9 @@ function SignUp() {
                 <button id="next" type="submit" onClick={handleSubmit}>
                     Create Account 
                 </button>
+                <div id= "already">Already have an account? Login</div>
+           </div>
+        
     </div>
   );
 }
