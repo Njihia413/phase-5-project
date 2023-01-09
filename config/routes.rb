@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do 
+       post 'password/forgot', to: 'password#forgot'
+       post 'password/reset', to: 'password#reset'
       resources :courses, :videos, :books, :reviews 
     end
   end
