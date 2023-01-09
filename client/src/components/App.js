@@ -10,6 +10,9 @@ import Reviews from "../pages/Reviews";
 import Courses from "../pages/Courses";
 import Course from "../pages/Course"
 import Profile from "../pages/Profile";
+import ContactUs from "./ContactUs";
+import './Contact.css';
+
 
 
 function App() {
@@ -49,10 +52,12 @@ function App() {
                 <Route path="/assessments" element={<Assessments />} />
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/courses/:courseId" element={<Course />} />
+                
                
                 
               </Routes>
             <UserNavbar/>
+            
 
 
           </div>
@@ -61,8 +66,14 @@ function App() {
           <Routes>
             <Route path="/signup" element={<Signup setUser={setUser} />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
+            <Route path="/ContactUs" element={<ContactUs />} />
+            
+            
+            
 
             <Route path="/" element={<Home />} />
+            
+            
           </Routes>
 
         )}
@@ -72,5 +83,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
