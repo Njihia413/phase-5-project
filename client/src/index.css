@@ -11,3 +11,119 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+header a,
+header button {
+  font-size: 1rem;
+  display: inline-block;
+  background-color: #fff8e7;
+  border: 1px solid rgb(90, 57, 54);
+  margin: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: salmon;
+  cursor: pointer;
+}
+
+main {
+  margin: 1rem;
+}
+
+form {
+  background-color: #eaeef2;
+  border: 1px solid aqua;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+
+form input {
+  margin: 0.25rem 0;
+}
+
+form button[type="submit"] {
+  width: 40%;
+}
+
+main{
+  width: 100%;
+  padding: 20px;
+}
+.sidebar{
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
+.top_section{
+  display: flex;
+  align-items:center;
+  padding:20px 15px;
+}
+.logo{
+  font-size: 30px;
+}
+.bars{
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.link{
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.link:hover{
+  background:lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+.active{
+  background: lightskyblue;
+  color: #000;
+}
+.icon, .link_text{
+  font-size: 20px;
+}
+.courses {
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+} 
+.course{
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.assessment{
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.review{
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+.profile {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
