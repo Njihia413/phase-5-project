@@ -1,211 +1,122 @@
+import React, { useState } from "react"
+import "./SignUp.css";
 
-import React from "react";
-import { Link } from "react-router-dom";
-import {useState} from "react";
-
-function SignUp () {
-  // start of sign up functionality
-  const [signupData, setSignupData] = useState({
-    username: "",
-    email_address: "",
-    password: "",
-    password_confirmation: "",
+function SignUp() {
+  const [data, setData] = useState({
+    role:"",
+    name:"",
+    email: "",
+    password:"",
+    passwordconfirmation: ""
   });
-
-  const [signupError, setSignupError] = useState([]);
-  const [signupLoading, setSignupLoading] = useState(false);
-
-  function handleSignupChange(event) {
-    const name = event.target.name;
-    const value = event.target.value;
-    setSignupData({ ...signupData, [name]: value });
+  // const formObject = {}
+  function handleChange(e) {
+    const newdata = { ...data };
+    newdata[e.target.id] = e.target.value;
+    setData(newdata);
+    // console.log(newdata)
   }
-
-  async function handleSubmitSignupDetails(event) {
-    event.preventDefault();
-    setSignupLoading(true);
-    const response = await fetch("/signup", {
-      
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(signupData),
-    });
-
-    const userData = await response.json();
-    if (response.ok) {
-      setUser(userData);
-      setOnLogin(true);
-      setSignupError([]);
-      setSignupLoading(false);
-      navigate("/");
-      setSignupData({
-        username: "",
-        password: "",
-        image_url: "",
-        password_confirmation: "",
+      body: JSON.stringify({
+        role: data.role,
+        name: data.name,
+        email: data.email,
+        password: data.password,
+        passwordconfirmation: data.passwordconfirmation,
+      }),
+    })
+      .then((res) => {
+        res.json();
+      })
+      .then((res) => {
+        console.log(res);
       });
-    } else {
-      setSignupError(userData.errors);
-      setSignupLoading(false);
-    }
+      setData({
+      role: "",
+      name: "",
+      email: "",
+      password: "",
+      passwordconfirmation: "",})
   }
+
   return (
-    <div className="signup-div">
-      <form className="signup-form" onSubmit={handleSubmitSignupDetails}>
-        <h1><span>T</span>he Orchid</h1> 
-        <div className="css">
-          <label> Username </label> <br />
-        <input
-          type="text"
-          name="username"
-          autoComplete="off"
-          className="signup-input"
-          value={signupData.username}
-          onChange={handleSignupChange}
-        />
-        {signupError.length > 0 ? (
-          <p style={{ color: "red", fontSize: "15px" }}>
-            {signupError.find((error) => error.includes("Username"))}!!!
-          </p>
-        ) : null}
-        <br />
-        <label htmlFor="password"> Password </label> <br />
-        <input
-          type="password"
-          name="password"
-          autoComplete="current-password"
-          className="signup-input"
-          value={signupData.password}
-          onChange={handleSignupChange}
-        />
-        {signupError.length > 0 ? (
-          <p style={{ color: "red", fontSize: "15px" }}>
-            {signupError.find((error) => error.includes("Password"))}!!!
-          </p>
-        ) : null}
-        <br />
-        <label type="password"> Password Confirmation </label> <br />
-        <input
-          type="password"
-          name="password_confirmation"
-          autoComplete="current-password"
-          className="signup-input"
-          value={signupData.password_confirmation}
-          onChange={handleSignupChange}
-        />
-        {signupError.length > 0 ? (
-          <p style={{ color: "red", fontSize: "15px" }}>
-            {signupError.find((error) => error.includes("confirmation"))}!!!
-          </p>
-        ) : null}
-        <br />
-        <label type="imageUrl"> Profile Image </label> <br />
-        <input
-          type="text"
-          id="imageUrl"
-          className="signup-input"
-          name="image_url"
-          value={signupData.image_url}
-          onChange={handleSignupChange}
-        /> <br/>
-        <label>Bio</label>
-        <textarea
-          rows="3"
-          autoComplete="off"
-          className="signup-input"
-          type="text"
-          onChange={handleSignupChange}
-        />
-        <br />
-        <button type="submit" id="signup-btn">
-          {signupLoading ? "Loading..." : "Sign Up"}
-        </button>
-        <Link id="link" to={"/login"}>
-          <span id="login-section"> Have an account already?  Login </span>
-        </Link></div>
-        
-      </form>
+    <div className="signupform" onSubmit={handleSubmit}>
+          <div className="welcome">Welcome To Masomo<span>Digi</span></div>
+          <br/>
+          <div className="create">create an Account</div>
+           <br/>
+        <div className="role">
+        <label>
+        Role
+        </label>
+        <br/>
+        <select
+          name="select"
+          id="role"
+          onChange={(e) => handleChange(e)}
+          value={data.role}>
+          <option onChange={(e) => handleChange(e)} value="Teacher">
+            Teacher
+          </option>
+          <option onChange={(e) => handleChange(e)} value="Student">
+            Student
+          </option>
+        </select>
+        </div>
+                <div className="user">
+                    <label>Username</label>  <br/>
+                    <input
+                    onChange={(e) => handleChange(e)}
+                    id="name"
+                    placeholder=" Username"
+                    name="name"
+                    type="text"
+                    value={data.name}
+                    />
+                </div>
+                <div className="email">
+                    <label htmlFor="customer-email">Email Address</label>  <br/>
+                    <input
+                    onChange={(e) => handleChange(e)}
+                    placeholder="   Email"
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={data.email}
+                   />
+                </div>
+
+                <div className="password">
+                    <label htmlFor="customer-password">Password</label>  <br/>
+                    <input
+                    onChange={(e) => handleChange(e)}
+                    placeholder="Password"
+                    id="password"
+                    name="password"
+                    type="password"
+                    value={data.password}
+                    />
+                </div>
+                <div className="password">
+                    <label htmlFor="password">Password Confirmation </label>  <br/>
+                    <input
+                    onChange={(e) => handleChange(e)}
+                    placeholder=" Password Confirmation"
+                    id="passwordconfirmation"
+                    name="passwordconfirmation"
+                    type="password"
+                    value={data.passwordconfirmation}
+                    />
+                </div>
+                <button id="next" type="submit" onClick={handleSubmit}>
+                    Create Account 
+                </button>
     </div>
   );
 }
 
 export default SignUp;
-import React,{useState} from 'react'
-import { useNavigate }  from 'react-router-dom'
-
-function Signup({setUser}) {
-  const navigate = useNavigate()
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-        password_confirmation: passwordConfirmation,
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
-    navigate('/')
-  }
-  return (
-    <div>
-          <div>
-      <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-
-       <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          autoComplete="off"
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          autoComplete="off"
-        />
-        <label htmlFor="password">Password Confirmation</label>
-        <input
-          type="password"
-          id="password_confirmation"
-          value={passwordConfirmation}
-          onChange={(e) => setPasswordConfirmation(e.target.value)}
-          autoComplete="off"
-        />
-        <button type="submit">Sign Up</button>
-       
-      </form>
-    </div>
-
-
-
-    </div>
-  )
-}
-
-export default Signup

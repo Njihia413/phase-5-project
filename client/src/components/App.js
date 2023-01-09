@@ -1,13 +1,8 @@
 
 import { Route, Routes } from "react-router-dom";
 import SignUp from "./Signup";
-import { useEffect } from "react";
-
-function App() {
-  
-
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+
 import Login from "./Login";
 import Home from "./Home";
 import Navbar from "./Navbar";
@@ -72,7 +67,7 @@ function App() {
 
         ) : (
           <Routes>
-            <Route path="/signup" element={<Signup setUser={setUser} />} />
+            {/* <Route path="/signup" element={<Signup setUser={setUser} />} /> */}
             <Route path="/login" element={<Login setUser={setUser} />} />
 
             <Route path="/" element={<Home />} />

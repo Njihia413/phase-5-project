@@ -3,7 +3,7 @@ import { useNavigate }  from 'react-router-dom'
 
 
 function Login({ setUser }) {
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
   function handleSubmit(e) {
@@ -13,7 +13,7 @@ function Login({ setUser }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, password }),
+      body: JSON.stringify({ email, password }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
@@ -27,13 +27,13 @@ function Login({ setUser }) {
     <div>
       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Email</label>
         <input
           type="text"
-          id="username"
+          id="email"
           autoComplete="off"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <br/>
 

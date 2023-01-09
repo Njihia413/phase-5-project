@@ -1,0 +1,43 @@
+.signupform {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    margin-left: 187px;
+    margin-top: 150px;
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 20px;
+    border: 3px solid #D9D9D9;
+    font-family: 'Montserrat';
+    
+    }
+    .welcome {
+    position: absolute;
+    width: 400px;
+    height: 161px;
+    margin-left: 40%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #2F4156;
+    margin-top: 4%;
+    }
+    .welcome span {
+        color: #867ACA;
+    }
+    .create {
+    position: absolute;
+    width: 637px;
+    height: 58px;
+    margin-top: 10%;
+    margin-left: 48%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+    }
+    
+    
