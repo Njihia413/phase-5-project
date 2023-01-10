@@ -7,7 +7,7 @@ import Login from "./Login";
 // import './App.css';
 import Footer from "./Footer"
 import ContactUs from "./ContactUs";
-import Courses from "./Courses";
+import Courses from "../pages/Courses";
 import About from "./About";
 
 function App() {
