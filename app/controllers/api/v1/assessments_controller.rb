@@ -1,4 +1,4 @@
-class AssessmentsController < ApplicationController
+class  Api::V1::AssessmentsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     # GET

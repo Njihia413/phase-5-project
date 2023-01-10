@@ -4,7 +4,7 @@ import "./SignUp.css";
 function SignUp() {
   const [data, setData] = useState({
     role:"",
-    name:"",
+    username:"",
     email: "",
     password:"",
     passwordconfirmation: ""
@@ -18,15 +18,15 @@ function SignUp() {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/signup", {
+    fetch("/users/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        role: data.role,
-        name: data.name,
+        username: data.username,
         email: data.email,
         password: data.password,
         passwordconfirmation: data.passwordconfirmation,
+        role: data.role
       }),
     })
       .then((res) => {
@@ -36,11 +36,11 @@ function SignUp() {
         console.log(res);
       });
       setData({
-      role: "",
-      name: "",
+      username: "",
       email: "",
       password: "",
-      passwordconfirmation: "",})
+      passwordconfirmation: "",
+      role: ""})
   }
 
   return (
@@ -77,7 +77,7 @@ function SignUp() {
                     placeholder=" Username"
                     name="name"
                     type="text"
-                    value={data.name}
+                    value={data.username}
                     />
                 </div>
                 <div className="email">
