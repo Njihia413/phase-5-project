@@ -49,9 +49,9 @@ function Login({ setUser }) {
         />
         <button type="submit">Login</button>
       </form>
-
+      <span id="signup=section"> Don't have an account? </span>
       <Link id= "link2" to={"/signup"}>
-          <span id="signup=section"> Don't have an account? Sign Up </span>
+           Sign Up 
         </Link>
     </div>
   );
