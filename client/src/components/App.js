@@ -62,7 +62,7 @@ function App() {
         ) : (
           <Routes>
             {/* <Route path="/signup" element={<Signup setUser={setUser} />} /> */}
-            <Route path="/login" element={<Login setUser={setUser} />} />
+            {/* <Route path="/login" element={<Login setUser={setUser} />} /> */}
             {/* <Route path="/ContactUs" element={<ContactUs />} /> */}
             <Route path="/" element={<Home />} />
           </Routes>

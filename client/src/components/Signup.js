@@ -1,5 +1,8 @@
 import React, { useState } from "react"
 import "./SignUp.css";
+import { Link } from "react-router-dom";
+import { useNavigate }  from 'react-router-dom'
+
 
 function SignUp() {
   const [data, setData] = useState({
@@ -9,6 +12,7 @@ function SignUp() {
     password:"",
     passwordconfirmation: ""
   });
+  const navigate = useNavigate()
   // const formObject = {}
   function handleChange(e) {
     const newdata = { ...data };
@@ -41,6 +45,8 @@ function SignUp() {
       email: "",
       password: "",
       passwordconfirmation: "",})
+
+      navigate(`/dashboard`)
   }
 
   return (
@@ -117,7 +123,9 @@ function SignUp() {
                 <button id="next" type="submit" onClick={handleSubmit}>
                     Create Account 
                 </button>
-                <div id= "already">Already have an account? Login</div>
+                <div id= "already"> <Link id="link" to={"/login"}>
+          <span id="login-section"> Have an account already?  Login </span>
+        </Link></div>
            </div>
         
     </div>
