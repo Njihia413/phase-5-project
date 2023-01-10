@@ -1,13 +1,9 @@
 import React from "react";
 import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
 import SignUp from "./Signup";
-import { useEffect } from "react";
-import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Login from "./Login";
-import Home from "./Home";
 import Navbar from "./Navbar";
 import Signup from "./Signup";
 import UserNavbar from "./UserNavbar";
