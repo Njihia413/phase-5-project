@@ -50,8 +50,7 @@ class Api::V1::CoursesController < ApplicationController
     def set_course
         @course = Course.find(params[:id])
         #@course = current_user.courses.find(params[:id])
-    # rescue ActiveRecord::RecordNotFound => error
-    #       render json: error.message, status: :unauthorized
+   
     end
     
     def course_params
