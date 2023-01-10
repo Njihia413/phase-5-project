@@ -1,4 +1,11 @@
 import { useForm } from 'react-hook-form';
+import './Navbar.js'
+import './Navbar.css'
+import './Footer.css'
+import './Footer.js'
+import './Contact.css'
+
+
 
 const ContactUs = () => {
   const {
@@ -18,12 +25,15 @@ const ContactUs = () => {
   };
 
   return (
-    <div className='ContactForm'>
+
+    <div className='Contact-us'>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center'>
             <div className='contactForm'>
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+                <h2> Let's Talk</h2>
+                <h3> We normally respond within 48hrs. Kindly leave a message</h3>
                 {/* Row 1 of form */}
                 <div className='row formRow'>
                   <div className='col-6'>
@@ -38,7 +48,7 @@ const ContactUs = () => {
                         }
                       })}
                       className='form-control formInput'
-                      placeholder='Name'
+                      placeholder='Full Name'
                     ></input>
                     {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
                   </div>
@@ -89,13 +99,13 @@ const ContactUs = () => {
                         required: true
                       })}
                       className='form-control formInput'
-                      placeholder='Message'
+                      placeholder='Your Message'
                     ></textarea>
                     {errors.message && <span className='errorMessage'>Please enter a message</span>}
                   </div>
                 </div>
                 <button className='submit-btn' type='submit'>
-                  Submit
+                  Send message
                 </button>
               </form>
             </div>

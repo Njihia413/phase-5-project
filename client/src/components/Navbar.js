@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Navbar.css'
 
 
 function Navbar({ user, setUser }) {
@@ -14,7 +15,11 @@ function Navbar({ user, setUser }) {
   return (
     <header>
       <div>
-        <Link to="/">Home</Link>
+      <div className="logo-text">
+                            <span className="logo-text-1">Masomo</span>
+                            <span className="logo-text-2">Digi</span>
+                        </div>
+       
         
         
       </div>
@@ -23,6 +28,7 @@ function Navbar({ user, setUser }) {
           <button onClick={handleLogoutClick}>Logout</button>
         ) : (
           <>
+           <Link to="/">Home</Link>
             <Link to="/signup">Signup</Link>
             <Link to="/login">Login</Link>
             <Link to="/ContactUs">Contact Us</Link>

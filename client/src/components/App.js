@@ -4,14 +4,16 @@ import Login from "./Login";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Signup from "./Signup";
-import UserNavbar from "./UserNavbar";
+import UserNavbar from "./Navbar";
 import Assessments from "../pages/Assessments";
 import Reviews from "../pages/Reviews";
 import Courses from "../pages/Courses";
 import Course from "../pages/Course"
 import Profile from "../pages/Profile";
 import ContactUs from "./ContactUs";
-import './Contact.css';
+// import './App.css';
+import Footer from "./Footer"
+
 
 
 
@@ -52,11 +54,13 @@ function App() {
                 <Route path="/assessments" element={<Assessments />} />
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/courses/:courseId" element={<Course />} />
+                {/* <Route path="/Footer" element={<Footer/>} /> */}
                 
                
                 
               </Routes>
             <UserNavbar/>
+            <Footer/>
             
 
 
@@ -67,6 +71,8 @@ function App() {
             <Route path="/signup" element={<Signup setUser={setUser} />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/ContactUs" element={<ContactUs />} />
+            
+
             
             
             
