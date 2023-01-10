@@ -1,7 +1,6 @@
 import React from "react";
 import Courses from "./Courses";
 import Enroll from "./Enroll";
-import Footer from "./Footer";
 import HomeBanner from "./HomeBanner";
 import Newsletter from "./Newsletter";
 
@@ -12,7 +11,6 @@ function Home () {
             <Courses/>
             <Enroll/>
             <Newsletter/>
-            <Footer/>
         </>
         
     )

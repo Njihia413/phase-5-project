@@ -4,15 +4,9 @@ import { Routes, Route }  from "react-router-dom";
 import SignUp from "./Signup";
 import { useEffect, useState } from "react";
 import Login from "./Login";
-import UserNavbar from "./Navbar";
-import Assessments from "../pages/Assessments";
-import Reviews from "../pages/Reviews";
-import Courses from "../pages/Courses";
-import Course from "../pages/Course"
-import Profile from "../pages/Profile";
-// import ContactUs from "./ContactUs";
 // import './App.css';
 import Footer from "./Footer"
+import ContactUs from "./ContactUs";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,15 +29,14 @@ function App() {
 
       <Routes>
           <Route path="/" element={<Home user={user}/>}/>
-      </Routes>
-
-       <Routes>
           <Route path="/signup" element={<SignUp setUser={setUser} />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
-       </Routes>
+          <Route path="/contact" element={<ContactUs />} />
+      </Routes>
+      <Footer/>
       {console.log(user)}
 
-      <main>
+      {/* <main>
         {user ? (
           <div>
                 
@@ -54,20 +47,15 @@ function App() {
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/courses/:courseId" element={<Course />} />
                 {/* <Route path="/Footer" element={<Footer/>} /> */}
-              </Routes>
+              {/* </Routes>
             <UserNavbar/>
-            <Footer/>  
+             
           </div>
 
         ) : (
           <Routes>
-            {/* <Route path="/signup" element={<Signup setUser={setUser} />} /> */}
-            <Route path="/login" element={<Login setUser={setUser} />} />
-            {/* <Route path="/ContactUs" element={<ContactUs />} /> */}
-            <Route path="/" element={<Home />} />
-          </Routes>
         )}
-      </main>
+      </main> */} 
     </div>
   );
 }
