@@ -2,10 +2,6 @@
 import { Route, Routes } from "react-router-dom";
 import SignUp from "./Signup";
 import { useEffect } from "react";
-
-function App() {
-  
-
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
@@ -18,6 +14,10 @@ import Reviews from "../pages/Reviews";
 import Courses from "../pages/Courses";
 import Course from "../pages/Course"
 import Profile from "../pages/Profile";
+
+function App() {
+  
+
 
 
 function App() {
@@ -85,6 +85,7 @@ function App() {
 
     </div>
   );
+}
 }
 
 export default App;
