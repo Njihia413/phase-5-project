@@ -4,15 +4,13 @@ import { Routes, Route }  from "react-router-dom";
 import SignUp from "./Signup";
 import { useEffect, useState } from "react";
 import Login from "./Login";
-import Navbar from "./Navbar";
-import Signup from "./Signup";
 import UserNavbar from "./Navbar";
 import Assessments from "../pages/Assessments";
 import Reviews from "../pages/Reviews";
 import Courses from "../pages/Courses";
 import Course from "../pages/Course"
 import Profile from "../pages/Profile";
-import ContactUs from "./ContactUs";
+// import ContactUs from "./ContactUs";
 // import './App.css';
 import Footer from "./Footer"
 
@@ -63,9 +61,9 @@ function App() {
 
         ) : (
           <Routes>
-            <Route path="/signup" element={<Signup setUser={setUser} />} />
+            {/* <Route path="/signup" element={<Signup setUser={setUser} />} /> */}
             <Route path="/login" element={<Login setUser={setUser} />} />
-            <Route path="/ContactUs" element={<ContactUs />} />
+            {/* <Route path="/ContactUs" element={<ContactUs />} /> */}
             <Route path="/" element={<Home />} />
           </Routes>
         )}
