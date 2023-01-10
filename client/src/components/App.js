@@ -7,6 +7,8 @@ import Login from "./Login";
 // import './App.css';
 import Footer from "./Footer"
 import ContactUs from "./ContactUs";
+import Courses from "./Courses";
+import About from "./About";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -32,6 +34,8 @@ function App() {
           <Route path="/signup" element={<SignUp setUser={setUser} />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/courses" element={<Courses/>} />
+          <Route path="/about" element={<About/>} />
       </Routes>
       <Footer/>
       {console.log(user)}

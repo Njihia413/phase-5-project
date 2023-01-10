@@ -200,6 +200,18 @@ span {
   cursor: pointer;
 }
 
+.footer-nav {
+  text-decoration: none;
+  color: #C3C8CD;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.footer-nav:hover {
+  color: #9085D1;
+}
+
 .fa-brands {
   color: #fff;
 }
