@@ -13,6 +13,10 @@ body {
   background-color: #9085D1 !important;
 }
 
+.main-color {
+  color: #9085D1 !important;
+}
+
 .bg-secondary {
   background-color: #102437 !important;
 }
@@ -242,18 +246,84 @@ span {
   border-radius: 30px;
 }
 
-.btn-login {
+.btn-contact:hover {
   background-color: transparent;
   border: 1px solid #102437;
   color: #102437;
 }
 
-.form-control {
+/* .form-control {
   border-radius: 20px;
   padding: 10px;
   border: 1px solid #102437;
+} */
+/*==================End of Contact us page=======================*/
+/*Beginning of sign up page */
+.outer-signup-card {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgba(0,0,0,.125);
+  margin-bottom: 10vh;
 }
 
+.inner-signup-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.btn-login {
+  width: 100%;
+  background-color:#102437;
+  color: #fff;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+
+
+
+
+/*Forms*/
+/* Forms */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+}
+
+.form-group select {
+  height: 49px;
+}
+    :focus,
+    :active {
+      box-shadow: none
+}
+
+.form-group input {
+  height: 49px;
+}
+  ::placeholder {
+    color: #AEB0B4;
+    font-size: 15px;
+  }
+
+  :focus,
+  :active {
+      box-shadow: none;
+    }
+
+  .required:after {
+    content: " *";
+    color: red;
+}
 /* header {
   display: flex;
   justify-content: space-between;

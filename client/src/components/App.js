@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
-import SignUp from "./Signup";
+import SignUp from "./SignUp";
 import { useEffect, useState } from "react";
 import Login from "./Login";
 // import './App.css';
