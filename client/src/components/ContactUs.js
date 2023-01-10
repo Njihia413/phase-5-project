@@ -66,7 +66,7 @@ const ContactUs = () => {
                             message: "Please use 30 characters or less"
                           }
                         })}
-                        className="form-control"
+                        className="form-control2"
                         placeholder="Full Name"
                       ></input>
                       {errors.name && <span className="errorMessage">{errors.name.message}</span>}
@@ -79,7 +79,7 @@ const ContactUs = () => {
                           required: true,
                           pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
                         })}
-                        className="form-control"
+                        className="form-control2"
                         placeholder="Email address"
                       ></input>
                       {errors.email && (
@@ -100,7 +100,7 @@ const ContactUs = () => {
                             message: "Subject cannot exceed 75 characters"
                           }
                         })}
-                        className="form-control"
+                        className="form-control2"
                         placeholder="Subject"
                       ></input>
                       {errors.subject && (
@@ -112,12 +112,12 @@ const ContactUs = () => {
                   <div className="row">
                     <div className="col-md-12 mb-4">
                       <textarea
-                        rows={3}
+                        rows={6}
                         name="message"
                         {...register("message", {
                           required: true
                         })}
-                        className="form-control"
+                        className="form-control2"
                         placeholder="Your Message"
                       ></textarea>
                       {errors.message && <span className="errorMessage">Please enter a message</span>}
