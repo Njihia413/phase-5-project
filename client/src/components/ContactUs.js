@@ -1,5 +1,4 @@
 import { useForm } from 'react-hook-form';
-import './Navbar.js';
 import Navbar from './Navbar.js';
 
 
@@ -133,20 +132,6 @@ const ContactUs = () => {
         </div>
       </div>
     </section>
-    {/* <div className='Contact-us'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12 text-center'>
-            <div className='contactForm'>
-            <h2 className='contact-heading'> Let's Talk!</h2>
-              <div className='contact-card'>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> */}
     </>
   );
 };
