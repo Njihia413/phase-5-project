@@ -1,4 +1,5 @@
 class Api::V1::VideosController < ApplicationController
+  before_action :find_video, only: [:show,  :update, :destroy]
   load_and_authorize_resource
 
   before_action :find_video, only: [:show,  :update, :destroy]

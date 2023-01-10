@@ -1,3 +1,13 @@
+
+puts 'seeding user'
+user1 = User.create!(email:"julia@gmail.com",password:"zxcvbnm") 
+user2 = User.create!(email:"leo@gmail.com",password:"zxcvbnm")
+
+puts 'Done'
+
+
+puts 'seeding course'
+
 puts 'Seeding user'
 user1 = User.create!(username: "julia", email:"julia@gmail.com",password:"zxcvbnm", password_confirmation: "zxcvbnm", role:"teacher") 
 user2 = User.create!( username: "leo", email:"leo@gmail.com",password:"zxcvbnm",  password_confirmation:"zxcvbnm", role:"teacher")
@@ -6,6 +16,7 @@ puts 'Done seeding users'
 
 
 puts 'Seeding courses'
+
 
 
 ## courses for  software engineering 
@@ -44,9 +55,6 @@ Video.create([
        course_id: 1
     }
   ])
-
-  
-  
 Book.create([
     ({
         title: "Eloquent Javascript",
@@ -205,6 +213,8 @@ Book.create([
 
 }
 ])
+
+puts 'ending'
 
  # creating for Social Media Expert course
  Course.create([name: "Become A Social Media Expert",image_url:"https://www.investopedia.com/thmb/8TfyI-FsF3RDSdQPhfM-NkDeWsA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1153397912-5cc5918639d6482b8b1b035413b8c267.jpg", user_id: 1])
@@ -1268,7 +1278,6 @@ Book.create!([
 
 puts 'ending'
 
-=======
 puts 'seeding user'
 user1 = User.create(name:"Julia",email:"julia@gmail.com" ,password:"zxcvbnm", password_confirmation: "zxcvbnm", role:1) 
 user2 = User.create(name:"Leo",email:"leo@gmail.com" ,password:"zxcvbnm", password_confirmation: "zxcvbnm", role:0)
@@ -2979,7 +2988,6 @@ Assessment.create([
       }
 ])
 puts 'Done Assessment'
-
 
 puts 'Seeding Reviews'
 

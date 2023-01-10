@@ -10,6 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema[7.0].define(version: 2023_01_06_090140) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
 ActiveRecord::Schema[7.0].define(version: 2023_01_07_085014) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_03_083243) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
+  
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "category"
@@ -67,6 +71,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_03_083243) do
     t.datetime "updated_at", null: false
     t.string "jti", null: false
     t.string "role"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["jti"], name: "index_users_on_jti", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["jti"], name: "index_users_on_jti", unique: true
@@ -86,6 +93,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_03_083243) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-  
   add_foreign_key "courses", "users"
 end

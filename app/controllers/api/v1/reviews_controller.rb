@@ -1,7 +1,7 @@
 class Api::V1::ReviewsController < ApplicationController
 
   load_and_authorize_resource
-  
+ 
     before_action :find_review, only: [:show,  :update, :destroy]
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
