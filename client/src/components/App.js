@@ -4,8 +4,7 @@ import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
 import { useEffect, useState } from "react";
 import Login from "./Login";
-// import './App.css';
-import Footer from "./Footer"
+import Footer from "./Footer";
 import ContactUs from "./ContactUs";
 import Courses from "../pages/Courses";
 import About from "./About";

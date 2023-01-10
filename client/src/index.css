@@ -317,6 +317,55 @@ span {
 }
 /*==================End of Login page=======================*/
 
+/*Beginning of About page */
+.about {
+  background-image: url('./assets/IMG-3216.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.bg-about {
+  background-color: #102437c1;
+  height: 90vh;
+}
+
+.about-text {
+  margin-top: 50px;
+}
+
+.btn-about {
+  width: 25%;
+  background-color:#102437;
+  color: #fff;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.about-section {
+  height: 492px;
+}
+
+.about-statistics {
+  background-color: #9085D1;
+  height: 50vh;
+}
+
+#about-p {
+  line-height: 30px;
+}
+
+.icon-text {
+  color: #fff;
+  margin-top: 20px;
+}
+
+
+/*==================End of About page=======================*/
+
+
 /*Forms*/
 /* Forms */
 .form-group {
