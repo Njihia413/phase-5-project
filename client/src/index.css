@@ -193,6 +193,15 @@ span {
   color: #C3C8CD;
   padding-left: 100px;
   padding-top: 20px;
+  cursor: pointer;
+}
+
+.fa-brands {
+  color: #fff;
+}
+
+.fa-brands:hover {
+  color: #9085D1;
 }
 
 /*==================End of Homepage=======================*/

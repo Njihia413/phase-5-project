@@ -61,10 +61,10 @@ function Footer () {
                             <div className="col-md-4">
                                 <h5 className="footer-heading">Social</h5>
                                 <p className="footer-text">
-                                    <p>Instagram</p>
-                                    <p>Facebook</p>
-                                    <p>Twitter</p>
-                                    <p>LinkedIn</p>
+                                    <p><i className="fa-brands fa-instagram"></i> Instagram</p>
+                                    <p><i className="fa-brands fa-facebook"></i> Facebook</p>
+                                    <p><i className="fa-brands fa-twitter"></i> Twitter</p>
+                                    <p><i className="fa-brands fa-linkedin"></i> LinkedIn</p>
                                 </p>
                             </div>
                         </div>
