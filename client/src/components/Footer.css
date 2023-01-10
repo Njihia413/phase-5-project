@@ -1,0 +1,54 @@
+.newsletter {
+    background: #9085D1;
+}
+
+.newsletter-text {
+    color: #ffffff;
+    text-align: center;
+    font: 400 16px/26px "Outfit";
+}
+
+.newsletter-header{
+    color: #ffffff;
+    text-align: center;
+    font: 600 50px/56px "Outfit";
+}
+
+.bar {
+    width: 422px;
+    height: 64px;
+    position: static;
+}
+.mail {
+    width: 422px;
+    height: 64px;
+    position: static;
+}
+.rectangle-4 {
+    background: #ffffff;
+    border-radius: 32px;
+    width: 422px;
+    height: 64px;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+.input-your-email--- {
+    color: #a1a3b6;
+    text-align: left;
+    font: 400 18px/28px "Outfit";
+}
+.button {
+    width: 139px;
+    height: 54px;
+    position: static;
+}
+
+
+.footer{
+    background: #102437;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    text-align: center;
+}
