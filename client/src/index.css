@@ -1,13 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css');
+
 body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-primary {
+  background-color: #9085D1 !important;
+}
+
+.bg-secondary {
+  background-color: #102437 !important;
+}
+
+.btn-primary, .btn-primary:hover {
+  background-color: #9085D1;
+  border-color: #9085D1;
+  border-radius: 26px;
+  padding: 10px 25px;
+}
+
+.btn-warning, .btn-warning:hover {
+  background-color: #102437;
+  border-color: #102437;
+  border-radius: 26px;
+  padding: 10px 35px;
+  color: #fff;
+}
+
+/*Home*/
+.home {
+  background-image: url('./assets/LandingImage-removebg-preview.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-home {
+  background-color: #102437c1;
+}
+
+.intro {
+  color: #fff;
+  text-align: center;
+  padding-top: 170px;
+}
+
+.intro-p {
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.intro-p2 {
+  color: #fff;
+  text-align: center;
+  padding-top: 143px;
+}
+
+/*Navbar*/
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+
+span {
+  color: #9085D1;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+  color: #9085D1;
+}
+
+
+/*Courses Section*/
+.card {
+  border: none;
+  margin-bottom: 25px;
+}
+
+.card-img-top {
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-body {
+  color: #fff;
+  background-color: #9085D1;
+  padding-bottom: 0;
+  padding-top: 10;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 70px;
+}
+
+.course-text {
+  font-weight: bold;
+}
+
+/*Enroll Section*/
+.enroll  {
+  background-color: #102437;
+  height: 560px;
+}
+
+.enroll-heading {
+  color: #fff;
+  padding-top: 180px;
+  padding-left: 100px;
+}
+
+.enroll-text {
+  color: #C3C8CD;
+  padding-left: 100px;
+}
+
+#enroll-btn {
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+.enroll-img {
+  position: absolute;
+  width: 629px;
+  height: 455px;
+  left: 650px;
+  top: 1170px;
+}
+
+/*Newsletter Section*/
+.newsletter {
+  background-color: #9085D1;
+  height: 55vh;
+}
+
+.newsletter-text {
+  color: #fff;
+  text-align: center;
+}
+
+.newsletter-form {
+  margin-top: 70px;
+  padding: 0px;
+}
+
+.input-group input {
+  height: 55px;
+  background-color: #fff;
+  border-radius: 26px 0px 0px 26px;
+  border: none;
+}
+
+::placeholder {
+    color: #AEB0B4;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+:focus,
+:active {
+  box-shadow: none;
+}
+
+.input-group-append button, .input-group-append button:hover{
+  margin-left: -20px;
+  height: 55px;
+  border-radius:  26px 26px 26px 26px ;
+}
+
+/*Footer*/
+.footer-wrapper {
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+
+.footer-heading {
+  color: #fff;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.footer-text {
+  color: #C3C8CD;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+hr {
+  margin: 1rem 0;
+  color: white;
+  border: 0;
+  border-top: 1px solid;
+  opacity: .25;
 }
