@@ -36,7 +36,7 @@ body {
   color: #fff;
 }
 
-/*Home*/
+/*Beginning of Homepage */
 .home {
   background-image: url('./assets/LandingImage-removebg-preview.png');
   background-position: center;
@@ -209,6 +209,7 @@ span {
 }
 
 /*==================End of Homepage=======================*/
+
 /*Beginning of contact us page*/
 .contact {
   background-image: url('./assets/IMG-3239.jpg');
@@ -258,6 +259,7 @@ span {
   border: 1px solid #102437;
 } */
 /*==================End of Contact us page=======================*/
+
 /*Beginning of sign up page */
 .outer-signup-card {
   padding-top: 20px;
@@ -284,10 +286,24 @@ span {
   font-weight: 700;
   border-radius: 30px;
 }
+/*==================End of Sign up page=======================*/
 
 
+/*Beginning of Login page */
+.login-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgba(0,0,0,.125);
+  margin-bottom: 10vh;
+}
 
-
+.login-heading {
+  color: #9085D1;
+  margin-top: 30px;
+}
+/*==================End of Login page=======================*/
 
 /*Forms*/
 /* Forms */
