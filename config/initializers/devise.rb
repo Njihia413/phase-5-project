@@ -28,6 +28,7 @@ Devise.setup do |config|
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
+  #config.mailer = 'Devise::Mailer'
 
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
@@ -313,6 +314,7 @@ Devise.setup do |config|
     jwt.secret = Rails.application.credentials.devise_jwt_secret_key!
     jwt.dispatch_requests = [
       ['POST', %r{^/users/sign_up$}]
+      ['POST', %r{^/users/sign_in$}]
     ]
     jwt.revocation_requests = [
       [ 'DELETE', %r{^/users/sign_out}]

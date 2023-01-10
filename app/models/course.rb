@@ -5,4 +5,6 @@ class Course < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :image_url,  presence: true
+   has_many :videos
+   has_many  :books
 end

@@ -1,6 +1,11 @@
 class Api::V1::CoursesController < ApplicationController
    
     before_action :set_course, only: [:show,  :update, :destroy]
+    load_and_authorize_resource
+
+
+    before_action :set_course, only: [:show,  :update, :destroy]
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
         @courses = Course.all
@@ -46,11 +51,16 @@ class Api::V1::CoursesController < ApplicationController
     def set_course
         @course = Course.find(params[:id])
         #@course = current_user.courses.find(params[:id])
+
     rescue ActiveRecord::RecordNotFound => error
           render json: error.message, status: :unauthorized
     end
     
     def course_params
         params.require(:course).permit(:name, :image_url, :user_id)
+    end 
+
+    def render_not_found_response
+        render json: { error: "Course not found" }, status: :not_found
     end
 end

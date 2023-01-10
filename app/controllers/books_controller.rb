@@ -1,31 +1,29 @@
-class Api::V1::BooksController < ApplicationController
-     load_and_authorize_resource
-    before_action :find_book, only: [ :show,  :update, :destroy]
+class BooksController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     # GET 
     def index
-      @books = Book.all
-      render json: @books
+      books = Book.all
+      render json: books
     end
   
     # POST 
     def create 
-      @book = Book.create(boook_params)
-      render json: @book, status: :created
+      book = Book.create(boook_params)
+      render json: book, status: :created
     end
   
      # GET
   def show
-     @book = find_book
-    render json: @book, status: :ok, serializer: BookReviewSerializer
+     book = find_book
+    render json: book, status: :ok, serializer: BookReviewSerializer
   end
 
    
     # DELETE 
     def destroy
-      @book = find_book
-      @book.destroy
+      book = find_book
+      book.destroy
       head :no_content
     end
   

@@ -1,5 +1,8 @@
 class Api::V1::VideosController < ApplicationController
-    before_action :find_video, only: [:show,  :update, :destroy]
+  before_action :find_video, only: [:show,  :update, :destroy]
+  load_and_authorize_resource
+
+  before_action :find_video, only: [:show,  :update, :destroy]
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     # GET
