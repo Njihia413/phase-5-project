@@ -4,16 +4,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
-
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <BrowserRouter> 
-     <App />
-     </BrowserRouter>
-   
+   <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
@@ -22,16 +20,4 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-import App from "./components/App";
-
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
-);
 

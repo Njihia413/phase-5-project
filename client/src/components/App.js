@@ -1,4 +1,6 @@
-
+import React from "react";
+import Home from "./Home";
+import { Routes, Route }  from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import SignUp from "./Signup";
 import { useEffect } from "react";
@@ -16,11 +18,6 @@ import Course from "../pages/Course"
 import Profile from "../pages/Profile";
 
 function App() {
-  
-
-
-
-function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -35,27 +32,24 @@ function App() {
   }, []);
 
 
-
-
   return (
 
     <div className="App">
+
+      <Routes>
+          <Route path="/" element={<Home user={user}/>}/>
+      </Routes>
+
        <Routes>
-       <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup" element={<SignUp setUser={setUser} />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
        </Routes>
-
-
-      <Navbar user={user} setUser={setUser} />
       {console.log(user)}
 
-      <main>
+      {/* <main>
         {user ? (
           <div>
                 
-              <Routes>
-                <Route path="*" element={<Home user={user} />} />
-              </Routes>
-            
               <Routes>
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/reviews" element={<Reviews />} />
@@ -80,12 +74,9 @@ function App() {
 
         )}
 
-      </main>
-
+      </main> */}
 
     </div>
   );
 }
-}
-
 export default App;
