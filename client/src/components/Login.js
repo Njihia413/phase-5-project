@@ -8,7 +8,7 @@ function Login({ setUser }) {
   const navigate = useNavigate()
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/login", {
+    fetch("/users/sign_in", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
