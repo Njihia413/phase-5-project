@@ -1,13 +1,21 @@
-import React from 'react'
+import React from "react";
+import Courses from "./Courses";
+import Enroll from "./Enroll";
+import Footer from "./Footer";
+import HomeBanner from "./HomeBanner";
+import Newsletter from "./Newsletter";
 
-function Home({ user }) {
-    if (user) {
-      return <h1>Welcome, {user.name}!</h1>;
-      
-    } else {
-      return <h1>Please Login or Sign Up</h1>;
-    }
+function Home () {
+    return (
+        <>
+            <HomeBanner/>
+            <Courses/>
+            <Enroll/>
+            <Newsletter/>
+            <Footer/>
+        </>
+        
+    )
 }
-  
 
-export default Home
+export default Home;
