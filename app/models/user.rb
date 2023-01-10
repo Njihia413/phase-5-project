@@ -19,12 +19,11 @@ class User < ApplicationRecord
        role == role_name
     end
   end
-
   
-
-
-
   def jwt_payload
      super
   end
+    has_secure_password 
+    has_many :assessments  
+    enum role: [:student, :teacher]
 end
