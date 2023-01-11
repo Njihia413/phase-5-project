@@ -31,7 +31,7 @@ function CourseDetails () {
         <div className="">
                <section className="course-details">
             <div className="bg-coursedetails">
-                <Navbar/> <br/> <br/><br/> <br/> <br/><br/><br/> <br/><br/>
+                <Navbar/> <br/> <br/><br/> <br/> <br/><br/><br/> 
             <div className="row">
                 <div className="col">
 
@@ -41,10 +41,12 @@ function CourseDetails () {
                 </div>
             </div>
             </div>
-        </section> <br/>
+        </section> <br/> <br/> 
             <div className="container">
-            <p className="course-text"> <i className="fa-solid fa-arrow-left"></i> <a className="main-color" href="/courses">Courses </a> </p>
-            <p className="text-center mt-1">Become A Web Developer</p>
+              <div className="dis">
+              <p className="course-text"> <i className="fa-solid fa-arrow-left"></i> <a className="main-color" href="/courses">Courses </a> </p>
+            <p className="tex">Become A Web Developer</p>
+              </div>
             <h5 className="text-center mt-1"><b>Learning Videos</b></h5>
             <div className='container my-5 py-5' key={videos.id}>
         <div className='row d-flex justify-content-center' key={videos.id}>
@@ -67,7 +69,7 @@ function CourseDetails () {
           }
         </div>
         </div>
-      </div> 
+      </div> <br/> 
       <Books/>  
 
             </div>
