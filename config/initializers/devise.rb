@@ -292,7 +292,7 @@ Devise.setup do |config|
   #
   # The router that invoked `devise_for`, in the example above, would be:
   # config.router_name = :my_engine
-  #
+
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
@@ -303,7 +303,7 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
-
+  
   # ==> Configuration for :registerable
 
   # When set to false, does not sign a user in automatically after their password is
@@ -318,7 +318,7 @@ Devise.setup do |config|
     jwt.revocation_requests = [
       [ 'DELETE', %r{^/users/sign_out}]
     ]
-    jwt.expiration_time = 60.minutes.to_i
+    jwt.expiration_time = 30.minutes.to_i
   end
 end
 

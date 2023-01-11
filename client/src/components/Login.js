@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useNavigate }  from 'react-router-dom'
 
 
-function Login({ setUser }) {
+function Login() {
+  const [ user, setUser] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
@@ -18,8 +19,9 @@ function Login({ setUser }) {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
+      console.log(user)
     });
-    navigate(`/dashboard`)
+    navigate(`/`)
     
   }
 
