@@ -43,7 +43,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg-coursedetails {
+  background-color: #102437c1;
+}
+.course-details {
+  background-image: url(./assets/IMG-3213.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+}
 .bg-home {
   background-color: #102437c1;
 }
