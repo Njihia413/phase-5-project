@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
 import './Navbar.js'
-import './Navbar.css'
-import './Footer.css'
+import '../css/Navbar.css'
+import '../css/Footer.css'
 import './Footer.js'
-import './Contact.css'
+import '../css/Contact.css'
 
 
 

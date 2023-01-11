@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import './Navbar.css'
+import '../css/Navbar.css'
 import { NavLink } from "react-router-dom";
 
 function Navbar ({ user, setUser }) {
@@ -13,30 +12,7 @@ function Navbar ({ user, setUser }) {
   }
 
   return (
-    // <header>
-    //   <div>
-    //   <div className="logo-text">
-    //                         <span className="logo-text-1">Masomo</span>
-    //                         <span className="logo-text-2">Digi</span>
-    //                     </div>
-       
-        
-        
-    //   </div>
-    //   <div>
-    //     {user ? (
-    //       <button onClick={handleLogoutClick}>Logout</button>
-    //     ) : (
-    //       <>
-    //        <Link to="/">Home</Link>
-    //         <Link to="/signup">Signup</Link>
-    //         <Link to="/login">Login</Link>
-    //         <Link to="/ContactUs">Contact Us</Link>
-    //       </>
-    //     )}
-    //   </div>
-   
-    // </header>
+
     <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
               <a className="navbar-brand" href="/">Masomo<span>Digi</span></a>

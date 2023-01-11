@@ -1,127 +1,81 @@
-import React, { useState } from "react"
-import "./SignUp.css";
+import React,{useState} from 'react'
+import { useNavigate }  from 'react-router-dom'
 
-function SignUp() {
-  const [data, setData] = useState({
-    role:"",
-    username:"",
-    email: "",
-    password:"",
-    passwordconfirmation: ""
-  });
-  // const formObject = {}
-  function handleChange(e) {
-    const newdata = { ...data };
-    newdata[e.target.id] = e.target.value;
-    setData(newdata);
-    // console.log(newdata)
-  }
+function Signup() {
+  const navigate = useNavigate()
+  const [user, setUser] = useState("")
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/users/", {
+    fetch("/users", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
-        username: data.username,
-        email: data.email,
-        password: data.password,
-        passwordconfirmation: data.passwordconfirmation,
-        role: data.role
+        username,
+        email,
+        password,
+        password_confirmation: passwordConfirmation,
       }),
-    })
-      .then((res) => {
-        res.json();
-      })
-      .then((res) => {
-        console.log(res);
-      });
-      setData({
-      username: "",
-      email: "",
-      password: "",
-      passwordconfirmation: "",
-      role: ""})
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+      console.log(user)
+    });
+    navigate('/')
   }
-
   return (
-    <div className="signupform" onSubmit={handleSubmit}>
-          <div className="welcome">Welcome To Masomo<span>Digi</span></div>
-          <br/>
-          <div className="create">create an Account</div>
-           <br/>
-           <div className= "border">
-           <div className="role">
-        <label id= "roles">
-        Role
-        </label>
-        <br/>
-        <select
-          name="select"
-          id="role"
-          onChange={(e) => handleChange(e)}
-          value={data.role}>
-            <option value="">Select</option>
-          <option onChange={(e) => handleChange(e)} value="Teacher">
-            Teacher
-          </option>
-          <option onChange={(e) => handleChange(e)} value="Student">
-            Student
-          </option>
-        </select>
-        </div>
-                <div className="user">
-                    <label id= "user">Username</label>  <br/>
-                    <input
-                    onChange={(e) => handleChange(e)}
-                    id="name"
-                    placeholder=" Username"
-                    name="name"
-                    type="text"
-                    value={data.username}
-                    />
-                </div>
-                <div className="email">
-                    <label id= "emails">Email Address</label>  <br/>
-                    <input
-                    onChange={(e) => handleChange(e)}
-                    placeholder="   Email"
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={data.email}
-                   />
-                </div>
+    <div>
+          <div>
+      <form onSubmit={handleSubmit}>
+        <h1>Sign Up</h1>
+        <label htmlFor="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          autoComplete="off"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
 
-                <div className="password">
-                    <label id= "passwords">Password</label>  <br/>
-                    <input
-                    onChange={(e) => handleChange(e)}
-                    placeholder="Password"
-                    id="password"
-                    name="password"
-                    type="password"
-                    value={data.password}
-                    />
-                </div>
-                <div className="password">
-                    <label id= "passw">Password Confirmation </label>  <br/>
-                    <input
-                    onChange={(e) => handleChange(e)}
-                    placeholder=" Password Confirmation"
-                    id="passwordconfirmation"
-                    name="passwordconfirmation"
-                    type="password"
-                    value={data.passwordconfirmation}
-                    />
-                </div>
-                <button id="next" type="submit" onClick={handleSubmit}>
-                    Create Account 
-                </button>
-                <div id= "already">Already have an account? Login</div>
-           </div>
-        
+       <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          autoComplete="off"
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          autoComplete="off"
+        />
+        <label htmlFor="password">Password Confirmation</label>
+        <input
+          type="password"
+          id="password_confirmation"
+          value={passwordConfirmation}
+          onChange={(e) => setPasswordConfirmation(e.target.value)}
+          autoComplete="off"
+        />
+        <button type="submit">Sign Up</button>
+       
+      </form>
     </div>
-  );
+
+
+
+    </div>
+  )
 }
 
-export default SignUp;
+export default Signup
