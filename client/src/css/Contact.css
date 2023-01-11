@@ -2,14 +2,12 @@
     border-radius: 51px;
     background-color:#102437;
     color: #ffffff;
-  /* width: 600px; */
+  
   height: 38px;
 
   
  position: static;
 }
-/* .col {
-border-radius: 50%; */
 
 
 
@@ -21,9 +19,7 @@ border-radius: 50%; */
   left: 537px;
   top: 2457px;
 }
-/* .col-6{
-    border-radius: 51px;
-} */
+
 input{
     padding: 15px;
     border-radius: 51px;
