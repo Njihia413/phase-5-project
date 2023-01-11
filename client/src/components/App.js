@@ -16,15 +16,15 @@ function App() {
     <div className="App">
 
       <Routes>
-          <Route path="/" element={<Home user={user}/>}/>
-          <Route path="/signup" element={<SignUp setUser={setUser} />} />
-          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/" element={<Home/>}/>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/courses" element={<Courses/>} />
           <Route path="/about" element={<About/>} />
       </Routes>
       <Footer/>
-      {console.log(user)}
+      {/* {console.log(user)} */}
 
       {/* <main>
         {user ? (
@@ -51,24 +51,3 @@ function App() {
 }
 
 export default App;  
-
-
-// import { useState, useEffect } from "react";
-
-// function App() {
-//   const [count, setCount] = useState(0);
-
-//   useEffect(() => {
-//     fetch("/hello")
-//       .then((r) => r.json())
-//       .then((data) => setCount(data.count));
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <h1>Page Count: {count}</h1>
-//     </div>
-//   );
-// }
-
-// export default App;
