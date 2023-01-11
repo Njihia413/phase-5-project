@@ -2,7 +2,6 @@ import React from "react";
 import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
-import { useEffect, useState } from "react";
 import Login from "./Login";
 import Footer from "./Footer";
 import ContactUs from "./ContactUs";
