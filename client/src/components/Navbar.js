@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import '../css/Navbar.css'
-=======
->>>>>>> main
 import { NavLink } from "react-router-dom";
 
 function Navbar ({ user, setUser }) {
@@ -15,10 +11,6 @@ function Navbar ({ user, setUser }) {
   }
 
   return (
-<<<<<<< HEAD
-
-=======
->>>>>>> main
     <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
               <a className="navbar-brand" href="/">Masomo<span>Digi</span></a>
