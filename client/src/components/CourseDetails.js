@@ -36,7 +36,7 @@ function CourseDetails () {
                 <div className="col">
 
                     <div className="intro-p">
-                        <h1>You can either enroll for this course to <br></br> gain access and also to the materials <br></br> been attached to it online only.</h1>
+                        <h2>You can enroll to this course to <br></br> gain access to the materials <br></br> been attached to it online only.</h2>
                     </div>
                 </div>
             </div>
