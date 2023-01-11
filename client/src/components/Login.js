@@ -26,7 +26,7 @@ function Login() {
   }
 
   return (
-    <>
+    <div>
     <section className="top-header">
       <div className="row text-center">
         <div className="col-md-12">
@@ -91,7 +91,7 @@ function Login() {
         </div>
       </div>
     </section>
-    </>
+    </div>
   );
 }
 

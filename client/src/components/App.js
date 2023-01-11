@@ -18,33 +18,12 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/contact" element={<ContactUs />} /> 
           <Route path="/courses" element={<Courses/>} />
           <Route path="/about" element={<About/>} />
       </Routes>
       <Footer/>
-      {/* {console.log(user)} */}
-
-      {/* <main>
-        {user ? (
-          <div>
-                
-              <Routes>
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/reviews" element={<Reviews />} />
-                <Route path="/assessments" element={<Assessments />} />
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/courses/:courseId" element={<Course />} />
-                {/* <Route path="/Footer" element={<Footer/>} /> */}
-              {/* </Routes>
-            <UserNavbar/>
-             
-          </div>
-
-        ) : (
-          <Routes>
-        )}
-      </main> */} 
+      
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 function About () {
     return (
-        <>
+        <div>
         <section className="about">
             <div className="bg-about">
                 <Navbar/>
@@ -182,7 +182,7 @@ function About () {
                 </div>
             </div>
         </section>
-    </>
+    </div>
     )
 }
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { useForm } from 'react-hook-form';
 import Navbar from './Navbar.js';
 
@@ -8,10 +9,10 @@ const ContactUs = () => {
     handleSubmit,
     formState: { errors }
   } = useForm();
-  
+
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
-    
+
     console.log('Name: ', name);
     console.log('Email: ', email);
     console.log('Subject: ', subject);
@@ -19,10 +20,10 @@ const ContactUs = () => {
   };
 
   return (
-    <>
-    <section className="contact">
-      <div className="bg-contact">
-        <Navbar/>
+    <div>
+      <section className="contact">
+        <div className="bg-contact">
+          <Navbar />
           <div className="row">
             <div className="col">
               <div className="intro">
@@ -33,26 +34,26 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-      </div>
-    </section>
-
-    <section className="contact-header">
-      <div className="row text-center">
-        <div className="col-md-12">
-          <h3 className="contact-heading">Let's Talk!</h3>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="contact-section">
-      <div className="cnt">
-        <div className="row d-flex justify-content-center">
-          <div className="col-md-5">
-            <div className="contact-card">
-            <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-              <div className="container text-center">
-                <p>We do normally respond within 48hrs. Please <br></br> leave a message</p>
-              </div>
+      <section className="contact-header">
+        <div className="row text-center">
+          <div className="col-md-12">
+            <h3 className="contact-heading">Let's Talk!</h3>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-section">
+        <div className="cnt">
+          <div className="row d-flex justify-content-center">
+            <div className="col-md-5">
+              <div className="contact-card">
+                <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+                  <div className="container text-center">
+                    <p>We do normally respond within 48hrs. Please <br></br> leave a message</p>
+                  </div>
                   {/* Row 1 of form */}
                   <div className="row">
                     <div className="col-md-12 mb-2">
@@ -127,12 +128,12 @@ const ContactUs = () => {
                     Send message
                   </button>
                 </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    </>
+      </section>
+    </div>
   );
 };
 

@@ -6,12 +6,12 @@ import Newsletter from "./Newsletter";
 
 function Home () {
     return (
-        <>
+        <div>
             <HomeBanner/>
             <Courses/>
             <Enroll/>
             <Newsletter/>
-        </>
+        </div>
         
     )
 }

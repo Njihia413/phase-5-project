@@ -43,7 +43,7 @@ function SignUp() {
   }
 
   return (
-    <>
+    <div>
     <section className="signup">
       <div className="p-3">
         <div className="row d-flex justify-content-center">
@@ -153,7 +153,7 @@ function SignUp() {
         </div>
       </div>
     </section>
-  </>
+  </div>
   );
 }
 

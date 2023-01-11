@@ -40,9 +40,9 @@ function Navbar ({ user, setUser }) {
                       {user ? (
                         <button className="btn btn-primary"  id="nav-btn" onClick={handleLogoutClick}>Logout</button>
                       ) : (
-                        <>
+                        <div>
                           <NavLink to="/login" className="btn btn-primary" id="nav-btn">Login</NavLink>
-                        </>
+                        </div>
                       )}
                     </div>
               </div>
