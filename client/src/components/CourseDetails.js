@@ -36,7 +36,7 @@ function CourseDetails () {
                 <div className="col">
 
                     <div className="intro-p">
-                        <h2>You can enroll to this course to <br></br> gain access to the materials <br></br> been attached to it online only.</h2>
+                        <h2>You can enroll to this course to gain access <br></br>   to the materials that have been<br></br> attached to it online <br></br> today.</h2>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ function CourseDetails () {
             <div className="container">
               <div className="dis">
               <p className="course-text"> <i className="fa-solid fa-arrow-left"></i> <a className="main-color" href="/courses">Courses </a> </p>
-            <p className="tex">Become A Web Developer</p>
+               <p className="tex">Become A Web Developer</p>
               </div>
             <h5 className="text-center mt-1"><b>Learning Videos</b></h5>
             <div className='container my-5 py-5' key={videos.id}>
