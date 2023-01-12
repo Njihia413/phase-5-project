@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom'
 
 function CourseDetails () {
   const { id } = useParams();
-  // const [courseid] = useState(1)
     const [course, setCourse] = useState([]);
     
    
@@ -54,7 +53,7 @@ function CourseDetails () {
             <h5 className="text-center mt-1"><b>Learning Videos</b></h5>
             <div className='container my-5 py-5' key={course.id}>
         <div className='row d-flex justify-content-center' key={course.id}>
-        <div className="card" >
+        {/* <div className="card" >
           {
             course.videos.map((video) => {
               return (
@@ -71,7 +70,7 @@ function CourseDetails () {
               )
             })
           }
-        </div>
+        </div> */}
         </div>
       </div> <br/> 
       
