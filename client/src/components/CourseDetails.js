@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar"
-// import Books from "./Books";
+import Books from "./Books";
 import { useParams } from 'react-router-dom'
+import cup from "../assets/IMG-3217.jpg";
+import cap from "../assets/IMG-3225.jpg";
+import cep from "../assets/IMG-3222.jpg";
+import cop from "../assets/IMG-3219.jpg";
+import coup from "../assets/IMG-3224.jpg";
+import bup from "../assets/IMG-3221.jpg";
+
 
 function CourseDetails () {
   const { id } = useParams();
+  // const [courseid] = useState(1)
     const [course, setCourse] = useState([]);
     
    
@@ -51,9 +59,9 @@ function CourseDetails () {
                <p className="tex">Become A Web Developer</p>
               </div>
             <h5 className="text-center mt-1"><b>Learning Videos</b></h5>
-            <div className='container my-5 py-5' key={course.id}>
+            {/* <div className='container my-5 py-5' key={course.id}>
         <div className='row d-flex justify-content-center' key={course.id}>
-        {/* <div className="card" >
+        <div className="card" >
           {
             course.videos.map((video) => {
               return (
@@ -70,14 +78,47 @@ function CourseDetails () {
               )
             })
           }
-        </div> */}
         </div>
-      </div> <br/> 
+        </div>
+      </div> <br/>  */}
+      <div className="row">
+      <div className="col-md-4">
+        <div className="card">
+          <img src={cup} alt="" className="card-img-new"></img>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="card">
+          <img src={cap} alt="" className="card-img-new"></img>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="card">
+          <img src={cep} alt="" className="card-img-new"></img>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="card">
+          <img src={cop} alt="" className="card-img-new"></img>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="card">
+          <img src={coup} alt="" className="card-img-new"></img>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="card">
+          <img src={bup} alt="" className="card-img-new"></img>
+        </div>
+      </div>
+      </div>
+    </div>
       
-      {/* <Books/>   */}
+      <Books/>  
 
             </div>
-        </div>
+    
     )
 }
 
