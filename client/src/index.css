@@ -43,7 +43,17 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg-coursedetails {
+  background-color: #102437c1;
+  height: 60vh;
+}
+.course-details {
+  background-image: url(./assets/IMG-3213.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+}
 .bg-home {
   background-color: #102437c1;
 }
@@ -544,3 +554,13 @@ hr {
   border-top: 1px solid;
   opacity: .25;
 } 
+.dis {
+  display: flex;
+}
+.course-text {
+  margin-right: 35%;
+}
+.tex {
+  font-size: 20px;
+  font-family: 'poppins';
+}
