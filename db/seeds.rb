@@ -1,3 +1,10 @@
+User.destroy_all
+Course.destroy_all
+Book.destroy_all
+Video.destroy_all
+Review.destroy_all
+
+
 puts 'Seeding user'
 user1 = User.create!(username: "julia", email:"julia@gmail.com",password:"zxcvbnm", password_confirmation: "zxcvbnm", role:"teacher") 
 user2 = User.create!( username: "leo", email:"leo@gmail.com",password:"zxcvbnm",  password_confirmation:"zxcvbnm", role:"teacher")
