@@ -17,7 +17,7 @@ const Course = () => {
   return (
     <section className="course">
       <div className="bg-course">
-        <Navbar />
+         <Navbar />
         <div className="row">
           <div className="col">
             <div className="intro">
