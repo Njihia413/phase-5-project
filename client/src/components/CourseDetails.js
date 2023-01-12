@@ -59,10 +59,10 @@ function CourseDetails () {
                <p className="tex">Become A Web Developer</p>
               </div>
             <h5 className="text-center mt-1"><b>Learning Videos</b></h5>
-            {/* <div className='container my-5 py-5' key={course.id}>
+            <div className='container my-5 py-5' key={course.id}>
         <div className='row d-flex justify-content-center' key={course.id}>
         <div className="card" >
-          {
+          {/* {
             course.videos.map((video) => {
               return (
                 <div>
@@ -77,10 +77,10 @@ function CourseDetails () {
                 </div>
               )
             })
-          }
+          } */}
         </div>
         </div>
-      </div> <br/>  */}
+      </div>
       <div className="row">
       <div className="col-md-4">
         <div className="card">
