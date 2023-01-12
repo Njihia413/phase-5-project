@@ -96,10 +96,10 @@ function SignUp() {
                       value={data.role}>
                         <option value="">Role</option>
                         <option onChange={(e) => handleChange(e)} value="Teacher">
-                          Teacher
+                          teacher
                         </option>
                         <option onChange={(e) => handleChange(e)} value="Student">
-                          Student
+                          student
                         </option>
                       </select>
                     </div>
