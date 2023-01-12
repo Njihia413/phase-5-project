@@ -543,4 +543,41 @@ hr {
   border: 0;
   border-top: 1px solid;
   opacity: .25;
+}
+.course {
+  background-image: url('./assets/IMG-3214.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
 } 
+.bg-course {
+  background-color: #102437c1;
+  height: 90vh;
+}
+.search-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form{
+  background: #9085D1;
+  width: 600px;
+  height: 55px;
+  display: flex;
+}
+.form input{
+  flex: 1;
+  border: none;
+  outline: none;
+
+}
+form.fa-sharp fa-solid fa-magnifying-glass{
+    align-self: center;
+    padding: 10px 20px;
+    color: #ffffff;
+}
+
+
