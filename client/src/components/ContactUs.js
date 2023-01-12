@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
-import Navbar from './Navbar.js';
+import Navbar from './Navbar';
 
 
 const ContactUs = () => {

@@ -6,7 +6,7 @@ function SignUp() {
     username:"",
     email: "",
     password:"",
-    passwordconfirmation: ""
+    password_confirmation: ""
   });
   // const formObject = {}
   function handleChange(e) {
@@ -20,13 +20,13 @@ function SignUp() {
     fetch("/users/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
+      body: JSON.stringify({user:{
         username: data.username,
         email: data.email,
         password: data.password,
-        passwordconfirmation: data.passwordconfirmation,
+        password_confirmation: data.password_confirmation,
         role: data.role
-      }),
+      }}),
     })
       .then((res) => {
         res.json();
@@ -38,7 +38,7 @@ function SignUp() {
       username: "",
       email: "",
       password: "",
-      passwordconfirmation: "",
+      password_confirmation: "",
       role: ""})
   }
 
@@ -96,10 +96,10 @@ function SignUp() {
                       value={data.role}>
                         <option value="">Role</option>
                         <option onChange={(e) => handleChange(e)} value="Teacher">
-                          Teacher
+                          teacher
                         </option>
                         <option onChange={(e) => handleChange(e)} value="Student">
-                          Student
+                          student
                         </option>
                       </select>
                     </div>
@@ -123,13 +123,13 @@ function SignUp() {
                       <div className="form-group">
                         <label htmlFor="password-confirmation" className="required">Password Confirmation</label>
                         <input 
-                          type="password-confirmation" 
-                          id="password-confirmation"
+                          type="password" 
+                          id="password_confirmation"
                           autoComplete="current-password"
-                          value={data.passwordconfirmation}
+                          value={data.password_confirmation}
                           className="form-control" 
-                          name="password-confirmation" 
-                          placeholder="Password Confirmation"
+                          name="password_confirmation" 
+                          placeholder="Password_confirmation"
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>

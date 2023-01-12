@@ -15,12 +15,12 @@ function Signup() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
+      body: JSON.stringify({user:{
         username,
         email,
         password,
         password_confirmation: passwordConfirmation,
-      }),
+      }}),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));

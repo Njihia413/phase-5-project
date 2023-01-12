@@ -152,6 +152,11 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.10-x86-mingw32)
       racc (~> 1.4)
+<<<<<<< HEAD
+=======
+    nokogiri (1.13.10-x86_64-linux)
+      racc (~> 1.4)
+>>>>>>> c738918de47fa4d498e989f3f6f19bbd01abe74b
     orm_adapter (0.5.0)
     pg (1.4.5)
     pg (1.4.5-x64-mingw32)
@@ -225,6 +230,10 @@ PLATFORMS
   x64-mingw32
   x86-mingw32
   x86-mswin32
+<<<<<<< HEAD
+=======
+  x86_64-linux
+>>>>>>> c738918de47fa4d498e989f3f6f19bbd01abe74b
 
 DEPENDENCIES
   active_model_serializers
