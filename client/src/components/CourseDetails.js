@@ -1,29 +1,33 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar"
-import Books from "./Books";
+// import Books from "./Books";
+import { useParams } from 'react-router-dom'
 
 function CourseDetails () {
-    const [videos, setVideos] = useState([])
+  const { id } = useParams();
+  // const [courseid] = useState(1)
+    const [course, setCourse] = useState([]);
+    
    
 
-    const fetchVideo = () => {
-        fetch("/videos")
+    const fetchCourse = () => {
+        fetch(`/api/v1/courses/${id}`)
           .then(response => {
             return response.json()
           })
-          .then(data => {
-            setVideos(data)
+          .then(course => {
+            setCourse(course)
           })
       }
     
       useEffect(() => {
-        fetchVideo()
+        fetchCourse()
       }, [])
 
-      if (videos=== undefined) {
+      if (course=== undefined) {
         return null;
       }
-       console.log(videos)
+       console.log(course)
     
       
 
@@ -44,15 +48,15 @@ function CourseDetails () {
         </section> <br/> <br/> 
             <div className="container">
               <div className="dis">
-              <p className="course-text"> <i className="fa-solid fa-arrow-left"></i> <a className="main-color" href="/courses">Courses </a> </p>
+              <h6 className="course-text"> <i className="fa-solid fa-arrow-left"></i> <a className="main-color" href="/courses">Courses </a> </h6>
                <p className="tex">Become A Web Developer</p>
               </div>
             <h5 className="text-center mt-1"><b>Learning Videos</b></h5>
-            <div className='container my-5 py-5' key={videos.id}>
-        <div className='row d-flex justify-content-center' key={videos.id}>
-        <div class="card" >
+            <div className='container my-5 py-5' key={course.id}>
+        <div className='row d-flex justify-content-center' key={course.id}>
+        <div className="card" >
           {
-            videos.map((video) => {
+            course.videos.map((video) => {
               return (
                 <div>
                   <div className='col-md-4' key={video.id} >
@@ -70,7 +74,8 @@ function CourseDetails () {
         </div>
         </div>
       </div> <br/> 
-      <Books/>  
+      
+      {/* <Books/>   */}
 
             </div>
         </div>
