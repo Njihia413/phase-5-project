@@ -5,7 +5,7 @@ import SignUp from "./SignUp";
 import Login from "./Login";
 import Footer from "./Footer";
 import ContactUs from "./ContactUs";
-import Courses from "../pages/Courses";
+import Courses from "./Courses";
 import About from "./About";
 import CourseDetails from "./CourseDetails";
 
@@ -25,7 +25,6 @@ function App() {
           <Route path="/CourseDetails" element={<CourseDetails/>} />
       </Routes>
       <Footer/>
-      
     </div>
   );
 }
