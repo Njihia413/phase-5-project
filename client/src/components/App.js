@@ -8,6 +8,7 @@ import ContactUs from "./ContactUs";
 import Courses from "./Courses";
 import About from "./About";
 import CourseDetails from "./CourseDetails";
+import BookDetails from "./BookDetails";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/courses" element={<Courses/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/CourseDetails" element={<CourseDetails/>} />
+          <Route path="/BookDetails" element={<BookDetails/>} />
       </Routes>
       <Footer/>
     </div>
