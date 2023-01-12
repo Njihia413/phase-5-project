@@ -9,6 +9,7 @@ cp -a client/build/. public/
 
 # Build commands for back end
 bundle install
-bundle exec rake db:migrate
+RAILS_ENV=production rake db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1 
+#bundle exec rake db:migrate
 bundle exec rake db:reset
 #bundle exec rake db:seed # if you have seed data, run this command for the initial deploy only to avoid duplicate records
