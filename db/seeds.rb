@@ -1774,7 +1774,7 @@ Review.create!([
 
     {
        
-       book_id: Book.find 5,
+       book_id: 5,
        rating: 2,
        description: "This course was a disappointment. The instructor was hard to understand and the course materials were poorly organized. I didn't feel like I learned much from this course."
     },
