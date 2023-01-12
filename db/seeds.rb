@@ -1,10 +1,3 @@
-User.destroy_all
-Course.destroy_all
-Book.destroy_all
-Video.destroy_all
-Review.destroy_all
-
-
 puts 'Seeding user'
 user1 = User.create!(username: "julia", email:"julia@gmail.com",password:"zxcvbnm", password_confirmation: "zxcvbnm", role:"teacher") 
 user2 = User.create!( username: "leo", email:"leo@gmail.com",password:"zxcvbnm",  password_confirmation:"zxcvbnm", role:"teacher")
@@ -16,39 +9,39 @@ puts 'Seeding courses'
 
 
 ## courses for  software engineering 
-course1 = Course.create!([name: "Become A Web Developer", image_url: "https://media.istockphoto.com/id/1201166649/photo/office-responsive-devices-web-design-website.jpg?s=612x612&w=0&k=20&c=w1zX61Nw0p3aguqUj9FFrUV9hl8l67zut_ZhdnB9p-E=", user_id: user1.id])
+Course.create!([name: "Become A Web Developer", image_url: "https://media.istockphoto.com/id/1201166649/photo/office-responsive-devices-web-design-website.jpg?s=612x612&w=0&k=20&c=w1zX61Nw0p3aguqUj9FFrUV9hl8l67zut_ZhdnB9p-E=", user_id:1 ])
 
 
 Video.create([
     {
        name: "Getting started with HTML and CSS",
        video_url: "https://youtu.be/T367E4I0n74",
-       course_id: course1.id
+       course_id: 1
     },
     {
        name: "React JS:What ypu need to know",
        video_url: "https://youtu.be/7gMmAaCMAnY",
-       course_id: course1.id
+       course_id: 1
     },
    {
        name: "Intro to Web Development",
        video_url: "https://youtu.be/-s3InudNIrM",
-       course_id: course1.id
+       course_id:1
     },
     {
        name: "Javascript Crush Course",
        video_url: "https://www.youtube.com/watch?v=hdI2bqOjy3c&t=2s",
-       course_id: course1.id
+       course_id:1
     },
     {
        name: "How to learn PHP and MySQL",
        video_url: "https://youtu.be/nP-MvFoDVZE",
-       course_id: course1.id
+       course_id:1
     },
     {
        name: "Learning Python",
        video_url: "https://youtu.be/03uyN3WquIc",
-       course_id: course1.id
+       course_id: 1
     }
   ])
 
@@ -61,7 +54,7 @@ Book.create([
         author: "Marjin Havaberke",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
         image_url: "https://eloquentjavascript.net/img/cover.jpg",
-        course_id: course1.id
+        course_id: 1
     }),
     ({
         title: "Introducing Web Development",
@@ -69,7 +62,7 @@ Book.create([
         author: "Jörg Krause",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
         image_url: "https://learning.oreilly.com/library/cover/9781484224991/250w/",
-        course_id: course1.id
+        course_id: 1
     }),
     ({
         title: "Web Development In React",
@@ -77,7 +70,7 @@ Book.create([
         author: "Mehul Mohan",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
         image_url: "https://m.media-amazon.com/images/P/9389423597.01.SCLZZZZZZZ_SX500.jpg",
-        course_id: course1.id
+        course_id: 1
     }),
     {
         title: "Learn Web Development with Python",
@@ -85,7 +78,7 @@ Book.create([
         author: " Fabrizio Romano ",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
         image_url: "https://m.media-amazon.com/images/P/1789953294.01.SCLZZZZZZZ_SX500.jpg",
-        course_id: course1.id
+        course_id: 1
     },
     ({
         title: "PHP and MySQL Web Development",
@@ -93,7 +86,7 @@ Book.create([
         author: " Luke Welling ",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
         image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51jl12bYlXL.jpg",
-        course_id: course1.id
+        course_id: 1
     }),
     ({
         title: "ASP,NET Core 6 and Angular",
@@ -101,51 +94,51 @@ Book.create([
         author: "Valerio De Sanctis",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
         image_url: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQNyZEJoGLQpk7j40QjylPrTWmULyeYNZE9CS-9ius0mA-NsZhw",
-        course_id: course1.id
+        course_id: 1
     }),
     ])
   
 
 # creating for Fashion tips course
-course2 = Course.create!([name: "Get Weekly Fashion Tips",image_url:"https://media.istockphoto.com/id/921284684/photo/female-fashion-designer.jpg?s=612x612&w=0&k=20&c=E9KdsoHJG3Yg_cuBi57oZ4QC4khJayaT8x9VYxeOG_o=", user_id: user1.id])
+Course.create!([name: "Get Weekly Fashion Tips",image_url:"https://media.istockphoto.com/id/921284684/photo/female-fashion-designer.jpg?s=612x612&w=0&k=20&c=E9KdsoHJG3Yg_cuBi57oZ4QC4khJayaT8x9VYxeOG_o=", user_id: 1])
 
 Video.create([
     {
        name: " Styling Hacks To TRANSFORM & UPDATE YOUR STYLE", 
        video_url: "https://youtu.be/fH9AOUyce9Q",
-       course_id: course2.id
+       course_id:2
       
 
     },
     {
        name: "Do's and Don'ts of Styling Trouser", 
        video_url: "https://youtu.be/-dUmQwSksBw",
-       course_id: course2.id
+       course_id:2
 
     },
     {
        name: "Fashion and styling hacks",
        video_url: "https://youtu.be/prxEmD1mFIQ",
-       course_id: course2.id
+       course_id:2
 
     },
     {
        name: "How to layer (and actually look chic) for the COLDEST PLACE ON EARTH",
        video_url: "https://youtu.be/OdHoS0Jsjtg",
-       course_id: course2.id 
+       course_id:2 
      
     },
     {
        name: "10 Fall Style Mistakes You Are PROBABLY Making!",
        video_url: "https://youtu.be/hQE5_5Sy0h4",
-       course_id: course2.id
+       course_id:2 
       
 
     },
     {
        name: " Easy, Wearable Trends for Everyday ", 
        video_url: "https://youtu.be/cjCtUBL39qc",
-       course_id: course2.id
+       course_id:2
      
     },
 ])
@@ -157,7 +150,7 @@ Book.create([
     author: "Meghan Hess",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
     image_url: "https://m.media-amazon.com/images/P/174379066X.01.SCLZZZZZZZ_SX500.jpg",
-    course_id: course2.id
+    course_id:2
    
 
 },
@@ -167,7 +160,7 @@ Book.create([
     author: "Désirée Sadek",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
     image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61N5UywZfgL.jpg",
-    course_id: course2.id
+    course_id:2
     
 
 },
@@ -177,9 +170,7 @@ Book.create([
     author: "Alison Matthews David",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
     image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81bEZTF1czL.jpg",
-    course_id: course2.id
-    
-    
+    course_id:2
    
 
 },
@@ -189,7 +180,7 @@ Book.create([
     author: " kate spade new york ",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
     image_url: "https://m.media-amazon.com/images/P/1419717871.01.SCLZZZZZZZ_SX500.jpg",
-    course_id: course2.id
+    course_id:2
     
 
 },
@@ -199,7 +190,7 @@ Book.create([
     author: "Antwaun Sargent",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
     image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81xzAis8AXL.jpg",
-    course_id: course2.id
+    course_id:2
     
 
 },
@@ -209,51 +200,51 @@ Book.create([
     author: "Andrew Bolton",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
     image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/615K0kFtLdL.jpg",
-    course_id: course2.id
+    course_id:2
     
 
 }
 ])
 
  # creating for Social Media Expert course
- course3=Course.create([name: "Become A Social Media Expert",image_url:"https://www.investopedia.com/thmb/8TfyI-FsF3RDSdQPhfM-NkDeWsA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1153397912-5cc5918639d6482b8b1b035413b8c267.jpg", user_id: user1.id])
+ Course.create([name: "Become A Social Media Expert",image_url:"https://www.investopedia.com/thmb/8TfyI-FsF3RDSdQPhfM-NkDeWsA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1153397912-5cc5918639d6482b8b1b035413b8c267.jpg", user_id: 1])
     
 Video.create!([
        {
           name: "How to Develop a Social Media Strategy Step by Step", 
           video_url: "https://youtu.be/PKUn7wU5sIc",
-          course_id: course3.id
+          course_id:3
          
        },
        {
           name: "What exactly does a Social Media Specialist do?", 
           video_url: "https://youtu.be/E3iGXpqvAok",
-          course_id: course3.id
+          course_id:3
 
        },
        {
           name: "How to Become a Social Media Manager: With NO Experience!",
           video_url: "https://youtu.be/kcim9Pl4DcU",
-          course_id: course3.id
+          course_id:3
 
        },
        {
           name: "How to create a content strategy for ANY brand",
           video_url: "https://youtu.be/KWrzzHlPQ7Y",
-          course_id: course3.id
+          course_id:3
         
        },
        {
           name: "DAY IN THE LIFE OF A SOCIAL MEDIA MANAGER | what it's like, tips, and more!",
           video_url: "https://youtu.be/DnjpcgX5sso", 
-          course_id: course3.id
+          course_id:3
          
 
        },
        {
           name: "BEST TOOLS for CREATING and MANAGING social media content ", 
           video_url: "https://youtu.be/5o5k-g-toHg",
-          course_id: course3.id
+          course_id:3
         
        }
 ])
@@ -265,7 +256,7 @@ Book.create!([
        author: "Jason McDonald",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51T0KDsCKIL.jpg",
-       course_id: course3.id
+       course_id:3
 
    },
    {
@@ -274,7 +265,7 @@ Book.create!([
        author: "Dave Kerpen",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/1260453286.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course3.id
+       course_id:3
 
    },
    {
@@ -283,7 +274,7 @@ Book.create!([
        author: " Brendan Kane ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81ehsrRzP4L.jpg",
-       course_id: course3.id
+       course_id:3
 
    },
    {
@@ -292,7 +283,7 @@ Book.create!([
        author: " Sean Cannell ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61eJn9iRNjL.jpg",
-       course_id: course3.id
+       course_id:3
 
    },
    {
@@ -301,7 +292,7 @@ Book.create!([
        author: "Antwaun Sargent",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81xzAis8AXL.jpg",
-       course_id: course3.id
+       course_id:3
 
    },
    {
@@ -310,50 +301,50 @@ Book.create!([
        author: "Cynthia Johnson ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/0399581375.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course3.id
+       course_id:3
 
    }
 ])
    
 # creating for Logo Design course
-course4= Course.create!([name: "Learn Logo Design", image_url: "https://digitaldefynd.com/wp-content/uploads/2018/10/Best-Logo-Design-course-tutorial-class-certification-training-online.jpg", user_id: user1.id])
+Course.create!([name: "Learn Logo Design", image_url: "https://digitaldefynd.com/wp-content/uploads/2018/10/Best-Logo-Design-course-tutorial-class-certification-training-online.jpg", user_id: 1])
 
 Video.create!([
        {
           name: "5 MIND BLOWING Logo Design Tips", 
           video_url: "https://youtu.be/dQjcqEE37jA",
-          course_id: course4.id
+          course_id:4
 
        },
        {
           name: "The Logo Design Process From Start To Finish", 
           video_url: "https://youtu.be/4MxRhjHmiVw",
-          course_id: course4.id
+          course_id:4
 
        },
        {
           name: "Guess the Logo Quiz: Food & Drink",
           video_url: "https://youtu.be/GAvmBElQb4M",
-          course_id: course4.id
+          course_id:4
 
        },
        {
           name: "Making FAMOUS Graphic Designs Better!? ",
           video_url: "https://youtu.be/INMuAYZDums",
-          course_id: course4.id
+          course_id:4 
         
        },
        {
           name: "6 GOLDEN Rules Of Logo Design (Logotype)",
           video_url: "https://youtu.be/eUMjzoiXx-0",
-          course_id: course4.id
+          course_id:4
          
 
        },
        {
           name: "13 Advanced Logo Design Techniques YOU NEED TO KNOW!", 
           video_url: "https://youtu.be/lyH8PBm8Qfo",
-          course_id: course4.id
+          course_id:4
         
        }
    
@@ -367,7 +358,7 @@ Book.create!([
        author: "Alina Wheeler",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51dEqIi8kLL.jpg",
-       course_id: course4.id
+       course_id:4
 
    },
    {
@@ -376,7 +367,7 @@ Book.create!([
        author: "Bill Gardner ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/A1lNZ4rmQzL.jpg",
-       course_id: course4.id
+       course_id:4
 
    },
    {
@@ -385,7 +376,7 @@ Book.create!([
        author: " A Michael Shumate ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/713uaOyzybL.jpg",
-       course_id: course4.id
+       course_id:4
 
    },
    {
@@ -394,7 +385,7 @@ Book.create!([
        author: "Michael Evamy ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/41j-d7jGasL.jpg",
-       course_id: course4.id
+       course_id:4
 
    },
    {
@@ -403,7 +394,7 @@ Book.create!([
        author: " Jens Müller ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71hx0KVj3QL.jpg",
-       course_id: course4.id
+       course_id:4
 
    },
    {
@@ -412,50 +403,50 @@ Book.create!([
        author: "David Airey",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/0321985206.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course4.id
+       course_id:4
 
    }
 ])
    
 # creating for Photography course
-course5 = Course.create!([name: "3 Weeks Photography Bootcamp",image_url: "https://ask.careers/wp-content/uploads/2019/04/How-to-Choose-the-Right-Photography-Course--1024x768.jpg", user_id: user1.id])
+Course.create!([name: "3 Weeks Photography Bootcamp",image_url: "https://ask.careers/wp-content/uploads/2019/04/How-to-Choose-the-Right-Photography-Course--1024x768.jpg", user_id: 1])
 Video.create!([
        {
           name: "10 NEW Photography Ideas in 100 Seconds", 
           video_url: "https://youtu.be/ineZXLbL7s8",
-          course_id: course5.id
+          course_id: 5
          
 
        },
        {
           name: "PHOTOGRAPHY BASICS in 10 MINUTES", 
           video_url: "https://youtu.be/V7z7BAZdt2M",
-          course_id: course5.id
+          course_id: 5
 
        },
        {
           name: "Beginner Photography MISTAKES - What to avoid to take better photos",
           video_url: "https://youtu.be/PW8tr4j1ZWE?list=RDQMYTRC1AAAZns",
-          course_id: course5.id
+          course_id: 5
 
        },
        {
           name: "Make your PHOTOS & VIDEOS more PROFESSIONAL!",
           video_url: "https://youtu.be/yzbBAkbgfW4?list=RDQMYTRC1AAAZns",
-          course_id: course5.id
+          course_id: 5
         
        },
        {
           name: "3 Mistakes All Beginner Photographers Make",
           video_url: "https://youtu.be/0q_qfSrTcLI?list=RDQMYTRC1AAAZns",
-          course_id: course5.id
+          course_id: 5
          
 
        },
        {
           name: "HOW TO MAKE MONEY WITH PHOTOGRAPHY - Things I wish I knew", 
           video_url: "https://youtu.be/IvZM8GyHFs8?list=RDQMYTRC1AAAZns",
-          course_id: course5.id
+          course_id: 5
         
        }
 ])
@@ -468,7 +459,7 @@ Book.create!([
        author: "Dane Sanders",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51w9XBxMFgL.jpg",
-       course_id: course5.id
+       course_id: 5
        
 
    },
@@ -478,7 +469,7 @@ Book.create!([
        author: "Bryan Peterson",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://static.wixstatic.com/media/4a5235_97e4a862aa7347bbb7c22bb765397267~mv2.jpg",
-       course_id: course5.id
+       course_id: 5
 
    },
    {
@@ -487,7 +478,7 @@ Book.create!([
        author: "Michael Freeman",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://static.wixstatic.com/media/4a5235_4de8a852801a42a5858fade57998c708~mv2.jpg",
-       course_id: course5.id
+       course_id: 5
    },
    {
        title: "The Art of Photography",
@@ -495,7 +486,7 @@ Book.create!([
        author: "Bruce Barnbaum",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://static.wixstatic.com/media/4a5235_b185939b440445edaebd479f7622c786~mv2.jpg",
-       course_id: course5.id
+       course_id: 5
 
    },
    {
@@ -504,7 +495,7 @@ Book.create!([
        author: "Scott Kelby",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://static.wixstatic.com/media/4a5235_3965fa7952c24709b8f4425f397c3eec~mv2.jpg",
-       course_id: course5.id
+       course_id: 5
 
    },
    {
@@ -513,53 +504,53 @@ Book.create!([
        author: "Jim Miotke",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://static.wixstatic.com/media/4a5235_f527675c01ec4af4b63d767d370a021f~mv2.jpg",
-       course_id: course5.id
+       course_id: 5
 
    }
 
 ])
 
 # creating for Modelling Skills course
-course6 = Course.create!([name: "Advance Your 3D Modelling Skills", image_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Finift.com%2Fcourses%2Fprofessional-modeling-course%2F&psig=AOvVaw1RPRvKA-1pnnX-N4wtCyAb&ust=1673342172925000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNi4ycOTuvwCFQAAAAAdAAAAABAc", user_id: user1.id])
+Course.create!([name: "Advance Your 3D Modelling Skills", image_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Finift.com%2Fcourses%2Fprofessional-modeling-course%2F&psig=AOvVaw1RPRvKA-1pnnX-N4wtCyAb&ust=1673342172925000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNi4ycOTuvwCFQAAAAAdAAAAABAc", user_id: 1])
 
 
 Video.create!([
        {
           name: "How to improve your 3D modeling skills", 
           video_url: "https://youtu.be/PGutNtvUkCU",
-          course_id: course6.id
+          course_id: 6,
          
 
        },
        {
           name: "6 key principles for 3D modeling", 
           video_url: "https://youtu.be/OVbIOHAI3iY",
-          course_id: course6.id
+          course_id: 6,
 
        },
        {
           name: "Clearly Define Details with Loops when 3D Modeling - Blender Beginner Tutorial",
           video_url: "https://youtu.be/iuGuxTzA2kY",
-          course_id: course6.id
+          course_id: 6,
 
        },
        {
           name: "A 3d Modeling Challenge to Level Up your Skills in Blender",
           video_url: "https://youtu.be/zKsmIqRNvEk",
-          course_id: course6.id
+          course_id: 6, 
         
        },
        {
           name: "The ONLY 5 Modeling Tools You Need To Make ANYTHING in Blender 2.91!",
           video_url: "https://youtu.be/kejQ8nX5YZA" ,
-          course_id: course6.id
+          course_id: 6,
          
 
        },
        {
           name: "Inventor 2020 Tutorial #94 | 3D Modeling Advanced", 
           video_url: "https://youtu.be/osF5JLjgIOk",
-          course_id: course6.id
+          course_id: 6,
         
        }
 ])
@@ -573,7 +564,7 @@ Book.create!([
        author: "William Vaughan",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81cGHplufcL.jpg",
-       course_id: course6.id
+       course_id: 6
        
 
    },
@@ -583,7 +574,7 @@ Book.create!([
        author: "Danan Thilakanathan",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51XyAu9ejAL.jpg",
-       course_id: course6.id
+       course_id: 6
        
 
    },
@@ -593,7 +584,7 @@ Book.create!([
        author: "Chris Legaspi",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51ubGqS6oRL.jpg",
-       course_id: course6.id
+       course_id: 6
 
    },
    {
@@ -602,7 +593,7 @@ Book.create!([
        author: "Fisher Gordon",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/1849516901.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course6.id
+       course_id: 6
 
    },
    {
@@ -611,7 +602,7 @@ Book.create!([
        author: "Munir Hamad",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/B01M2BSDN9.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course6.id
+       course_id: 6
 
    },
    {
@@ -620,7 +611,7 @@ Book.create!([
        author: "Nicholas Bernhardt Zeman",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/1482224127.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course6.id
+       course_id: 6
 
    }
 
@@ -628,45 +619,45 @@ Book.create!([
 
 
 # creating for Organization Management course
-course7 = Course.create!([name: "Learn Organization Management",image_url: "https://miro.medium.com/max/720/1*mxW0p3OkangWjyu4pPzh4Q.webp", user_id: 1])
+Course.create!([name: "Learn Organization Management",image_url: "https://miro.medium.com/max/720/1*mxW0p3OkangWjyu4pPzh4Q.webp", user_id: 1])
      
 Video.create!([
        {
           name: "Organizational Management", 
           video_url: "https://youtu.be/x7hGc5-XXZo",
-          course_id: course7.id
+          course_id: 7
          
 
        },
        {
           name: "Management skills ", 
           video_url: "https://youtu.be/xHBhFKBLhWs",
-          course_id: course7.id
+          course_id: 7
 
        },
        {
           name: "Management Process ",
           video_url: "https://youtu.be/q6LMjurECZM",
-          course_id: course7.id
+          course_id: 7
 
        },
        {
           name: "Types of Organizational Structure in management",
           video_url: "https://youtu.be/4o6v0XIylzA",
-          course_id: course7.id
+          course_id: 7
         
        },
        {
           name: "Introduction to Management and Organizations (Lecture 1) | P.O.M",
           video_url: "https://youtu.be/JH4srpPMgAc?list=RDLVx7hGc5-XXZo",
-          course_id: course7.id
+          course_id: 7
          
 
        },
        {
           name: "Organizing Function of Management", 
           video_url: "https://youtu.be/3yVsOSbbPhc?list=RDLVx7hGc5-XXZo",
-          course_id: course7.id
+          course_id: 7
         
        }
 ])
@@ -679,7 +670,7 @@ Book.create!([
        author: "Rupert Morrison",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/1398603260.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course7.id
+       course_id: 7
 
    },
    {
@@ -688,7 +679,7 @@ Book.create!([
        author: "Jeffrey A. Miles ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51aZbHO7q1L.jpg",
-       course_id: course7.id
+       course_id: 7
 
    },
    {
@@ -697,7 +688,7 @@ Book.create!([
        author: "Project Management Institute",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81hvZ2kAM0L.jpg",
-       course_id: course7.id
+       course_id: 7
 
    },
    {
@@ -706,7 +697,7 @@ Book.create!([
        author: "Hal G. Rainey",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/1119705894.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course7.id
+       course_id: 7
 
    },
    {
@@ -715,7 +706,7 @@ Book.create!([
        author: "Ricky W. Griffin",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51UoxLC7bPL.jpg",
-       course_id: course7.id
+       course_id: 7
 
    },
    {
@@ -724,7 +715,7 @@ Book.create!([
        author: " Jr. Ziegenfuss, James T",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51pUhWgRVLL._SY346_.jpg",
-       course_id: course7.id
+       course_id: 7
 
    }
 
@@ -732,50 +723,45 @@ Book.create!([
 
 
 # creating for Designer course
- course8 = Course.create([ name: "Skills Needed to Become A Designer",image_url:"https://itm.edu/img/itmidm/how-to-make-money-as-a-graphic-designer.webp", user_id: user1.id])
+Course.create([ name: "Skills Needed to Become A Designer",image_url:"https://itm.edu/img/itmidm/how-to-make-money-as-a-graphic-designer.webp", user_id: 1])
     
 Video.create!([
        {
           name: " Ways to become a Better Designer and to be More Creative", 
           video_url: "https://youtu.be/YHNYaQzsRf8",
-          course_id: course8.id
+          course_id: 8
          
 
        },
        {
           name: "Simple Tips to IMPROVE your Design", 
           video_url: "https://youtu.be/53zf7pBjCaU",
-          course_id: course8.id
-         
+          course_id: 8
 
        },
        {
           name: "How To Practice Your Design Skills",
           video_url: "https://youtu.be/NnWabh4pIko",
-          course_id: course8.id
-         
+          course_id: 8
 
        },
        {
           name: "Most Valuable Skills for Designers",
           video_url: "https://youtu.be/chQm-DLMUs8",
-          course_id: course8.id
-         
+          course_id: 8 
         
        },
        {
           name: " Design Exercises to Improve Skills + Confidence",
           video_url: "https://youtu.be/vzudkGYl0ks",
-          course_id: course8.id
-          
+          course_id: 8 
          
 
        },
        {
           name: "Product Design Skills", 
           video_url: "https://youtu.be/EfhyU6dulNk",
-          course_id: course8.id
-         
+          course_id: 8
         
        }
 ])
@@ -788,8 +774,7 @@ Book.create!([
        author: "Don Norman",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://bigthink.com/wp-content/uploads/2018/09/18650802.jpg?fit=1200,675",
-       course_id: course8.id
-         
+       course_id: 8
        
 
    },
@@ -799,8 +784,7 @@ Book.create!([
        author: "Alan Cooper",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://bigthink.com/wp-content/uploads/2018/09/18650801.jpg?fit=1200,675",
-       course_id: course8.id
-         
+       course_id: 8
    },
    {
        title: "A Product Guide to UX Design",
@@ -808,8 +792,7 @@ Book.create!([
        author: "Russ Unger",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://bigthink.com/wp-content/uploads/2018/09/18650797.jpg?fit=1200,675",
-       course_id: course8.id
-         
+       course_id: 8
 
    },
    {
@@ -818,8 +801,7 @@ Book.create!([
        author: "Kimberly Elam",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://bigthink.com/wp-content/uploads/2018/09/18650794.jpg?fit=1200,675",
-       course_id: course8.id
-         
+       course_id: 8
 
    },
    {
@@ -828,8 +810,7 @@ Book.create!([
        author: "Paul Rand",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://bigthink.com/wp-content/uploads/2018/09/18650800.jpg?fit=1200,675",
-       course_id: course8.id
-         
+       course_id: 8
 
    },
    {
@@ -838,52 +819,51 @@ Book.create!([
        author: "Aaris Sherin",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://hackr.io/blog/media/design-elements-color-fundamentals-1.jpg",
-       course_id: course8.id
-         
+       course_id: 8
    }
 
 ])
 
 # creating for Make-up Artist course
-course9 = Course.create([name: " 2 in 1 course of Becoming A Makeup Artist", image_url: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/makeup-course-flyer-template-design-9ce8947ad8b46d7d30094dec9d713aee_screen.jpg?ts=1610965024", user_id: user1.id])
+Course.create([name: " 2 in 1 course of Becoming A Makeup Artist", image_url: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/makeup-course-flyer-template-design-9ce8947ad8b46d7d30094dec9d713aee_screen.jpg?ts=1610965024", user_id: 1])
      
 Video.create!([
        {
           name: "Lisa Eldridge On Becoming A Make-Up Artist", 
           video_url: "https://youtu.be/zPbr-1fVflI",
-          course_id: course9.id
+          course_id: 9
          
 
        },
        {
           name: "Do Your Makeup Like A PRO! The Secret Tips, Tricks & Hacks You Didn't Know", 
           video_url: "https://youtu.be/virhqj5E9LQ",
-          course_id: course9.id
+          course_id: 9
 
        },
        {
           name: " MAKEUP MISTAKES TO AVOID!!!",
           video_url: "https://youtu.be/hsuXFCF8qtA",
-          course_id: course9.id
+          course_id: 9
 
        },
        {
           name: "Makeup Starter Kit for BEGINNERS + How to Use It",
           video_url: "https://youtu.be/d-uvF74Y0s8",
-          course_id: course9.id
+          course_id: 9 
         
        },
        {
           name: "THE BEST EYEBROW TUTORIAL FOR BEGINNERS!! VERY DETAILED",
           video_url: "https://youtu.be/VCZE20foaqE",
-          course_id: course9.id
+          course_id: 9
          
 
        },
        {
           name: "EXTRA GLAM Makeup Tutorial", 
           video_url: "https://youtu.be/nf8ySuesAPg",
-          course_id: course9.id
+          course_id: 9
         
        }
 
@@ -897,7 +877,7 @@ Book.create!([
        author: "G M Reyna",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/51hNeljE57L.jpg",
-       course_id: course9.id
+       course_id: 9
       
 
    },
@@ -907,7 +887,7 @@ Book.create!([
        author: "Jana Ririnui",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://www.cossetmoi.com/wp-content/uploads/2017/03/photo-2-300x252.jpg",
-       course_id: course9.id
+       course_id: 9
        
 
    },
@@ -917,7 +897,7 @@ Book.create!([
        author: "Robert Jones ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81w91aO0uuL.jpg",
-       course_id: course9.id
+       course_id: 9
        
 
    },
@@ -927,7 +907,7 @@ Book.create!([
        author: "Rae Morris",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://www.cossetmoi.com/wp-content/uploads/2017/03/41SshuIut7L._SX258_BO1204203200_.jpg",
-       course_id: course9.id
+       course_id: 9
        
 
    },
@@ -937,7 +917,7 @@ Book.create!([
        author: "Iman",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://www.cossetmoi.com/wp-content/uploads/2017/03/51YLPyYP4TL._SX384_BO1204203200_.jpg",
-       course_id: course9.id
+       course_id: 9
        
 
    },
@@ -947,7 +927,7 @@ Book.create!([
        author: "Lisa Eldridge",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://www.cossetmoi.com/wp-content/uploads/2017/03/images-242x300.jpg",
-       course_id: course9.id
+       course_id: 9
 
    }
 
@@ -956,45 +936,45 @@ Book.create!([
 
 
 # creating for Artist course
-course10 = Course.create([ name: "Embark on the Journey of becoming an Artist", image_url: "https://cdn.conceptartempire.com/images/06/596/aaron-blaise-premium-preview-photo.jpg", user_id: user1.id])
+Course.create([ name: "Embark on the Journey of becoming an Artist", image_url: "https://cdn.conceptartempire.com/images/06/596/aaron-blaise-premium-preview-photo.jpg", user_id: 1])
 
 Video.create!([
        {
           name: "Getting started as an ARTIST ", 
           video_url: "https://youtu.be/bhpnb7r9Vw0",
-          course_id: course10.id
+          course_id: 10
          
 
        },
        {
           name: "Vincent Van Gogh's The Starry Night: Great Art Explained", 
           video_url: "https://youtu.be/wk9L1N9bRRE",
-          course_id: course10.id
+          course_id: 10
 
        },
        {
           name: "Things EVERY ARTIST Should Avoid Doing",
           video_url: "https://youtu.be/OUme0_vtCtw",
-          course_id: course10.id
+          course_id: 10
 
        },
        {
           name: "How To Launch Your Art Career",
           video_url: "https://youtu.be/I6mbCPEtX8g",
-          course_id: course10.id
+          course_id: 10 
         
        },
        {
           name: "How I Built My Art Business From Nothing - My Business Strategy and Journey To Being An Illustrator",
           video_url: "https://youtu.be/Gnhxny0STrk",
-          course_id: course10.id
+          course_id: 10
          
 
        },
        {
           name: "Launching my online ART SHOP + how YOU CAN too ✰ making art prints at home", 
           video_url: "https://youtu.be/ImilY7SE96M",
-          course_id: course10.id
+          course_id: 10
         
        }
 ])
@@ -1007,7 +987,7 @@ Book.create!([
        author: "Jackie Battenfield",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71MDash37sL.jpg",
-       course_id: course10.id
+       course_id: 10
        
 
    },
@@ -1017,7 +997,7 @@ Book.create!([
        author: "Lori McNee",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/811p+O4MlQL.jpg",
-       course_id: course10.id
+       course_id: 10
 
    },
    {
@@ -1026,7 +1006,7 @@ Book.create!([
        author: "Alyson B. Stanfield",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71fmM8Rj6EL.jpg",
-       course_id: course10.id
+       course_id: 10
 
    },
    {
@@ -1035,7 +1015,7 @@ Book.create!([
        author: "Mr Barney Davey ",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/I/51aPa8WhykL.jpg",
-       course_id: course10.id
+       course_id: 10
 
    },
    {
@@ -1044,7 +1024,7 @@ Book.create!([
        author: "Elaine Grogan Luttrull",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71xTKp110bL.jpg",
-       course_id: course10.id
+       course_id: 10
 
    },
    {
@@ -1053,53 +1033,53 @@ Book.create!([
        author: "Gigi Rosenberg",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/91zYHsJ5Z+L.jpg",
-       course_id: course10.id
+       course_id: 10
 
    }
 
 ])
 
 # creating for Growing Relationships course
-course11 = Course.create([name: "The Art of Growing Relationships", image_url: "https://www.theaccessgroup.com/media/1vroptyn/relationship-building.png?anchor=center&mode=crop&width=820&height=460&rnd=132899282306300000", user_id: user1.id])
+Course.create([name: "The Art of Growing Relationships", image_url: "https://www.theaccessgroup.com/media/1vroptyn/relationship-building.png?anchor=center&mode=crop&width=820&height=460&rnd=132899282306300000", user_id: 1])
 
      
 Video.create!([
        {
           name: "How to Grow Within a Relationship : Psychology & Mental Health", 
           video_url: "https://youtu.be/UlGJ0dm19SU",
-          course_id: course11.id
+          course_id: 11
          
 
        },
        {
           name: "How to Improve Your Relationship", 
           video_url: "https://youtu.be/rNVtxTwd9zc",
-          course_id: course11.id
+          course_id: 11
 
        },
        {
           name: "Behaviors That Destroy Relationships",
           video_url: "https://youtu.be/AikTYbk0iXk",
-          course_id: course11.id
+          course_id: 11
 
        },
        {
           name: "Advice for Strong Relationships from Jordan Peterson",
           video_url: "https://youtu.be/n-SVPsGMPi8",
-          course_id: course11.id
+          course_id: 11 
         
        },
        {
           name: "Jordan Peterson: Fixing relationships",
           video_url: "https://youtu.be/Yii6JBGWHms",
-          course_id: course11.id
+          course_id: 11
          
 
        },
        {
           name: "Skills for Healthy Romantic Relationships", 
           video_url: "https://youtu.be/gh5VhaicC6g",
-          course_id: course11.id
+          course_id: 11
         
        }
 ])
@@ -1112,7 +1092,7 @@ Book.create!([
        author: " Amir Levine",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://media.self.com/photos/5f57e00297d45dbf4b2612f8/master/w_1920%2Cc_limit/Pattached.png",
-       course_id: course11.id
+       course_id: 11
       
 
    },
@@ -1122,7 +1102,7 @@ Book.create!([
        author: " Dr Aziz Gazipura",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/098897987X.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course11.id
+       course_id: 11
        
 
    },
@@ -1132,7 +1112,7 @@ Book.create!([
        author: "Aminatou Sow",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://media.self.com/photos/5f57cda29e0bccbfba9b52ac/master/w_1920%2Cc_limit/Big%2520Friendship.jpg",
-       course_id: course11.id
+       course_id: 11
        
 
    },
@@ -1142,7 +1122,7 @@ Book.create!([
        author: "Stephanie Barron Hall",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://media.self.com/photos/5f57d17d956d4ce19c85696b/master/w_1920%2Cc_limit/The%2520Enneagram%2520in%2520Love.jpg",
-       course_id: course11.id
+       course_id: 11
       
    },
    {
@@ -1151,7 +1131,7 @@ Book.create!([
        author: "David Richo",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://media.self.com/photos/5f57d3a797d45dbf4b2612e1/master/w_1920%2Cc_limit/How%2520to%2520Be%2520an%2520Adult%2520in%2520Relationships.jpg",
-       course_id: course11.id
+       course_id: 11
        
 
    },
@@ -1161,7 +1141,7 @@ Book.create!([
        author: "Shasta Nelson",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://media.self.com/photos/5f57db5d97d45dbf4b2612f6/master/w_1920%2Cc_limit/Frientimacy.jpg",
-       course_id: course11.id
+       course_id: 11
        
 
    }
@@ -1169,33 +1149,33 @@ Book.create!([
 ])
 
 # creating for Music course
-course12 = Course.create([ name: "Having A Good Listening Ear To Good Music", image_url: "https://news.ubc.ca/wp-content/uploads/2019/06/shutterstock_198925616-1024x683.jpg", user_id: use1.id])
+Course.create([ name: "Having A Good Listening Ear To Good Music", image_url: "https://news.ubc.ca/wp-content/uploads/2019/06/shutterstock_198925616-1024x683.jpg", user_id: 1])
      
 Video.create!([
        {
           name: "Benefits of Listening to Music | Tips For Life ESL", 
           video_url: "https://youtu.be/N7n_wIPXvLE",
-          course_id: course12.id
+          course_id: 12
          
 
        },
        {
           name: "Learn music theory in half an hour.", 
           video_url: "https://youtu.be/rgaTLrZGlk0",
-          course_id: course12.id
+          course_id: 12
 
        },
        {
           name: "Calm Your Anxiety",
           video_url: "https://youtu.be/zPyg4N7bcHM",
-          course_id: course12.id
+          course_id: 12
           
 
        },
        {
           name: "✏️ a lofi hip hop playlist to help you study for finals! 📚",
           video_url: "https://youtu.be/vWwewNiEL_Y",
-          course_id: course12.id
+          course_id: 12
           
            
          
@@ -1204,7 +1184,7 @@ Video.create!([
        {
           name: "POV: You finally came home after a hard day.",
           video_url: "https://youtu.be/DSKcEsfdQm0",
-          course_id: course12.id
+          course_id: 12
            
          
 
@@ -1212,7 +1192,7 @@ Video.create!([
        {
           name: "Pov: You Choose to Be Happy | Mood Boost Playlist", 
           video_url: "https://youtu.be/fI_f7HOixNQ",
-          course_id: course12.id
+          course_id: 12
          
        }
         
@@ -1226,7 +1206,7 @@ Book.create!([
        author: "Robert Greenberg",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81lAWwi7EdL.jpg",
-       course_id: course12.id
+       course_id: 12
           
       
 
@@ -1237,7 +1217,7 @@ Book.create!([
        author: "https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/910elZzlSkL.jpg",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://m.media-amazon.com/images/P/098897987X.01._SCLZZZZZZZ_SX500_.jpg",
-       course_id: course12.id
+       course_id: 12
           
        
 
@@ -1248,7 +1228,7 @@ Book.create!([
        author: "Daniel J. Levitin",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://images4.penguinrandomhouse.com/cover/9780452288522",
-       course_id: course12.id
+       course_id: 12
           
        
 
@@ -1259,7 +1239,7 @@ Book.create!([
        author: "Haruki Murakami",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://images4.penguinrandomhouse.com/cover/9780804173728",
-       course_id: course12.id
+       course_id: 12
           
        
 
@@ -1270,7 +1250,7 @@ Book.create!([
        author: "Jay Z",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://images1.penguinrandomhouse.com/cover/9780812981155",
-       course_id: course12.id
+       course_id: 12
           
 
    },
@@ -1280,7 +1260,7 @@ Book.create!([
        author: "Oliver Sacks",
        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor nisi nec velit tempus, sit amet auctor odio gravida.",
        image_url: "https://images3.penguinrandomhouse.com/cover/9781400033539",
-       course_id: course12.id
+       course_id: 12
           
    }
 ])
@@ -1753,7 +1733,7 @@ puts 'ending'
 puts 'Seeding Reviews'
 
 Review.create!([
-    {   book_id: 1 ,
+    {   book_id: 1,
        rating: 4,
        description: "This course was really helpful in understanding the material. The instructor was clear and engaging, and the course materials were well organized. I would definitely recommend this course to others." 
 
