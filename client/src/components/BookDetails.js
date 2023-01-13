@@ -5,7 +5,7 @@ import Reviews from "../pages/Reviews";
 const BookDetails = () => {
   return (
     <div>
-      <section className="course">
+      <section className="bookdetails">
       <div className="bg-course">
         <Navbar />
         <div className="row">
