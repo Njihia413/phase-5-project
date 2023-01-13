@@ -15,11 +15,11 @@ import bap from "../assets/IMG-3220.jpg";
 const Dashboard = () => {
   return (
     <section className="dashboard">
-      {/* <h3><b>Courses</b></h3>
+      <h3><b>Courses</b></h3>
       <div className="dashboard-text">
       <strong>All Courses</strong> 
       <strong>My Courses</strong>
-      </div> */}
+      </div>
       {/* <div className="search-container">
         <form>
           <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
