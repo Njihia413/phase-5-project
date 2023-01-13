@@ -48,7 +48,7 @@ const Course = () => {
           </button>
         </div>
       </div> */}
-      {/* <div className="text-container">
+      <div className="text-container">
         <div className="text-block">
           <p>
             <strong>All Courses</strong>
@@ -63,7 +63,7 @@ const Course = () => {
           <p>Sound & Music(1223)</p>
           <p>Digital Marketing(382)</p>
         </div>
-      </div> */}
+      </div>
 
       <div className="col-md-3">
         <div className="card">
