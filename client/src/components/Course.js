@@ -187,6 +187,21 @@ const Course = () => {
           </div>
         </div>
       </div>
+      <div className="number-btn-i">
+         <p>01</p>
+      </div>
+      <div className="number-btn-i">
+         <p>02</p>
+      </div>
+      <div className="number-btn-i">
+         <p>03</p>
+      </div>
+      <div className="number-btn-i">
+         <p>-</p>
+      </div>
+      <div className="number-btn-i">
+         <p>next</p>
+      </div>
     </section>
   );
 };
