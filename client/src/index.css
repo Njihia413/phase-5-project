@@ -624,5 +624,12 @@ form.fa-sharp fa-solid fa-magnifying-glass{
 .filter-sort-button i {
   font-size: 20px; 
 }
+.dashboard{
+  background-color: #9085D1;
+}
+.dashboard-text{
+  display: flex;
+  justify-content: space-between;
+}
 
 
