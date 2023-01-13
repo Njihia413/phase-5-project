@@ -41,10 +41,10 @@ const Course = () => {
       <div class="filter-sort-container">
         <div class="filter-sort-button">
           <button type="button">
-            Filter <i class="fas fa-caret-down"></i>
+            Filter <i class="fa-solid fa-caret-down"></i>
           </button>
           <button type="button">
-            Sort By <i class="fas fa-caret-down"></i>
+            Sort By <i class="fa-solid fa-caret-down"></i>
           </button>
         </div>
       </div>

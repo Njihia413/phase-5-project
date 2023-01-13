@@ -600,5 +600,29 @@ form.fa-sharp fa-solid fa-magnifying-glass{
 .text-block p {
   display: block;
 }
+.filter-sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.filter-sort-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
+.filter-sort-button button {
+  background-color: #102437c1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.filter-sort-button i {
+  font-size: 20px; 
+}
 
 
