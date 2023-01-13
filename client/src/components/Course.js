@@ -38,7 +38,7 @@ const Course = () => {
           ></input>
         </form>
       </div>
-      {/* <div class="filter-sort-container">
+      <div class="filter-sort-container">
         <div class="filter-sort-button">
           <button type="button">
             Filter <i class="fas fa-caret-down"></i>
@@ -47,7 +47,7 @@ const Course = () => {
             Sort By <i class="fas fa-caret-down"></i>
           </button>
         </div>
-      </div> */}
+      </div>
       <div className="text-container">
         <div className="text-block">
           <p>
