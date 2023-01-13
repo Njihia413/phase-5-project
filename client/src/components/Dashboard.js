@@ -29,7 +29,7 @@ const Dashboard = () => {
           ></input>
         </form>
       </div>
-      {/* <div class="filter-sort-container">
+      <div class="filter-sort-container">
         <div class="filter-sort-button">
           <button type="button">
             Filter <i class="fa-solid fa-caret-down"></i>
@@ -38,8 +38,8 @@ const Dashboard = () => {
             Sort By <i class="fa-solid fa-caret-down"></i>
           </button>
         </div>
-      </div> */}
-      {/* <div className="text-container">
+       </div> 
+       <div className="text-container">
         <div className="text-block">
           <p>
             <strong>All Courses</strong>
@@ -54,7 +54,7 @@ const Dashboard = () => {
           <p>Sound & Music(1223)</p>
           <p>Digital Marketing(382)</p>
         </div>
-      </div> */}
+      </div>
 
       <div className="col-md-3">
         <div className="card">
@@ -182,4 +182,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Dashboard; 
