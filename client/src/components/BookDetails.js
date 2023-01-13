@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from './Navbar';
+import Reviews from "../pages/Reviews";
 
 const BookDetails = () => {
   return (
@@ -18,7 +19,7 @@ const BookDetails = () => {
         </div>
       </div>
     </section>
-
+<Reviews/>
 </div>
   )
 }
