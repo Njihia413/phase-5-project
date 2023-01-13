@@ -264,6 +264,11 @@ span {
   border: 1px solid #102437;
   color: #102437;
 }
+.container{
+  color: #000000;
+  font-weight: bolder;
+  font-style: italic;
+}
 
 /* .form-control {
   border-radius: 20px;
