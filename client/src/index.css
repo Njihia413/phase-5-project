@@ -468,3 +468,12 @@ hr {
   background-repeat: no-repeat;
   height: 90vh;
 }
+
+/* start of book details */
+.bookdetails {
+  background-image: url('./assets/IMG-3230-removebg-preview.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
