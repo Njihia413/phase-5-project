@@ -631,5 +631,27 @@ form.fa-sharp fa-solid fa-magnifying-glass{
   display: flex;
   justify-content: space-between;
 }
+.number-btn-i{
+  position: absolute;
+  left: 10%;
+  bottom: 3%;
+}
+.number-btn-i p{
+  font-size: 7px;
+  display: inline-flex;
+  width: 80px;
+  height: 80px;
+  padding-left: 0px;
+  text-align: center;
+  border: 2px solid #9085D1;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.number-btn-i, number-btn-i:hover{
+  color: #9085D1;
+  
+}
 
 
