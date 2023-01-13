@@ -56,7 +56,7 @@ const Dashboard = () => {
         </div>
       </div> */}
 
-      {/* <div className="col-md-3">
+      <div className="col-md-3">
         <div className="card">
           <a href="./courses">
             <img src={cup} alt="" className="card-img-top"></img>
@@ -177,7 +177,7 @@ const Dashboard = () => {
             <p>The Art Of Growing A Relationship</p>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
