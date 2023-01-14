@@ -11,10 +11,11 @@ import bop from "../assets/IMG-3226.jpg";
 import bep from "../assets/IMG-3223.jpg";
 import boup from "../assets/IMG-3227.jpg";
 import bap from "../assets/IMG-3220.jpg";
-
+import DashboardNav from "./DashboardNav";
 const Dashboard = () => {
   return (
     <section className="dashboard">
+      <DashboardNav/>
       <h3><b>Courses</b></h3>
       <div className="dashboard-text">
       <strong>All Courses</strong> 
@@ -193,6 +194,7 @@ const Dashboard = () => {
       <div className="number-btn-i">
          <p>next</p>
       </div>
+      
     </section>
   );
 };
