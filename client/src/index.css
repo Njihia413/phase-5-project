@@ -264,6 +264,11 @@ span {
   border: 1px solid #102437;
   color: #102437;
 }
+.container{
+  color: #000000;
+  font-weight: bolder;
+  font-style: italic;
+}
 
 /* .form-control {
   border-radius: 20px;
@@ -417,7 +422,7 @@ span {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 20px;
+  border-radius: 26px;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 /* header {
@@ -435,15 +440,17 @@ header button {
   border: 1px solid rgb(90, 57, 54);
   margin: 1rem;
   padding: 1rem;
+
+.footer-nav {
   text-decoration: none;
-  color: salmon;
+  color: #C3C8CD;
+  display: block;
+  margin-top: 10px;
   cursor: pointer;
 }
-
 main {
   margin: 1rem;
 }
-
 form {
   background-color: #eaeef2;
   border: 1px solid aqua;
@@ -453,58 +460,162 @@ form {
   margin: 0 auto;
   padding: 0 1rem 1rem;
 }
-
 form input {
   margin: 0.25rem 0;
 }
-
 form button[type="submit"] {
   width: 40%;
 }
 
-main{
+.footer-nav:hover {
+  color: #9085D1;
+}
+
+.fa-brands {
+  color: #fff;
+}
+
+.fa-brands:hover {
+  color: #9085D1;
+}
+
+/*==================End of Homepage=======================*/
+
+/*Beginning of contact us page*/
+.contact {
+  background-image: url('./assets/IMG-3239.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+
+.bg-contact {
+  background-color: #102437c1;
+  height: 90vh;
+}
+
+.contact-heading {
+  color: #9085D1;
+  padding-top: 50px;
+}
+
+.contact-card {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid #102437;
+  margin-bottom: 20vh;
+}
+
+.btn-contact {
   width: 100%;
-  padding: 20px;
-}
-.sidebar{
-  background: #000;
+  background-color:#102437;
   color: #fff;
-  height: 100vh;
-  width: 200px;
-  transition: all 0.5s;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 30px;
 }
-.top_section{
-  display: flex;
-  align-items:center;
-  padding:20px 15px;
+
+.btn-contact:hover {
+  background-color: transparent;
+  border: 1px solid #102437;
+  color: #102437;
 }
-.logo{
-  font-size: 30px;
+
+/* .form-control {
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #102437;
+} */
+/*==================End of Contact us page=======================*/
+
+/*Beginning of sign up page */
+.outer-signup-card {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgba(0,0,0,.125);
+  margin-bottom: 10vh;
 }
-.bars{
-  display: flex;
-  font-size: 25px;
-  margin-left: 50px;
+
+.inner-signup-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgba(0,0,0,.125);
 }
-.link{
-  display: flex;
+
+.btn-login {
+  width: 100%;
+  background-color:#102437;
   color: #fff;
-  padding: 10px 15px;
-  gap: 15px;
-  transition: all 0.5s;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 30px;
 }
-.link:hover{
-  background:lightskyblue;
-  color: #000;
-  transition: all 0.5s;
+/*==================End of Sign up page=======================*/
+
+
+/*Beginning of Login page */
+.login-card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid rgba(0,0,0,.125);
+  margin-bottom: 10vh;
 }
-.active{
-  background: lightskyblue;
-  color: #000;
+
+.login-heading {
+  color: #9085D1;
+  margin-top: 30px;
 }
-.icon, .link_text{
-  font-size: 20px;
+/*==================End of Login page=======================*/
+
+/*Beginning of About page */
+.about {
+  background-image: url('./assets/IMG-3216.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
 }
+
+.bg-about {
+  background-color: #102437c1;
+  height: 90vh;
+}
+
+.about-text {
+  margin-top: 50px;
+}
+
+.btn-about {
+  width: 25%;
+  background-color:#102437;
+  color: #fff;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.about-section {
+  height: 492px;
+}
+
+.about-statistics {
+  background-color: #9085D1;
+  height: 50vh;
+}
+
+#about-p {
+  line-height: 30px;
+}
+
 .courses {
   margin-left: auto;
   margin-right: auto;
@@ -537,12 +648,83 @@ main{
   width: 8em
 } */
 
+
+.icon-text {
+  color: #fff;
+  margin-top: 20px;
+}
+
+
+/*==================End of About page=======================*/
+
+
+/*Forms*/
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+}
+
+.form-group select {
+  height: 49px;
+}
+    :focus,
+    :active {
+      box-shadow: none
+}
+
+.form-group input {
+  height: 49px;
+}
+  ::placeholder {
+    color: #AEB0B4;
+    font-size: 15px;
+  }
+
+  :focus,
+  :active {
+      box-shadow: none;
+    }
+
+  .required:after {
+    content: " *";
+    color: red;
+  
+}
+
+.form-control2 {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #102437;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 20px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* End of Forms */
+
 hr {
   margin: 1rem 0;
   color: white;
   border: 0;
   border-top: 1px solid;
   opacity: .25;
+} 
+
+/* Beginning of Courses page */
+.dis {
+  display: flex;
 }
 .course {
   background-image: url('./assets/IMG-3214.jpg');
@@ -624,6 +806,7 @@ form.fa-sharp fa-solid fa-magnifying-glass{
 .filter-sort-button i {
   font-size: 20px; 
 }
+
 .dashboard{
   background-color: #9085D1;
 }
@@ -654,4 +837,24 @@ form.fa-sharp fa-solid fa-magnifying-glass{
   
 }
 
+.course-text {
+  margin-right: 35%;
+}
+.tex {
+  font-size: 20px;
+}
 
+/*==================End of Courses page=======================*/
+
+/* Beginning of Course Details page*/
+.bg-coursedetails {
+  background-color: #102437c1;
+  height: 90vh;
+}
+.course-details {
+  background-image: url(./assets/IMG-3213.JPG);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}

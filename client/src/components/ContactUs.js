@@ -1,12 +1,55 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
-import Navbar from './Navbar.js';
-
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';;
+import Navbar from './Navbar';
 
 const ContactUs = () => {
   const {
     register,
     handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm();
+   // Function that displays a success toast on bottom right of the page when form submission is successful
+   const toastifySuccess = () => {
+    toast('Thank you for contacting us! Our Team will get back to you within 48hours.', {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        className: 'submit-feedback',
+        toastId: 'notifyToast'
+    });
+  };
+ // Function called on submit that uses emailjs to send email of valid contact form
+ const onSubmit = async (data) => {
+  // Destrcture data object
+  const { name, email, subject, message } = data;
+  try {
+      const templateParams = {
+          name,
+          email,
+          subject,
+          message
+      };
+
+      await emailjs.send(
+          "service_423gfo8",
+          "template_kicerto",
+          templateParams,
+          "kc2pjZyrhc5dxKH2b"
+      );
+
+      reset();
+      toastifySuccess();
+  } catch (e) {
+      console.log(e);
+  }
+};
     formState: { errors }
   } = useForm();
 
@@ -129,6 +172,7 @@ const ContactUs = () => {
                   </button>
                 </form>
               </div>
+              <ToastContainer />
             </div>
           </div>
         </div>
