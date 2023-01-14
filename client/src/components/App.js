@@ -4,9 +4,9 @@ import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import Footer from "./Footer";
-import ContactUs from "./ContactUs";
-import Courses from "../pages/Courses";
-import ContactUs from "./ContactUs";
+// import ContactUs from "./ContactUs";
+// import Courses from "../pages/Courses";
+// import ContactUs from "./ContactUs";
 // import Courses from "./Courses";
 import About from "./About";
 import Course from "./Course";
@@ -22,8 +22,8 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/contact" element={<ContactUs />} />   
-          <Route path="/courses" element={<Courses/>} />
+          {/* <Route path="/contact" element={<ContactUs />} />   
+          <Route path="/courses" element={<Courses/>} /> */}
           <Route path="/about" element={<About/>} />
           <Route path="/course" element={<Course/>} />
           <Route path="/CourseDetails" element={<CourseDetails/>} />
