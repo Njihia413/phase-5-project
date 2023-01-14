@@ -15,12 +15,12 @@ function Signup() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({user:{
+      body: JSON.stringify({
         username,
         email,
         password,
         password_confirmation: passwordConfirmation,
-      }}),
+      }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
@@ -78,4 +78,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default Signup;

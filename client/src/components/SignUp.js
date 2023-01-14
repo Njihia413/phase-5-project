@@ -6,6 +6,7 @@ function SignUp() {
     username:"",
     email: "",
     password:"",
+    passwordconfirmation: ""
     password_confirmation: ""
   });
   // const formObject = {}
@@ -20,6 +21,13 @@ function SignUp() {
     fetch("/users/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: data.username,
+        email: data.email,
+        password: data.password,
+        passwordconfirmation: data.passwordconfirmation,
+        role: data.role
+      }),
       body: JSON.stringify({user:{
         username: data.username,
         email: data.email,
@@ -38,6 +46,7 @@ function SignUp() {
       username: "",
       email: "",
       password: "",
+      passwordconfirmation: "",
       password_confirmation: "",
       role: ""})
   }
@@ -96,10 +105,10 @@ function SignUp() {
                       value={data.role}>
                         <option value="">Role</option>
                         <option onChange={(e) => handleChange(e)} value="Teacher">
-                          teacher
+                          Teacher
                         </option>
                         <option onChange={(e) => handleChange(e)} value="Student">
-                          student
+                          Student
                         </option>
                       </select>
                     </div>
@@ -124,12 +133,12 @@ function SignUp() {
                         <label htmlFor="password-confirmation" className="required">Password Confirmation</label>
                         <input 
                           type="password" 
-                          id="password_confirmation"
+                          id="password-confirmation"
                           autoComplete="current-password"
-                          value={data.password_confirmation}
+                          value={data.passwordconfirmation}
                           className="form-control" 
-                          name="password_confirmation" 
-                          placeholder="Password_confirmation"
+                          name="password-confirmation" 
+                          placeholder="Password Confirmation"
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
