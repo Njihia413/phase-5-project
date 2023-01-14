@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate }  from 'react-router-dom'
+import { useNavigate, Link }  from 'react-router-dom'
 
 
-function Login() {
-  const [ user, setUser] = useState("")
+function Login({ setStoredToken }) {
+  // const [ user, setUser] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
@@ -12,19 +12,24 @@ function Login() {
     fetch("/users/sign_in", {
       method: "POST",
       headers: {
+        Accepts: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ email, password }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
+    }) .then((res) => res.json())
+    .then((data) => {
+      if (data.jti) {
+        localStorage.setItem("token",data.status.data.jti);
+        setStoredToken(data.data.status.data.jti);
+        navigate("/");
+      } else {
+        alert("Invalid credentials");
       }
-      console.log(user)
     });
-    navigate(`/`)
+  
     
   }
-
+  
   return (
     <div>
     <section className="top-header">
@@ -81,7 +86,7 @@ function Login() {
                     </div>
                     <div className="col-md-12 text-center">
                       <div className="form-group">
-                          <p>Not a member? <strong><a className="main-color" href="/signup">Sign Up</a></strong></p>
+                          <p>Not a member? <strong><Link className="main-color" to="/signup">Sign Up</Link></strong></p>
                       </div>
                     </div>
                   </div>

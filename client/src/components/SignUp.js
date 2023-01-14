@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate }  from 'react-router-dom'
 
-function SignUp() {
+function SignUp({ setStoredToken }) {
+  const [error, setError] = useState(null);
+  const navigate = useNavigate()
   const [data, setData] = useState({
     role:"",
     username:"",
@@ -19,7 +22,8 @@ function SignUp() {
     e.preventDefault();
     fetch("/users/", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {  Accepts: "application/json",
+      "Content-Type": "application/json", },
       body: JSON.stringify({user:{
         username: data.username,
         email: data.email,
@@ -28,20 +32,36 @@ function SignUp() {
         role: data.role
       }}),
     })
-      .then((res) => {
-        res.json();
-      })
-      .then((res) => {
-        console.log(res);
-      });
+    .then((res) =>  {
+      if (res.ok) {res.json()
+    .then((datas) => {
+      localStorage.setItem("token", datas.status.data.jti);
+      console.log(datas);
+      setStoredToken(datas.status.data.jti);
+    });
       setData({
       username: "",
       email: "",
       password: "",
       password_confirmation: "",
       role: ""})
-  }
+      } else {
+        res.json().then((error) => setError(error));
+      }
+    })
 
+      {if ( data.role === "Student") {
+        navigate(`/login`) } else {
+          navigate(`/courses`)
+    
+        }
+      }
+      console.log(data.role)
+  }
+  
+ 
+
+    
   return (
     <div>
     <section className="signup">
@@ -56,6 +76,9 @@ function SignUp() {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">
+                      {error ? (
+                      <p>{error.errors}</p>
+                  ) : null}
                         <label htmlFor="username" className="required">Username</label>
                           <input 
                               type="text" 
@@ -113,7 +136,7 @@ function SignUp() {
                           value={data.password}
                           className="form-control" 
                           name="password" 
-                          placeholder="Password"
+                          placeholder="must be more than 6 characters"
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
@@ -129,7 +152,7 @@ function SignUp() {
                           value={data.password_confirmation}
                           className="form-control" 
                           name="password_confirmation" 
-                          placeholder="Password_confirmation"
+                          placeholder="must be more than 6 characters"
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
@@ -153,6 +176,11 @@ function SignUp() {
         </div>
       </div>
     </section>
+    
+
+    
+ 
+    
   </div>
   );
 }
