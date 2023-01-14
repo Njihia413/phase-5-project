@@ -6,7 +6,7 @@ function SignUp() {
     username:"",
     email: "",
     password:"",
-    passwordconfirmation: ""
+    
     password_confirmation: ""
   });
   // const formObject = {}
@@ -17,40 +17,32 @@ function SignUp() {
     // console.log(newdata)
   }
   function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/users/", {
+    e.preventDefault()
+    fetch("/users/",{
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: data.username,
-        email: data.email,
-        password: data.password,
-        passwordconfirmation: data.passwordconfirmation,
-        role: data.role
-      }),
       body: JSON.stringify({user:{
         username: data.username,
         email: data.email,
         password: data.password,
-        password_confirmation: data.password_confirmation,
+        passwordconfirmation: data.password_confirmation,
         role: data.role
       }}),
+      
+    }) .then((res) => {
+      if (res.ok) {
+        console.log(res.headers.get("Authorization"));
+        localStorage.setItem("token", res.headers.get("Authorization"));
+        return res.json();
+      } else {
+        throw new Error(res);
+      }
     })
-      .then((res) => {
-        res.json();
-      })
-      .then((res) => {
-        console.log(res);
-      });
-      setData({
-      username: "",
-      email: "",
-      password: "",
-      passwordconfirmation: "",
-      password_confirmation: "",
-      role: ""})
-  }
-
+    .then((json) => console.dir(json))
+    .catch((err) => console.error(err));
+     
+  };
+      
   return (
     <div>
     <section className="signup">
