@@ -7,6 +7,7 @@ function SignUp() {
     email: "",
     password:"",
     passwordconfirmation: ""
+    password_confirmation: ""
   });
   // const formObject = {}
   function handleChange(e) {
@@ -27,6 +28,13 @@ function SignUp() {
         passwordconfirmation: data.passwordconfirmation,
         role: data.role
       }),
+      body: JSON.stringify({user:{
+        username: data.username,
+        email: data.email,
+        password: data.password,
+        password_confirmation: data.password_confirmation,
+        role: data.role
+      }}),
     })
       .then((res) => {
         res.json();
@@ -39,6 +47,7 @@ function SignUp() {
       email: "",
       password: "",
       passwordconfirmation: "",
+      password_confirmation: "",
       role: ""})
   }
 
@@ -123,7 +132,7 @@ function SignUp() {
                       <div className="form-group">
                         <label htmlFor="password-confirmation" className="required">Password Confirmation</label>
                         <input 
-                          type="password-confirmation" 
+                          type="password" 
                           id="password-confirmation"
                           autoComplete="current-password"
                           value={data.passwordconfirmation}

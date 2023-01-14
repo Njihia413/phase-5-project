@@ -2,9 +2,8 @@ import React from "react";
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
-import Navbar from './Navbar.js';
-
+import 'react-toastify/dist/ReactToastify.min.css';;
+import Navbar from './Navbar';
 
 const ContactUs = () => {
   const {
@@ -51,6 +50,17 @@ const ContactUs = () => {
       console.log(e);
   }
 };
+    formState: { errors }
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    const { name, email, subject, message } = data;
+
+    console.log('Name: ', name);
+    console.log('Email: ', email);
+    console.log('Subject: ', subject);
+    console.log('Message: ', message);
+  };
 
   return (
     <div>

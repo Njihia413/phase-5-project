@@ -1,5 +1,7 @@
-class ApplicationController < ActionController::API
-    include ActionController::Cookies 
+class ApplicationController < ActionController::API 
+    #include ActionController::Cookies 
+    before_action :authenticate_user!
+    
     before_action :configure_permitted_parameters, if: :devise_controller?
 
     rescue_from CanCan::AccessDenied  do |exception|
@@ -9,8 +11,10 @@ class ApplicationController < ActionController::API
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password, :password_confirmation])
-    devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :password, ])
+    added_attrs = [:username,:role, :email, :password, :password_confirmation]
+    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
+    devise_parameter_sanitizer.permit :sign_in, keys: added_attrs
+    devise_parameter_sanitizer.permit :account_update, keys: added_attrs
   end
     
 end

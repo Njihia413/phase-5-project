@@ -1,19 +1,18 @@
 import React from "react";
-import Courses from "./Courses";
 import Enroll from "./Enroll";
-import Footer from "./Footer";
 import HomeBanner from "./HomeBanner";
 import Newsletter from "./Newsletter";
+import PopularCourses from "./PopularCourses";
+
 
 function Home () {
     return (
-        <>
+        <div>
             <HomeBanner/>
-            <Courses/>
+            <PopularCourses/>
             <Enroll/>
             <Newsletter/>
-            <Footer/>
-        </>
+        </div>
         
     )
 }
