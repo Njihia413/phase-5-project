@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import cup from "../assets/IMG-3217.jpg";
 import cap from "../assets/IMG-3225.jpg";
 import cep from "../assets/IMG-3222.jpg";
@@ -13,21 +12,13 @@ import bep from "../assets/IMG-3223.jpg";
 import boup from "../assets/IMG-3227.jpg";
 import bap from "../assets/IMG-3220.jpg";
 
-const Course = () => {
+const Dashboard = () => {
   return (
-    <section className="course">
-      <div className="bg-course">
-        <Navbar />
-        <div className="row">
-          <div className="col">
-            <div className="intro">
-              <h1>
-                Checkout our courses <br></br> curated for your E-<br></br>
-                Learning
-              </h1>
-            </div>
-          </div>
-        </div>
+    <section className="dashboard">
+      <h3><b>Courses</b></h3>
+      <div className="dashboard-text">
+      <strong>All Courses</strong> 
+      <strong>My Courses</strong>
       </div>
       <div className="search-container">
         <form>
@@ -47,8 +38,8 @@ const Course = () => {
             Sort By <i class="fa-solid fa-caret-down"></i>
           </button>
         </div>
-      </div>
-      <div className="text-container">
+       </div> 
+       <div className="text-container">
         <div className="text-block">
           <p>
             <strong>All Courses</strong>
@@ -67,9 +58,9 @@ const Course = () => {
 
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={cup} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Become a Social Media Expert</p>
           </div>
@@ -77,9 +68,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={cap} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Learn Logo Design</p>
           </div>
@@ -87,9 +78,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={cep} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Become a Web Developer</p>
           </div>
@@ -97,9 +88,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={cop} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Get Weekly Shopping Tips</p>
           </div>
@@ -107,9 +98,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={coup} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>3 Weeks Photography Bootcamp</p>
           </div>
@@ -117,9 +108,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={bup} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Advance Your 3D Modelling Skills</p>
           </div>
@@ -128,9 +119,9 @@ const Course = () => {
 
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={bop} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Learn Organization Management</p>
           </div>
@@ -138,9 +129,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={bep} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Skills Needed To Become A Designer</p>
           </div>
@@ -149,9 +140,9 @@ const Course = () => {
 
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={boup} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>2 in 1 Course On Becoming A Makeup Artist</p>
           </div>
@@ -159,9 +150,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={cip} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>Embark on the Journey of Becoming an Artist</p>
           </div>
@@ -169,9 +160,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={bip} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>How To Have A Good Listening Ear For Music</p>
           </div>
@@ -179,9 +170,9 @@ const Course = () => {
       </div>
       <div className="col-md-3">
         <div className="card">
-          <a href="./courses">
+          
             <img src={bap} alt="" className="card-img-top"></img>
-          </a>
+          
           <div className="card-body">
             <p>The Art Of Growing A Relationship</p>
           </div>
@@ -206,4 +197,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default Dashboard; 
