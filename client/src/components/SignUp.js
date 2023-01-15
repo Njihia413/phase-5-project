@@ -39,6 +39,7 @@ function SignUp({ setStoredToken }) {
       console.log(datas);
       setStoredToken(datas.status.data.jti);
     });
+      setError([]);
       setData({
       username: "",
       email: "",
@@ -46,7 +47,7 @@ function SignUp({ setStoredToken }) {
       password_confirmation: "",
       role: ""})
       } else {
-        res.json().then((error) => setError(error));
+        setError(data.errors);
       }
     })
 
@@ -76,9 +77,6 @@ function SignUp({ setStoredToken }) {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">
-                      {error ? (
-                      <p>{error.errors}</p>
-                  ) : null}
                         <label htmlFor="username" className="required">Username</label>
                           <input 
                               type="text" 
@@ -91,6 +89,11 @@ function SignUp({ setStoredToken }) {
                               onChange={(e) => handleChange(e)}
                               required>
                           </input>
+                          {/* {error.length > 0 ? (
+          <p style={{ color: "red", fontSize: "15px" }}>
+            {error.find((error) => error.includes("Username"))}!!!
+          </p>
+        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -107,6 +110,11 @@ function SignUp({ setStoredToken }) {
                             onChange={(e) => handleChange(e)}
                             required>
                         </input>
+                        {/* {error.length > 0 ? (
+          <p style={{ color: "red", fontSize: "15px" }}>
+            {error.find((error) => error.includes("Email"))}!!!
+          </p>
+        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -140,6 +148,11 @@ function SignUp({ setStoredToken }) {
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
+                        {/* {error.length > 0 ? (
+          <p style={{ color: "red", fontSize: "15px" }}>
+            {error.find((error) => error.includes("Password"))}!!!
+          </p>
+        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -156,6 +169,11 @@ function SignUp({ setStoredToken }) {
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
+                        {/* {error.length > 0 ? (
+          <p style={{ color: "red", fontSize: "15px" }}>
+            {error.find((error) => error.includes("Confirmation"))}!!!
+          </p>
+        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
