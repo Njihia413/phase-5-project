@@ -845,6 +845,29 @@ form.fa-sharp fa-solid fa-magnifying-glass{
 }
 
 /*==================End of Courses page=======================*/
+/*DashboardNav*/
+.header{
+  background-color: #102437;
+  
+}
+.navbar-brand, .navbar-brand:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+span {
+  color: #9085D1;
+}
+
+
+.nav-link, .nav-link:hover {
+  color: #fff;
+}
+
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+  color: #9085D1;
+}
 
 /* Beginning of Course Details page*/
 .bg-coursedetails {

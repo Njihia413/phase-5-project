@@ -34,9 +34,9 @@ function Navbar ({ user, setUser }) {
                           <li className="nav-item">
                               <NavLink to="/contact"  className="nav-link">Contact Us</NavLink>
                           </li>
-                          {/* <li className="nav-item">
-                              <NavLink to="/Dashboard"  className="nav-link">Dashboard</NavLink> */}
-                          {/* </li> */}
+                           {/* <li className="nav-item">
+                              <NavLink to="/Dashboard"  className="nav-link">Dashboard</NavLink> 
+                           </li>  */}
                       </ul>
                       {/* <button className="btn btn-primary" id="nav-btn">Log In</button> */}
                       <div>

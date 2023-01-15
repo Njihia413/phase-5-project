@@ -11,6 +11,7 @@ function DashboardNav ({ user, setUser }) {
   }
 
   return (
+    <div className="header">
     <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
               <a className="navbar-brand" href="/">Masomo<span>Digi</span></a>
@@ -34,9 +35,9 @@ function DashboardNav ({ user, setUser }) {
                           <li className="nav-item">
                               <NavLink to="/contact"  className="nav-link">Contact Us</NavLink>
                           </li>
-                          <li className="nav-item">
+                          {/* <li className="nav-item">
                               <NavLink to="/Dashboard"  className="nav-link">Dashboard</NavLink>
-                          </li>
+                          </li> */}
                       </ul>
                       {/* <button className="btn btn-primary" id="nav-btn">Log In</button> */}
                       <div>
@@ -51,6 +52,7 @@ function DashboardNav ({ user, setUser }) {
               </div>
           </div>
       </nav>
+      </div>
   );
 }
 export default DashboardNav;
