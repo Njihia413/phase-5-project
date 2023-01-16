@@ -6,7 +6,6 @@ function SignUp() {
     username:"",
     email: "",
     password:"",
-    passwordconfirmation: ""
     password_confirmation: ""
   });
   // const formObject = {}
