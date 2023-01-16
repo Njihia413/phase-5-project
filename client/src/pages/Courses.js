@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Navbar from "./Navbar";
 import { NavLink} from 'react-router-dom'
 
 function Courses() {
@@ -22,9 +23,54 @@ function Courses() {
   
 
   return (
-  
-    <div className='courses'>
-           <h2> Courses</h2>
+  <section className='courses'>
+    <div className='bg-courses'>
+        <Navbar />
+        <div className="row">
+          <div className="col">
+            <div className="intro">
+              <h1>
+                Checkout our courses <br></br> curated for your E-<br></br>
+                Learning
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div className="course-search-container">
+        <form>
+          <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search for Courses iewebdevelopment"
+          ></input>
+        </form>
+      </div>
+      <div class="courses-filter-sort-container">
+        <div class="courses-filter-sort-button">
+          <button type="button">
+            Filter <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <button type="button">
+            Sort By <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </div>
+       </div> 
+       <div className="courses-text-container">
+        <div className="courses-text-block">
+          <p>
+            <strong>All Courses</strong>
+          </p>
+          <p>Web Development(2908)</p>
+          <p>Designs(11293)</p>
+          <p>Photography(2230)</p>
+          <p>3d Artist(19828)</p>
+          <p>Motion Graphics(8223)</p>
+          <p>Software Engineer(1001)</p>
+          <p>UI/UX Roadmap(734)</p>
+          <p>Sound & Music(1223)</p>
+          <p>Digital Marketing(382)</p>
+        </div>
+      </div>
        <div className='container my-5 py-5' key={courses.id}>
         <div className='row d-flex justify-content-center' key={courses.id}>
         <div class="card" >
@@ -51,6 +97,7 @@ function Courses() {
       </div>  
 
     </div>
+    </section>
   )
 }
 
