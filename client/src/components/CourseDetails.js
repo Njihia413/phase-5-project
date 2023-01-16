@@ -33,12 +33,14 @@ function CourseDetails() {
       ))}
       <h4>Reading Materials</h4>
       {course.books.map((book) => (
+        <div className="row">
           <div className="col-md-3" key={book.id}>
             <div className="card">
           <img src={book.image_url}/>
           <Link className='btn btn-success'to={`/bookdetails`}> More Info</Link>
-        </div>
+           </div>
 
+        </div>
         </div>
       ))}
     </div>

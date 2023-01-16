@@ -72,12 +72,13 @@ function Courses() {
         </div>
       </div>
        <div className='container my-5 py-5' key={courses.id}>
-        <div className='row d-flex justify-content-center' key={courses.id}>
+        
         <div class="card" >
           {
             courses.map((course) => {
               return (
                 <div>
+                  <div className='row d-flex ' key={courses.id}>
                   <div className='col-md-4' key={course.id} >
                     <div className="card text" key={course.id}>
                     <img src={course.image_url} className="card-img-top" alt="..." />
@@ -88,11 +89,12 @@ function Courses() {
                        <NavLink className='btn btn-success'to={`/courses/${course.id}`}> More Info</NavLink>
                     </div>
                   </div>
+                  </div>
                 </div>
               )
             })
           }
-        </div>
+      
         </div>
       </div>  
 
