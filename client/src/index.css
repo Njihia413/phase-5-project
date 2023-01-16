@@ -264,11 +264,11 @@ span {
   border: 1px solid #102437;
   color: #102437;
 }
-.container{
+/* .container{
   color: #000000;
   font-weight: bolder;
   font-style: italic;
-}
+} */
 
 /* .form-control {
   border-radius: 20px;
@@ -616,15 +616,15 @@ form button[type="submit"] {
   line-height: 30px;
 }
 
-.courses {
+/* .courses {
   margin-left: auto;
   margin-right: auto;
   width: 8em;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-} 
-.course{
+}  */
+/* .course{
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -646,7 +646,7 @@ form button[type="submit"] {
   margin-left: auto;
   margin-right: auto;
   width: 8em
-} */
+}  */
 
 
 .icon-text {
@@ -726,14 +726,16 @@ hr {
 .dis {
   display: flex;
 }
-.course {
+
+.courses-page {
   background-image: url('./assets/IMG-3214.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
 } 
-.bg-course {
+
+.bg-courses {
   background-color: #102437c1;
   height: 90vh;
 }
@@ -845,16 +847,183 @@ form.fa-sharp fa-solid fa-magnifying-glass{
 }
 
 /*==================End of Courses page=======================*/
+/*DashboardNav*/
+.header{
+  background-color: #102437;
+  
+}
+.navbar-brand, .navbar-brand:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+span {
+  color: #9085D1;
+}
+
+
+.nav-link, .nav-link:hover {
+  color: #fff;
+}
+
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+  color: #9085D1;
+}
 
 /* Beginning of Course Details page*/
 .bg-coursedetails {
   background-color: #102437c1;
-  height: 90vh;
+  height: 80vh;
 }
 .course-details {
   background-image: url(./assets/IMG-3213.JPG);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 80vh;
 }
+/* .card-img-new {
+width: 354px;
+height: 190px;
+border-radius: 20px;
+}
+.card-img-n {
+  width: 274px;
+  height: 350px;
+} */
+/* student dashboard */
+ .dash-card {
+  border: none;
+  margin-bottom: 25px;
+  
+  
+  
+}
+.dash-card-img-top 
+.courses-text-container {
+  float: left;
+  width: 20%; 
+  
+}
+
+
+.courses-text-block p {
+  display: block;
+  color: #fff;
+}
+
+/*
+.courses-filter-sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.courses-filter-sort-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
+.courses-filter-sort-button button {
+  background-color: #102437c1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.courses-filter-sort-button i {
+  font-size: 20px; 
+}
+.course-search-container {
+  background-color: #9085D1;
+  padding: 10px;
+  height: 80%;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+.course-search-container input {
+  border: none;
+  padding: 10px;
+  width: 80%;
+  background-color: #9085D1;
+}
+.course-search-container i {
+  font-size: 20px;
+}
+.card {
+  border: none;
+  margin-bottom: 25px;
+}
+.card-img-top {
+  height: 100px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 80%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.dash-card-body {
+
+}
+.card-body {
+
+  color: #fff;
+  background-color: #9085d1;
+  padding-bottom: 0;
+  padding-top: 10;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 70px;
+  width: 80%;
+}
+
+.dash-text-container {
+  float: right;
+  width: 20%;
+}
+
+.dash-text-block p {
+  display: block;
+}
+
+.dash-search-container {
+  background-color: #9085D1;
+  padding: 10px;
+  height: 80%;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+.dash-search-container input {
+  border: none;
+  padding: 10px;
+  width: 80%;
+  background-color: #9085D1;
+}
+
+.dash-search-container i {
+  
+  font-size: 20px;
+}
+
+.dashboard{
+  background-color: rgb(218, 218, 248);
+}
+
+hr {
+  margin: 1rem 0;
+  color: white;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.25;
+} */
