@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
@@ -5,6 +6,47 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import Navbar from './Navbar.js';
 
+=======
+// import React from "react";
+// import { useForm } from 'react-hook-form';
+// import emailjs from 'emailjs-com';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.min.css';;
+// import Navbar from './Navbar';
+
+
+// const ContactUs = () => {
+//   const {
+//     register,
+//     handleSubmit,
+//     reset,
+//     formState: { errors }
+//   } = useForm();
+//    // Function that displays a success toast on bottom right of the page when form submission is successful
+//    const toastifySuccess = () => {
+//     toast('Thank you for contacting us! Our Team will get back to you within 48hours.', {
+//         position: 'bottom-right',
+//         autoClose: 5000,
+//         hideProgressBar: true,
+//         closeOnClick: true,
+//         pauseOnHover: true,
+//         draggable: false,
+//         className: 'submit-feedback',
+//         toastId: 'notifyToast'
+//     });
+//   };
+//  // Function called on submit that uses emailjs to send email of valid contact form
+//  const onSubmit = async (data) => {
+//   // Destrcture data object
+//   const { name, email, subject, message } = data;
+//   try {
+//       const templateParams = {
+//           name,
+//           email,
+//           subject,
+//           message
+//       };
+>>>>>>> main
 
 const ContactUs = () => {
   const {
@@ -13,6 +55,7 @@ const ContactUs = () => {
     reset,
     formState: { errors }
   } = useForm();
+
    // Function that displays a success toast on bottom right of the page when form submission is successful
    const toastifySuccess = () => {
     toast('Thank you for contacting us! Our Team will get back to you within 48hours.', {
@@ -37,13 +80,24 @@ const ContactUs = () => {
           subject,
           message
       };
+      
 
-      await emailjs.send(
-          "service_423gfo8",
-          "template_kicerto",
-          templateParams,
-          "kc2pjZyrhc5dxKH2b"
-      );
+//       await emailjs.send(
+//           "service_423gfo8",
+//           "template_kicerto",
+//           templateParams,
+//           "kc2pjZyrhc5dxKH2b"
+//       );
+
+
+//       reset();
+//       toastifySuccess();
+//   } catch (e) {
+//       console.log(e);
+//   }
+// };
+//     formState: { errors }
+//   } = useForm();
 
       reset();
       toastifySuccess();
@@ -51,32 +105,53 @@ const ContactUs = () => {
       console.log(e);
   }
 };
+<<<<<<< HEAD
+=======
+
+const {
+  // formState: { errors }
+} = useForm();
+
+
+} 
+
+
+ const onSubmit = async (data) => {
+    const { name, email, subject, message } = data;
+
+    console.log('Name: ', name);
+    console.log('Email: ', email);
+    console.log('Subject: ', subject);
+    console.log('Message: ', message);
+   };
+>>>>>>> main
 
   return (
     <div>
-      <section className="contact">
+    <section className="contact">
         <div className="bg-contact">
-          <Navbar />
-          <div className="row">
-            <div className="col">
-              <div className="intro">
-                <h1>24Hrs On Deck Customer Support</h1>
+           <Navbar />
+      <div className="row">
+           <div className="col">
+             <div className="intro">
+               <h1>24Hrs On Deck Customer Support</h1>
               </div>
               <div className="intro-p">
                 <h3>We are at your call, we serve you always</h3>
               </div>
             </div>
-          </div>
+         </div>
         </div>
-      </section>
+       </section>
 
       <section className="contact-header">
         <div className="row text-center">
-          <div className="col-md-12">
+         <div className="col-md-12">
             <h3 className="contact-heading">Let's Talk!</h3>
           </div>
-        </div>
-      </section>
+</div>
+     </section>
+
 
       <section className="contact-section">
         <div className="cnt">
@@ -169,6 +244,5 @@ const ContactUs = () => {
       </section>
     </div>
   );
-};
 
-export default ContactUs;
+// export default ContactUs;
