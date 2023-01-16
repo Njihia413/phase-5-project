@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from './Navbar';
-import Reviews from "../pages/Reviews";
+import ReviewForm from "../pages/ReviewForm";
+import {  Link } from 'react-router-dom'
 
 const BookDetails = () => {
+  
   return (
     <div>
       <section className="bookdetails">
@@ -19,7 +21,17 @@ const BookDetails = () => {
         </div>
       </div>
     </section>
-<Reviews/>
+              <div className="dis">
+              <p className="course-text"> <i className="fa-solid fa-arrow-left"></i> <a className="main-color" href="/CourseDetails">Course Details </a> </p>
+               <p className="tex">Eloquent Javascript</p>
+              </div>
+             
+              
+<ReviewForm/>
+<div className = 'hiddenLinks'>
+              <Link to = '/ReviewForm'>Review</Link>
+ 
+</div>
 </div>
   )
 }
