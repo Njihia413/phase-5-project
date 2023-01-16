@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate, Link }  from 'react-router-dom'
+import { useNavigate }  from 'react-router-dom'
+import { NavLink, useNavigate }  from 'react-router-dom'
 
 
 function Login() {
@@ -122,7 +123,7 @@ console.log(email)
                     </div>
                     <div className="col-md-12 text-center">
                       <div className="form-group">
-                          <p>Not a member? <strong><Link className="main-color" to="/signup">Sign Up</Link></strong></p>
+                          <p>Not a member? <strong><NavLink className="main-color" to="/signup">Sign Up</NavLink></strong></p>
                       </div>
                     </div>
                   </div>
