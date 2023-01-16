@@ -674,14 +674,14 @@ hr {
 .dis {
   display: flex;
 }
-.course {
+.courses {
   background-image: url('./assets/IMG-3214.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
 } 
-.bg-course {
+.bg-courses {
   background-color: #102437c1;
   height: 90vh;
 }
@@ -805,4 +805,78 @@ form.fa-sharp fa-solid fa-magnifying-glass{
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
+}
+.courses-text-container {
+  float: left;
+  width: 20%; 
+}
+
+.courses-text-block p {
+  display: block;
+}
+.courses-filter-sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.courses-filter-sort-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
+.courses-filter-sort-button button {
+  background-color: #102437c1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.courses-filter-sort-button i {
+  font-size: 20px; 
+}
+.course-search-container {
+  background-color: #9085D1;
+  padding: 10px;
+  height: 80%;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+.course-search-container input {
+  border: none;
+  padding: 10px;
+  width: 80%;
+  background-color: #9085D1;
+}
+.course-search-container i {
+  font-size: 20px;
+}
+.card {
+  border: none;
+  margin-bottom: 25px;
+}
+.card-img-top {
+  height: 100px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 80%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-body {
+  color: #fff;
+  background-color: #9085d1;
+  padding-bottom: 0;
+  padding-top: 10;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 70px;
+  width: 80%;
 }
