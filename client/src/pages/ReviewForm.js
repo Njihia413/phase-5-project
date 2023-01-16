@@ -1,62 +1,82 @@
-import React from 'react'
+import { useState } from "react";
 
 
+const initialState = {
+    Title: "",
+    Author: "",
+    Review: "",
+    rRating: "",
+  };
 
-class ReviewForm extends React.Component {
- 
-    state = {
-        reviewed_book: '',
-        rating: '',
-        user_username: '',
-    }
-    
-handleReviewedGame = (event) => {
-    this.setState ({
-        reviewed_book: event.target.value
-     })
-}
+function ReviewForm({ onAddReview }) {
+  const [formData, setFormData] = useState(initialState);
 
-handleRating = (event) => {
-    this.setState ({
-        rating: event.target.value
-     })
-}
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  }
 
-handleUser = (event) => {
-    this.setState ({
-        user_username: event.target.value
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("./reviews", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     })
+      .then((r) => r.json())
+      .then((newReview) => {
+        setFormData(initialState);
+        onAddReview(newReview);
+      });
+  }
+
+  return (
+    <div className="review">
+      <h2>Reviews</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="title">Title: </label>
+        <input
+          type="text"
+          id="title"
+          value={formData.title}
+          onChange={handleChange}
+        />
+        {/* <label htmlFor="image">Image URL: </label> */}
+        {/* <input
+          type="text"
+          id="image"
+          value={formData.image}
+          onChange={handleChange}
+        /> */}
+        <label htmlFor="author">Author: </label>
+        <input
+          type="text"
+          id="note"
+          value={formData.note}
+          onChange={handleChange}
+        />
+        <label htmlFor="review">Review: </label>
+        <textarea
+          id="description"
+          value={formData.description}
+          onChange={handleChange}
+        />
+        <label htmlFor="rating">Rating: </label>
+        <input
+          type="number"
+          id="rating"
+          max="5"
+          value={formData.rating}
+          onChange={handleChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
 }
 
-handleForm = (e) => {
-    e.preventDefault()
-    // console.log(e)
-    const review = {
-    reviewed_book: this.state.reviewed_book,
-    rating: this.state.rating,
-    }
-    
-   this.props.addReview(review)
-    }
-render() {
-    return (
-    <div className="form-container">
-            <form onSubmit={(e) => {this.handleForm(e)}}>
-                <div>
-                    <label>Review</label>
-                    <br></br>
-                    <textarea type="text" placeholder="Drop Your Review" rows={10} cols={50} value={this.state.reviewed_book} onChange={this.handleReviewedBook}  className="form"/>
-                    <div>
-                    <label>Stars</label>
-                    <br></br>
-                    <input type="number"  max="5" min="0" value={this.state.rating} onChange={this.handleRating} />
-                    </div>
-                </div>
-                <button type="submit" className="sub-review">Reviews</button>
-            </form> 
-        
-    </div>
-        )
-    }
-}
 export default ReviewForm;
