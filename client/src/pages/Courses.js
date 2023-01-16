@@ -5,7 +5,7 @@ function Courses() {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     async function getCourses() {
-      const request = fetch('/courses');
+      const request = fetch('/api/v1/courses');
       const response = await request;
       const parsed = await response.json();
       setCourses(parsed);

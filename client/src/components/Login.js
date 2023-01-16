@@ -44,23 +44,23 @@ function Login() {
 
     // Then wait 30 minutes and do this:
 
-fetch("/private/test", {
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: getToken(),
-  },
-})
-  .then((res) => {
-    if (res.ok) {
-      return res.json();
-    } else if (res.status ==="401") {
-      return res.text().then((text) => Promise.reject(text));
-    }
-  })
-  .then((json) => console.dir(json))
-  .catch((err) => console.error(err));
+// fetch("/private/test", {
+//   headers: {
+//     "Content-Type": "application/json",
+//     Authorization: getToken(),
+//   },
+// })
+//   .then((res) => {
+//     if (res.ok) {
+//       return res.json();
+//     } else if (res.status ==="401") {
+//       return res.text().then((text) => Promise.reject(text));
+//     }
+//   })
+//   .then((json) => console.dir(json))
+//   .catch((err) => console.error(err));
   
-    navigate(`/`)
+    navigate(`/courses`)
     
   }
 
