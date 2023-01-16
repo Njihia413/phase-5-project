@@ -34,7 +34,7 @@ function App() {
           {/* <Route path="/course" element={<Course/>} /> */}
           <Route path="/courses/:courseId" element={<CourseDetails/>} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

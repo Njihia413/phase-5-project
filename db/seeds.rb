@@ -15,7 +15,7 @@ Course.create!([name: "Become A Web Developer", image_url: "https://media.istock
 Video.create([
     {
        name: "Getting started with HTML and CSS",
-       video_url: "https://youtu.be/T367E4I0n74",
+       video_url: "https://youtube.com/embed/T367E4I0n74",
        course_id: 1
     },
     {
@@ -25,22 +25,22 @@ Video.create([
     },
    {
        name: "Intro to Web Development",
-       video_url: "https://youtu.be/-s3InudNIrM",
+       video_url: "https://youtube.com/embed/-s3InudNIrM",
        course_id:1
     },
     {
        name: "Javascript Crush Course",
-       video_url: "https://www.youtube.com/watch?v=hdI2bqOjy3c&t=2s",
+       video_url: "https://www.youtube.com/embed/hdI2bqOjy3c",
        course_id:1
     },
     {
        name: "How to learn PHP and MySQL",
-       video_url: "https://youtu.be/nP-MvFoDVZE",
+       video_url: "https://youtube.com/embed/nP-MvFoDVZE",
        course_id:1
     },
     {
        name: "Learning Python",
-       video_url: "https://youtu.be/03uyN3WquIc",
+       video_url: "https://youtube.com/embed/03uyN3WquIc",
        course_id: 1
     }
   ])
@@ -105,39 +105,39 @@ Course.create!([name: "Get Weekly Fashion Tips",image_url:"https://media.istockp
 Video.create([
     {
        name: " Styling Hacks To TRANSFORM & UPDATE YOUR STYLE", 
-       video_url: "https://youtu.be/fH9AOUyce9Q",
+       video_url: "https://youtube.com/embed/fH9AOUyce9Q",
        course_id:2
       
 
     },
     {
        name: "Do's and Don'ts of Styling Trouser", 
-       video_url: "https://youtu.be/-dUmQwSksBw",
+       video_url: "https://youtube.com/embed/-dUmQwSksBw",
        course_id:2
 
     },
     {
        name: "Fashion and styling hacks",
-       video_url: "https://youtu.be/prxEmD1mFIQ",
+       video_url: "https://youtube.com/embed/prxEmD1mFIQ",
        course_id:2
 
     },
     {
        name: "How to layer (and actually look chic) for the COLDEST PLACE ON EARTH",
-       video_url: "https://youtu.be/OdHoS0Jsjtg",
+       video_url: "https://youtube.com/embed/OdHoS0Jsjtg",
        course_id:2 
      
     },
     {
        name: "10 Fall Style Mistakes You Are PROBABLY Making!",
-       video_url: "https://youtu.be/hQE5_5Sy0h4",
+       video_url: "https://youtube.com/embed/hQE5_5Sy0h4",
        course_id:2 
       
 
     },
     {
        name: " Easy, Wearable Trends for Everyday ", 
-       video_url: "https://youtu.be/cjCtUBL39qc",
+       video_url: "https://youtube.com/embed./cjCtUBL39qc",
        course_id:2
      
     },
@@ -212,38 +212,38 @@ Book.create([
 Video.create!([
        {
           name: "How to Develop a Social Media Strategy Step by Step", 
-          video_url: "https://youtu.be/PKUn7wU5sIc",
+          video_url: "https://youtube.com/embed/PKUn7wU5sIc",
           course_id:3
          
        },
        {
           name: "What exactly does a Social Media Specialist do?", 
-          video_url: "https://youtu.be/E3iGXpqvAok",
+          video_url: "https://youtube.com/embed/E3iGXpqvAok",
           course_id:3
 
        },
        {
           name: "How to Become a Social Media Manager: With NO Experience!",
-          video_url: "https://youtu.be/kcim9Pl4DcU",
+          video_url: "https://youtube.com/embed/kcim9Pl4DcU",
           course_id:3
 
        },
        {
           name: "How to create a content strategy for ANY brand",
-          video_url: "https://youtu.be/KWrzzHlPQ7Y",
+          video_url: "https://youtube.com/embed/KWrzzHlPQ7Y",
           course_id:3
         
        },
        {
           name: "DAY IN THE LIFE OF A SOCIAL MEDIA MANAGER | what it's like, tips, and more!",
-          video_url: "https://youtu.be/DnjpcgX5sso", 
+          video_url: "https://youtube.com/embed/DnjpcgX5sso", 
           course_id:3
          
 
        },
        {
           name: "BEST TOOLS for CREATING and MANAGING social media content ", 
-          video_url: "https://youtu.be/5o5k-g-toHg",
+          video_url: "https://youtube.com/embed/5o5k-g-toHg",
           course_id:3
         
        }
@@ -312,38 +312,38 @@ Course.create!([name: "Learn Logo Design", image_url: "https://digitaldefynd.com
 Video.create!([
        {
           name: "5 MIND BLOWING Logo Design Tips", 
-          video_url: "https://youtu.be/dQjcqEE37jA",
+          video_url: "https://youtube.com/embed/dQjcqEE37jA",
           course_id:4
 
        },
        {
           name: "The Logo Design Process From Start To Finish", 
-          video_url: "https://youtu.be/4MxRhjHmiVw",
+          video_url: "https://youtube.com/embed/4MxRhjHmiVw",
           course_id:4
 
        },
        {
           name: "Guess the Logo Quiz: Food & Drink",
-          video_url: "https://youtu.be/GAvmBElQb4M",
+          video_url: "https://youtube.com/embed/GAvmBElQb4M",
           course_id:4
 
        },
        {
           name: "Making FAMOUS Graphic Designs Better!? ",
-          video_url: "https://youtu.be/INMuAYZDums",
+          video_url: "https://youtube.com/embed/INMuAYZDums",
           course_id:4 
         
        },
        {
           name: "6 GOLDEN Rules Of Logo Design (Logotype)",
-          video_url: "https://youtu.be/eUMjzoiXx-0",
+          video_url: "https://youtube.com/embed/eUMjzoiXx-0",
           course_id:4
          
 
        },
        {
           name: "13 Advanced Logo Design Techniques YOU NEED TO KNOW!", 
-          video_url: "https://youtu.be/lyH8PBm8Qfo",
+          video_url: "https://youtube.com/embed/lyH8PBm8Qfo",
           course_id:4
         
        }
@@ -413,14 +413,14 @@ Course.create!([name: "3 Weeks Photography Bootcamp",image_url: "https://ask.car
 Video.create!([
        {
           name: "10 NEW Photography Ideas in 100 Seconds", 
-          video_url: "https://youtu.be/ineZXLbL7s8",
+          video_url: "https://youtube.com/embed/ineZXLbL7s8",
           course_id: 5
          
 
        },
        {
           name: "PHOTOGRAPHY BASICS in 10 MINUTES", 
-          video_url: "https://youtu.be/V7z7BAZdt2M",
+          video_url: "https://youtube.com/embed/V7z7BAZdt2M",
           course_id: 5
 
        },
@@ -432,20 +432,20 @@ Video.create!([
        },
        {
           name: "Make your PHOTOS & VIDEOS more PROFESSIONAL!",
-          video_url: "https://youtu.be/yzbBAkbgfW4?list=RDQMYTRC1AAAZns",
+          video_url: "https://youtube.com/embed/yzbBAkbgfW4",
           course_id: 5
         
        },
        {
           name: "3 Mistakes All Beginner Photographers Make",
-          video_url: "https://youtu.be/0q_qfSrTcLI?list=RDQMYTRC1AAAZns",
+          video_url: "https://youtube.com/embed/0q_qfSrTcLI",
           course_id: 5
          
 
        },
        {
           name: "HOW TO MAKE MONEY WITH PHOTOGRAPHY - Things I wish I knew", 
-          video_url: "https://youtu.be/IvZM8GyHFs8?list=RDQMYTRC1AAAZns",
+          video_url: "https://youtube.com/embed/IvZM8GyHFs8",
           course_id: 5
         
        }
@@ -517,39 +517,39 @@ Course.create!([name: "Advance Your 3D Modelling Skills", image_url: "https://ww
 Video.create!([
        {
           name: "How to improve your 3D modeling skills", 
-          video_url: "https://youtu.be/PGutNtvUkCU",
+          video_url: "https://youtube.com/embed/PGutNtvUkCU",
           course_id: 6,
          
 
        },
        {
           name: "6 key principles for 3D modeling", 
-          video_url: "https://youtu.be/OVbIOHAI3iY",
+          video_url: "https://youtube.com/embed/OVbIOHAI3iY",
           course_id: 6,
 
        },
        {
           name: "Clearly Define Details with Loops when 3D Modeling - Blender Beginner Tutorial",
-          video_url: "https://youtu.be/iuGuxTzA2kY",
+          video_url: "https://youtube.com/embed/iuGuxTzA2kY",
           course_id: 6,
 
        },
        {
           name: "A 3d Modeling Challenge to Level Up your Skills in Blender",
-          video_url: "https://youtu.be/zKsmIqRNvEk",
+          video_url: "https://youtube.com/embed/zKsmIqRNvEk",
           course_id: 6, 
         
        },
        {
           name: "The ONLY 5 Modeling Tools You Need To Make ANYTHING in Blender 2.91!",
-          video_url: "https://youtu.be/kejQ8nX5YZA" ,
+          video_url: "https://youtube.com/embed/kejQ8nX5YZA" ,
           course_id: 6,
          
 
        },
        {
           name: "Inventor 2020 Tutorial #94 | 3D Modeling Advanced", 
-          video_url: "https://youtu.be/osF5JLjgIOk",
+          video_url: "https://youtube.com/embed/osF5JLjgIOk",
           course_id: 6,
         
        }
@@ -624,39 +624,39 @@ Course.create!([name: "Learn Organization Management",image_url: "https://miro.m
 Video.create!([
        {
           name: "Organizational Management", 
-          video_url: "https://youtu.be/x7hGc5-XXZo",
+          video_url: "https://youtube.com/embed/x7hGc5-XXZo",
           course_id: 7
          
 
        },
        {
           name: "Management skills ", 
-          video_url: "https://youtu.be/xHBhFKBLhWs",
+          video_url: "https://youtube.com/embed/xHBhFKBLhWs",
           course_id: 7
 
        },
        {
           name: "Management Process ",
-          video_url: "https://youtu.be/q6LMjurECZM",
+          video_url: "https://youtube.com/embed/q6LMjurECZM",
           course_id: 7
 
        },
        {
           name: "Types of Organizational Structure in management",
-          video_url: "https://youtu.be/4o6v0XIylzA",
+          video_url: "https://youtube.com/embed/4o6v0XIylzA",
           course_id: 7
         
        },
        {
           name: "Introduction to Management and Organizations (Lecture 1) | P.O.M",
-          video_url: "https://youtu.be/JH4srpPMgAc?list=RDLVx7hGc5-XXZo",
+          video_url: "https://youtube.com/embed/JH4srpPMgAc",
           course_id: 7
          
 
        },
        {
           name: "Organizing Function of Management", 
-          video_url: "https://youtu.be/3yVsOSbbPhc?list=RDLVx7hGc5-XXZo",
+          video_url: "https://youtube.com/embed/3yVsOSbbPhc",
           course_id: 7
         
        }
@@ -728,39 +728,39 @@ Course.create([ name: "Skills Needed to Become A Designer",image_url:"https://it
 Video.create!([
        {
           name: " Ways to become a Better Designer and to be More Creative", 
-          video_url: "https://youtu.be/YHNYaQzsRf8",
+          video_url: "https://youtube.com/embed/YHNYaQzsRf8",
           course_id: 8
          
 
        },
        {
           name: "Simple Tips to IMPROVE your Design", 
-          video_url: "https://youtu.be/53zf7pBjCaU",
+          video_url: "https://youtube.com/embed/53zf7pBjCaU",
           course_id: 8
 
        },
        {
           name: "How To Practice Your Design Skills",
-          video_url: "https://youtu.be/NnWabh4pIko",
+          video_url: "https://youtube.com/embed/NnWabh4pIko",
           course_id: 8
 
        },
        {
           name: "Most Valuable Skills for Designers",
-          video_url: "https://youtu.be/chQm-DLMUs8",
+          video_url: "https://youtube.com/embed/chQm-DLMUs8",
           course_id: 8 
         
        },
        {
           name: " Design Exercises to Improve Skills + Confidence",
-          video_url: "https://youtu.be/vzudkGYl0ks",
+          video_url: "https://youtube.com/embed/vzudkGYl0ks",
           course_id: 8 
          
 
        },
        {
           name: "Product Design Skills", 
-          video_url: "https://youtu.be/EfhyU6dulNk",
+          video_url: "https://youtube.com/embed/EfhyU6dulNk",
           course_id: 8
         
        }
@@ -830,7 +830,7 @@ Course.create([name: " 2 in 1 course of Becoming A Makeup Artist", image_url: "h
 Video.create!([
        {
           name: "Lisa Eldridge On Becoming A Make-Up Artist", 
-          video_url: "https://youtu.be/zPbr-1fVflI",
+          video_url: "https://youtube.com/embed/zPbr-1fVflI",
           course_id: 9
          
 
@@ -843,26 +843,26 @@ Video.create!([
        },
        {
           name: " MAKEUP MISTAKES TO AVOID!!!",
-          video_url: "https://youtu.be/hsuXFCF8qtA",
+          video_url: "https://youtube.com/embed/hsuXFCF8qtA",
           course_id: 9
 
        },
        {
           name: "Makeup Starter Kit for BEGINNERS + How to Use It",
-          video_url: "https://youtu.be/d-uvF74Y0s8",
+          video_url: "https://youtube.com/embed/d-uvF74Y0s8",
           course_id: 9 
         
        },
        {
           name: "THE BEST EYEBROW TUTORIAL FOR BEGINNERS!! VERY DETAILED",
-          video_url: "https://youtu.be/VCZE20foaqE",
+          video_url: "https://youtube.com/embed/VCZE20foaqE",
           course_id: 9
          
 
        },
        {
           name: "EXTRA GLAM Makeup Tutorial", 
-          video_url: "https://youtu.be/nf8ySuesAPg",
+          video_url: "https://youtube.com/embed/nf8ySuesAPg",
           course_id: 9
         
        }
@@ -941,39 +941,39 @@ Course.create([ name: "Embark on the Journey of becoming an Artist", image_url: 
 Video.create!([
        {
           name: "Getting started as an ARTIST ", 
-          video_url: "https://youtu.be/bhpnb7r9Vw0",
+          video_url: "https://www.youtube.com/embed/bhpnb7r9Vw0",
           course_id: 10
          
 
        },
        {
           name: "Vincent Van Gogh's The Starry Night: Great Art Explained", 
-          video_url: "https://youtu.be/wk9L1N9bRRE",
+          video_url: "https://youtube.com/embed/wk9L1N9bRRE",
           course_id: 10
 
        },
        {
           name: "Things EVERY ARTIST Should Avoid Doing",
-          video_url: "https://youtu.be/OUme0_vtCtw",
+          video_url: "https://youtube.com/embed/OUme0_vtCtw",
           course_id: 10
 
        },
        {
           name: "How To Launch Your Art Career",
-          video_url: "https://youtu.be/I6mbCPEtX8g",
+          video_url: "https://youtube.com/embed/I6mbCPEtX8g",
           course_id: 10 
         
        },
        {
           name: "How I Built My Art Business From Nothing - My Business Strategy and Journey To Being An Illustrator",
-          video_url: "https://youtu.be/Gnhxny0STrk",
+          video_url: "https://youtube.com/embed/Gnhxny0STrk",
           course_id: 10
          
 
        },
        {
           name: "Launching my online ART SHOP + how YOU CAN too ✰ making art prints at home", 
-          video_url: "https://youtu.be/ImilY7SE96M",
+          video_url: "https://youtube.com/embed/ImilY7SE96M",
           course_id: 10
         
        }
@@ -1046,39 +1046,39 @@ Course.create([name: "The Art of Growing Relationships", image_url: "https://www
 Video.create!([
        {
           name: "How to Grow Within a Relationship : Psychology & Mental Health", 
-          video_url: "https://youtu.be/UlGJ0dm19SU",
+          video_url: "https://youtube.com/embed/UlGJ0dm19SU",
           course_id: 11
          
 
        },
        {
           name: "How to Improve Your Relationship", 
-          video_url: "https://youtu.be/rNVtxTwd9zc",
+          video_url: "https://youtube.com/embed/rNVtxTwd9zc",
           course_id: 11
 
        },
        {
           name: "Behaviors That Destroy Relationships",
-          video_url: "https://youtu.be/AikTYbk0iXk",
+          video_url: "https://youtube.com/embed/AikTYbk0iXk",
           course_id: 11
 
        },
        {
           name: "Advice for Strong Relationships from Jordan Peterson",
-          video_url: "https://youtu.be/n-SVPsGMPi8",
+          video_url: "https://youtube.com/embed/n-SVPsGMPi8",
           course_id: 11 
         
        },
        {
           name: "Jordan Peterson: Fixing relationships",
-          video_url: "https://youtu.be/Yii6JBGWHms",
+          video_url: "https://youtube.com/embed/Yii6JBGWHms",
           course_id: 11
          
 
        },
        {
           name: "Skills for Healthy Romantic Relationships", 
-          video_url: "https://youtu.be/gh5VhaicC6g",
+          video_url: "https://youtube.com/embed/gh5VhaicC6g",
           course_id: 11
         
        }
@@ -1154,27 +1154,27 @@ Course.create([ name: "Having A Good Listening Ear To Good Music", image_url: "h
 Video.create!([
        {
           name: "Benefits of Listening to Music | Tips For Life ESL", 
-          video_url: "https://youtu.be/N7n_wIPXvLE",
+          video_url: "https://youtube.com/embed/N7n_wIPXvLE",
           course_id: 12
          
 
        },
        {
           name: "Learn music theory in half an hour.", 
-          video_url: "https://youtu.be/rgaTLrZGlk0",
+          video_url: "https://youtube.com/embed/rgaTLrZGlk0",
           course_id: 12
 
        },
        {
           name: "Calm Your Anxiety",
-          video_url: "https://youtu.be/zPyg4N7bcHM",
+          video_url: "https://youtube.com/embed/zPyg4N7bcHM",
           course_id: 12
           
 
        },
        {
           name: "✏️ a lofi hip hop playlist to help you study for finals! 📚",
-          video_url: "https://youtu.be/vWwewNiEL_Y",
+          video_url: "https://youtube.com/embed/vWwewNiEL_Y",
           course_id: 12
           
            
@@ -1183,7 +1183,7 @@ Video.create!([
        },
        {
           name: "POV: You finally came home after a hard day.",
-          video_url: "https://youtu.be/DSKcEsfdQm0",
+          video_url: "https://youtube.com/embed/DSKcEsfdQm0",
           course_id: 12
            
          
@@ -1191,7 +1191,7 @@ Video.create!([
        },
        {
           name: "Pov: You Choose to Be Happy | Mood Boost Playlist", 
-          video_url: "https://youtu.be/fI_f7HOixNQ",
+          video_url: "https://youtube.com/embed/fI_f7HOixNQ",
           course_id: 12
          
        }
