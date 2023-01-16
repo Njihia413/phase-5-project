@@ -2,11 +2,26 @@ import React, { useState } from "react";
 import { useNavigate, Link }  from 'react-router-dom'
 
 
-function Login({ setStoredToken }) {
-  // const [ user, setUser] = useState("")
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
+
+
+  function setToken(token) {
+    localStorage.setItem("token", token);
+    localStorage.setItem("lastLoginTime", new Date(Date.now()).getTime());
+  }
+
+  function getToken() {
+    let now = new Date(Date.now()).getTime();
+    let thirtyMinutes = 1000 * 60 * 30;
+    let timeSinceLastLogin = now - localStorage.getItem("lastLoginTime");
+    if (timeSinceLastLogin < thirtyMinutes) {
+      return localStorage.getItem("token");
+    }
+  }
+  
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/users/sign_in", {
@@ -15,18 +30,38 @@ function Login({ setStoredToken }) {
         Accepts: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password }),
-    }) .then((res) => res.json())
-    .then((data) => {
-      if (data.jti) {
-        localStorage.setItem("token",data.status.data.jti);
-        setStoredToken(data.data.status.data.jti);
-        navigate("/");
+      body: JSON.stringify({user:{ email, password },}),
+    }) .then((res) => {
+      if (res.ok) {
+        setToken(res.headers.get("Authorization"));
+        return res.json();
       } else {
-        alert("Invalid credentials");
+        return res.text().then((text) => Promise.reject(text));
       }
-    });
+    })
+    .then((json) => console.dir(json))
+    .catch((err) => console.error(err));
+
+
+    // Then wait 30 minutes and do this:
+
+fetch("/private/test", {
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: getToken(),
+  },
+})
+  .then((res) => {
+    if (res.ok) {
+      return res.json();
+    } else if (res.status ==="401") {
+      return res.text().then((text) => Promise.reject(text));
+    }
+  })
+  .then((json) => console.dir(json))
+  .catch((err) => console.error(err));
   
+    navigate(`/`)
     
   }
   

@@ -1,14 +1,27 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Navbar ({ user, setUser }) {
-  function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
-      if (r.ok) {
-        setUser(null);
-      }
-    });
-  }
+function Navbar () {
+    function logout() {
+        fetch("/users/sign_out", {
+          method: "delete",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: localStorage.getItem("token"),
+          },
+        })
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              return res.json().then((json) => Promise.reject(json));
+            }
+          })
+          .then((json) => {
+            console.dir(json);
+          })
+          .catch((err) => console.error(err));
+        }
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -35,15 +48,12 @@ function Navbar ({ user, setUser }) {
                               <NavLink to="/contact"  className="nav-link">Contact Us</NavLink>
                           </li>
                       </ul>
-                      {/* <button className="btn btn-primary" id="nav-btn">Log In</button> */}
+                      <button className="btn btn-primary"  id="nav-btn" onClick={logout}>Logout</button> 
                       <div>
-                      {user ? (
-                        <button className="btn btn-primary"  id="nav-btn" onClick={handleLogoutClick}>Logout</button>
-                      ) : (
                         <div>
                           <NavLink to="/login" className="btn btn-primary" id="nav-btn">Login</NavLink>
                         </div>
-                      )}
+                      
                     </div>
               </div>
           </div>

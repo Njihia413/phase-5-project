@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { useNavigate }  from 'react-router-dom'
 
 function SignUp({ setStoredToken }) {
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const navigate = useNavigate()
   const [data, setData] = useState({
     role:"",
     username:"",
     email: "",
     password:"",
+    
     password_confirmation: ""
   });
   // const formObject = {}
@@ -19,8 +20,8 @@ function SignUp({ setStoredToken }) {
     // console.log(newdata)
   }
   function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/users/", {
+    e.preventDefault()
+    fetch("/users/",{
       method: "POST",
       headers: {  Accepts: "application/json",
       "Content-Type": "application/json", },
@@ -28,41 +29,24 @@ function SignUp({ setStoredToken }) {
         username: data.username,
         email: data.email,
         password: data.password,
-        password_confirmation: data.password_confirmation,
+        passwordconfirmation: data.password_confirmation,
         role: data.role
       }}),
-    })
-    .then((res) =>  {
-      if (res.ok) {res.json()
-    .then((datas) => {
-      localStorage.setItem("token", datas.status.data.jti);
-      console.log(datas);
-      setStoredToken(datas.status.data.jti);
-    });
-      setError([]);
-      setData({
-      username: "",
-      email: "",
-      password: "",
-      password_confirmation: "",
-      role: ""})
+      
+    }) .then((res) => {
+      if (res.ok) {
+        console.log(res.headers.get("Authorization"));
+        localStorage.setItem("token", res.headers.get("Authorization"));
+        return res.json();
       } else {
-        setError(data.errors);
+        throw new Error(res);
       }
     })
-
-      {if ( data.role === "Student") {
-        navigate(`/login`) } else {
-          navigate(`/courses`)
-    
-        }
-      }
-      console.log(data.role)
-  }
-  
- 
-
-    
+    .then((json) => console.dir(json))
+    .catch((err) => console.error(err));
+     
+  };
+      
   return (
     <div>
     <section className="signup">
@@ -127,10 +111,10 @@ function SignUp({ setStoredToken }) {
                       value={data.role}>
                         <option value="">Role</option>
                         <option onChange={(e) => handleChange(e)} value="Teacher">
-                          teacher
+                          Teacher
                         </option>
                         <option onChange={(e) => handleChange(e)} value="Student">
-                          student
+                          Student
                         </option>
                       </select>
                     </div>
@@ -160,12 +144,12 @@ function SignUp({ setStoredToken }) {
                         <label htmlFor="password-confirmation" className="required">Password Confirmation</label>
                         <input 
                           type="password" 
-                          id="password_confirmation"
+                          id="password-confirmation"
                           autoComplete="current-password"
                           value={data.password_confirmation}
                           className="form-control" 
-                          name="password_confirmation" 
-                          placeholder="must be more than 6 characters"
+                          name="password-confirmation" 
+                          placeholder="Password Confirmation"
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
