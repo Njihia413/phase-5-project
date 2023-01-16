@@ -264,11 +264,11 @@ span {
   border: 1px solid #102437;
   color: #102437;
 }
-.container{
+/* .container{
   color: #000000;
   font-weight: bolder;
   font-style: italic;
-}
+} */
 
 /* .form-control {
   border-radius: 20px;
@@ -564,15 +564,15 @@ span {
   line-height: 30px;
 }
 
-.courses {
+/* .courses {
   margin-left: auto;
   margin-right: auto;
   width: 8em;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-} 
-.course{
+}  */
+/* .course{
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -594,7 +594,7 @@ span {
   margin-left: auto;
   margin-right: auto;
   width: 8em
-} */
+}  */
 
 
 .icon-text {
@@ -674,13 +674,15 @@ hr {
 .dis {
   display: flex;
 }
-.courses {
+
+.courses-page {
   background-image: url('./assets/IMG-3214.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
 } 
+
 .bg-courses {
   background-color: #102437c1;
   height: 90vh;
@@ -829,7 +831,7 @@ span {
   background-repeat: no-repeat;
   height: 80vh;
 }
-.card-img-new {
+/* .card-img-new {
 width: 354px;
 height: 190px;
 border-radius: 20px;
@@ -837,9 +839,9 @@ border-radius: 20px;
 .card-img-n {
   width: 274px;
   height: 350px;
-}
+} */
 /* student dashboard */
-.dash-card {
+ .dash-card {
   border: none;
   margin-bottom: 25px;
   
@@ -850,11 +852,16 @@ border-radius: 20px;
 .courses-text-container {
   float: left;
   width: 20%; 
+  
 }
+
 
 .courses-text-block p {
   display: block;
+  color: #fff;
 }
+
+/*
 .courses-filter-sort-container {
   display: flex;
   align-items: center;
@@ -921,7 +928,6 @@ border-radius: 20px;
   background-color: #9085d1;
   padding-bottom: 0;
   padding-top: 10;
-  /* padding-left: 10px; */
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 70px;
@@ -968,4 +974,4 @@ hr {
   border: 0;
   border-top: 1px solid;
   opacity: 0.25;
-}
+} */
