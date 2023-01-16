@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate }  from 'react-router-dom'
+
 
 function SignUp() {
+  const navigate = useNavigate()
   const [data, setData] = useState({
     role:"",
     username:"",
@@ -16,40 +19,35 @@ function SignUp() {
     // console.log(newdata)
   }
   function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/users/", {
+    e.preventDefault()
+    fetch("/users/",{
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: data.username,
-        email: data.email,
-        password: data.password,
-        passwordconfirmation: data.passwordconfirmation,
-        role: data.role
-      }),
       body: JSON.stringify({user:{
         username: data.username,
         email: data.email,
         password: data.password,
-        password_confirmation: data.password_confirmation,
+        passwordconfirmation: data.password_confirmation,
         role: data.role
       }}),
-    })
-      .then((res) => {
-        res.json();
-      })
-      .then((res) => {
-        console.log(res);
-      });
-      setData({
-      username: "",
-      email: "",
-      password: "",
-      passwordconfirmation: "",
-      password_confirmation: "",
-      role: ""})
-  }
+      
+    }) .then((res) => {
+      if (res.ok) {
+        console.log(res.headers.get("Authorization"));
+        localStorage.setItem("token", res.headers.get("Authorization"));
+        return res.json();
+      } else {
+        throw new Error(res);
 
+      }
+    })
+    .then((json) => console.dir(json))
+    .catch((err) => console.error(err));
+    console.log(data.role)
+    navigate(`/login`)
+     
+  };
+      
   return (
     <div>
     <section className="signup">
@@ -103,11 +101,11 @@ function SignUp() {
                       onChange={(e) => handleChange(e)}
                       value={data.role}>
                         <option value="">Role</option>
-                        <option onChange={(e) => handleChange(e)} value="Teacher">
-                          Teacher
+                        <option onChange={(e) => handleChange(e)} value="teacher">
+                          teacher
                         </option>
-                        <option onChange={(e) => handleChange(e)} value="Student">
-                          Student
+                        <option onChange={(e) => handleChange(e)} value="student">
+                          student
                         </option>
                       </select>
                     </div>

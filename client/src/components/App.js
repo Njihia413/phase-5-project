@@ -12,6 +12,11 @@ import About from "./About";
 // import Course from "./Course";
 // import CourseDetails from "./CourseDetails";
 import Dashboard from "./Dashboard"
+// import ContactUs from "./ContactUs";
+//  import Courses from "./Courses";
+import About from "./About";
+// import Course from "./Course";
+import CourseDetails from "./CourseDetails";
 
 function App() {
 
@@ -26,8 +31,8 @@ function App() {
           {/* <Route path="/contact" element={<ContactUs />} />    */}
           <Route path="/courses" element={<Courses/>} />
           <Route path="/about" element={<About/>} />
-          {/* <Route path="/course" element={<Course/>} />
-          <Route path="/CourseDetails" element={<CourseDetails/>} /> */}
+          {/* <Route path="/course" element={<Course/>} /> */}
+          <Route path="/courses/:courseId"  element={<CourseDetails/>} /> 
           <Route path= "/Dashboard" element={<Dashboard/>}/>
       </Routes>
       <Footer/>

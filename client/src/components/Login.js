@@ -1,12 +1,27 @@
 import React, { useState } from "react";
-import { useNavigate }  from 'react-router-dom'
+import { NavLink, useNavigate }  from 'react-router-dom'
 
 
 function Login() {
-  const [ user, setUser] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate()
+
+
+  function setToken(token) {
+    localStorage.setItem("token", token);
+    localStorage.setItem("lastLoginTime", new Date(Date.now()).getTime());
+  }
+
+  function getToken() {
+    let now = new Date(Date.now()).getTime();
+    let thirtyMinutes = 1000 * 60 * 30;
+    let timeSinceLastLogin = now - localStorage.getItem("lastLoginTime");
+    if (timeSinceLastLogin < thirtyMinutes) {
+      return localStorage.getItem("token");
+    }
+  }
+  
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/users/sign_in", {
@@ -14,14 +29,38 @@ function Login() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
+      body: JSON.stringify({user:{ email, password },}),
+    }) .then((res) => {
+      if (res.ok) {
+        setToken(res.headers.get("Authorization"));
+        return res.json();
+      } else {
+        return res.text().then((text) => Promise.reject(text));
       }
-      console.log(user)
-    });
-    navigate(`/`)
+    })
+    .then((json) => console.dir(json))
+    .catch((err) => console.error(err));
+
+
+    // Then wait 30 minutes and do this:
+
+// fetch("/private/test", {
+//   headers: {
+//     "Content-Type": "application/json",
+//     Authorization: getToken(),
+//   },
+// })
+//   .then((res) => {
+//     if (res.ok) {
+//       return res.json();
+//     } else if (res.status ==="401") {
+//       return res.text().then((text) => Promise.reject(text));
+//     }
+//   })
+//   .then((json) => console.dir(json))
+//   .catch((err) => console.error(err));
+  
+    navigate(`/courses`)
     
   }
 
@@ -81,7 +120,7 @@ function Login() {
                     </div>
                     <div className="col-md-12 text-center">
                       <div className="form-group">
-                          <p>Not a member? <strong><a className="main-color" href="/signup">Sign Up</a></strong></p>
+                          <p>Not a member? <strong><NavLink className="main-color" to="/signup">Sign Up</NavLink></strong></p>
                       </div>
                     </div>
                   </div>
