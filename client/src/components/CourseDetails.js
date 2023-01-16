@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar"
 // import Books from "./Books";
-import { useParams } from 'react-router-dom'
-// import ReactPlayer from 'react-video-js-player';
-import { Link} from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 function CourseDetails() {
   const {courseId} = useParams();
@@ -33,12 +31,14 @@ function CourseDetails() {
       ))}
       <h4>Reading Materials</h4>
       {course.books.map((book) => (
+        <div className="row">
           <div className="col-md-3" key={book.id}>
             <div className="card">
           <img src={book.image_url}/>
           <Link className='btn btn-success'to={`/bookdetails`}> More Info</Link>
-        </div>
+           </div>
 
+        </div>
         </div>
       ))}
     </div>
@@ -47,61 +47,4 @@ function CourseDetails() {
 
 export default CourseDetails
 
-  //  function CourseDetails() {
-  //   const [course, setCourse] = useState([]);
-  //   const {courseId} = useParams();
-  //   console.log (courseId);
-   
-  //   useEffect(() => {
-  //     fetch(`/api/v1/courses/${courseId}`)
-  //         .then ( response => {
-  //           if (response.ok) {
-  //             response.json() .then (data =>  {
-  //               setCourse(data)
-  //             }
-  //               )
-  //           }
-  //         }
-
-  //         )
-  //       },[courseId])
-      
-  //    console.log(course)
-   
- 
-   
   
-     
-  
-  // return (
-  //   <div className="">
-  //    <section className="course-details">
-  //        <div className="bg-coursedetails">
-  //           <Navbar/> <br/> <br/><br/> <br/> <br/><br/><br/>
-  //       <div className="row">
-  //           <div className="col">
-  //               <div className="intro-p">
-  //                   <h2>You can enroll to this course to gain access <br></br>   to the materials that have been<br></br> attached to it online <br></br> today.</h2>
-  //               </div>
-  //           </div>
-  //       </div>
-  //        </div>
-  //    </section> <br/> <br/>
-     {/* <div className="card" >
-            {
-            course.videos.map((video) => (
-               
-                <div>
-                  <div className='col-md-4' key={video.id} >
-                    <div className="card text" key={video.id}>
-                    <video src={video.video_url} className="card-img-top" alt="..." ></video>
-                    </div>
-                  </div>
-                </div>
-              
-            ))
-          }  
-        </div> */}
-//      </div>
-//   )
-// }
