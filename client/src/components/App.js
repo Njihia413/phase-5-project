@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect} from "react";
 import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
@@ -12,13 +12,16 @@ import Footer from "./Footer";
 import About from "./About";
 import Course from "./Course";
 import CourseDetails from "./CourseDetails";
+import { useState } from "react";
 
 function App() {
-  const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
+  // const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
   
-  useEffect(() => {
-    console.log(storedToken);
-  }, [storedToken]);
+  // useEffect(() => {
+  //   console.log(storedToken);
+  // }, [storedToken]);
+
+
 
   return (
 

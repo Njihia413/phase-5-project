@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate }  from 'react-router-dom'
 
-function SignUp({ setStoredToken }) {
-  // const [error, setError] = useState(null);
-  const navigate = useNavigate()
+function SignUp() {
   const [data, setData] = useState({
     role:"",
     username:"",
@@ -23,8 +20,7 @@ function SignUp({ setStoredToken }) {
     e.preventDefault()
     fetch("/users/",{
       method: "POST",
-      headers: {  Accepts: "application/json",
-      "Content-Type": "application/json", },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({user:{
         username: data.username,
         email: data.email,
@@ -73,11 +69,6 @@ function SignUp({ setStoredToken }) {
                               onChange={(e) => handleChange(e)}
                               required>
                           </input>
-                          {/* {error.length > 0 ? (
-          <p style={{ color: "red", fontSize: "15px" }}>
-            {error.find((error) => error.includes("Username"))}!!!
-          </p>
-        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -94,11 +85,6 @@ function SignUp({ setStoredToken }) {
                             onChange={(e) => handleChange(e)}
                             required>
                         </input>
-                        {/* {error.length > 0 ? (
-          <p style={{ color: "red", fontSize: "15px" }}>
-            {error.find((error) => error.includes("Email"))}!!!
-          </p>
-        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -128,15 +114,10 @@ function SignUp({ setStoredToken }) {
                           value={data.password}
                           className="form-control" 
                           name="password" 
-                          placeholder="must be more than 6 characters"
+                          placeholder="Password"
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
-                        {/* {error.length > 0 ? (
-          <p style={{ color: "red", fontSize: "15px" }}>
-            {error.find((error) => error.includes("Password"))}!!!
-          </p>
-        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -146,18 +127,13 @@ function SignUp({ setStoredToken }) {
                           type="password" 
                           id="password-confirmation"
                           autoComplete="current-password"
-                          value={data.password_confirmation}
+                          value={data.passwordconfirmation}
                           className="form-control" 
                           name="password-confirmation" 
                           placeholder="Password Confirmation"
                           onChange={(e) => handleChange(e)}
                           required>
                         </input>
-                        {/* {error.length > 0 ? (
-          <p style={{ color: "red", fontSize: "15px" }}>
-            {error.find((error) => error.includes("Confirmation"))}!!!
-          </p>
-        ) : null} */}
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -178,11 +154,6 @@ function SignUp({ setStoredToken }) {
         </div>
       </div>
     </section>
-    
-
-    
- 
-    
   </div>
   );
 }
