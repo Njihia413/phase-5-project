@@ -8,7 +8,6 @@ import Footer from "./Footer";
 import Courses from "../pages/Courses";
 // import ContactUs from "./ContactUs";
 // import Courses from "./Courses";
-import About from "./About";
 // import Course from "./Course";
 // import CourseDetails from "./CourseDetails";
 import Dashboard from "./Dashboard"
