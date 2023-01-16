@@ -1,29 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Navbar () {
-    function logout() {
-        fetch("/users/sign_out", {
-          method: "delete",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: localStorage.getItem("token"),
-          },
-        })
-          .then((res) => {
-            if (res.ok) {
-              return res.json();
-            } else {
-              return res.json().then((json) => Promise.reject(json));
-            }
-          })
-          .then((json) => {
-            console.dir(json);
-          })
-          .catch((err) => console.error(err));
-        }
+function DashboardNav ({ user, setUser }) {
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+      }
+    });
+  }
 
   return (
+    <div className="header">
     <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
               <a className="navbar-brand" href="/">Masomo<span>Digi</span></a>
@@ -47,20 +35,24 @@ function Navbar () {
                           <li className="nav-item">
                               <NavLink to="/contact"  className="nav-link">Contact Us</NavLink>
                           </li>
-                           {/* <li className="nav-item">
-                              <NavLink to="/Dashboard"  className="nav-link">Dashboard</NavLink> 
-                           </li>  */}
+                          {/* <li className="nav-item">
+                              <NavLink to="/Dashboard"  className="nav-link">Dashboard</NavLink>
+                          </li> */}
                       </ul>
-                      <button className="btn btn-primary"  id="nav-btn" onClick={logout}>Logout</button> 
+                      {/* <button className="btn btn-primary" id="nav-btn">Log In</button> */}
                       <div>
+                      {/* {user ? (
+                        <button className="btn btn-primary"  id="nav-btn" onClick={handleLogoutClick}>Logout</button>
+                      ) : ( */}
                         <div>
-                          <NavLink to="/login" className="btn btn-primary" id="nav-btn">Login</NavLink>
+                          {/* <NavLink to="/login" className="btn btn-primary" id="nav-btn">Login</NavLink> */}
                         </div>
-                      
+                      {/* )} */}
                     </div>
               </div>
           </div>
       </nav>
+      </div>
   );
 }
-export default Navbar;
+export default DashboardNav;

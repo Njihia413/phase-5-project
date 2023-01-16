@@ -12,6 +12,7 @@ const ContactUs = () => {
     reset,
     formState: { errors }
   } = useForm();
+
    // Function that displays a success toast on bottom right of the page when form submission is successful
    const toastifySuccess = () => {
     toast('Thank you for contacting us! Our Team will get back to you within 48hours.', {
@@ -50,8 +51,13 @@ const ContactUs = () => {
       console.log(e);
   }
 };
-    formState: { errors }
-  } = useForm();
+
+const {
+  // formState: { errors }
+} = useForm();
+
+
+} 
 
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
@@ -179,6 +185,5 @@ const ContactUs = () => {
       </section>
     </div>
   );
-};
 
 export default ContactUs;
