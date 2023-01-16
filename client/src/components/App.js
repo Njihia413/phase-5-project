@@ -11,7 +11,7 @@ import Courses from "../pages/Courses";
 import About from "./About";
 // import Course from "./Course";
 // import CourseDetails from "./CourseDetails";
-// import Dashboard from "./Dashboard"
+import Dashboard from "./Dashboard"
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/about" element={<About/>} />
           {/* <Route path="/course" element={<Course/>} />
           <Route path="/CourseDetails" element={<CourseDetails/>} /> */}
-          {/* <Route path= "/Dashboard" element={<Dashboard/>}/> */}
+          <Route path= "/Dashboard" element={<Dashboard/>}/>
       </Routes>
       <Footer/>
     </div>
