@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate }  from 'react-router-dom'
+import { NavLink, useNavigate }  from 'react-router-dom'
 
 
 function Login() {
@@ -120,7 +120,7 @@ function Login() {
                     </div>
                     <div className="col-md-12 text-center">
                       <div className="form-group">
-                          <p>Not a member? <strong><a className="main-color" href="/signup">Sign Up</a></strong></p>
+                          <p>Not a member? <strong><NavLink className="main-color" to="/signup">Sign Up</NavLink></strong></p>
                       </div>
                     </div>
                   </div>
