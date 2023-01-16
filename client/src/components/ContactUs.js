@@ -2,9 +2,8 @@ import React from "react";
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
-import Navbar from './Navbar.js';
-
+import 'react-toastify/dist/ReactToastify.min.css';;
+import Navbar from './Navbar';
 
 const ContactUs = () => {
   const {
@@ -13,6 +12,7 @@ const ContactUs = () => {
     reset,
     formState: { errors }
   } = useForm();
+
    // Function that displays a success toast on bottom right of the page when form submission is successful
    const toastifySuccess = () => {
     toast('Thank you for contacting us! Our Team will get back to you within 48hours.', {
@@ -51,6 +51,22 @@ const ContactUs = () => {
       console.log(e);
   }
 };
+
+const {
+  // formState: { errors }
+} = useForm();
+
+
+} 
+
+  const onSubmit = async (data) => {
+    const { name, email, subject, message } = data;
+
+    console.log('Name: ', name);
+    console.log('Email: ', email);
+    console.log('Subject: ', subject);
+    console.log('Message: ', message);
+  };
 
   return (
     <div>
@@ -169,6 +185,5 @@ const ContactUs = () => {
       </section>
     </div>
   );
-};
 
 export default ContactUs;

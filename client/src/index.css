@@ -820,14 +820,23 @@ span {
 /* Beginning of Course Details page*/
 .bg-coursedetails {
   background-color: #102437c1;
-  height: 90vh;
+  height: 80vh;
 }
 .course-details {
   background-image: url(./assets/IMG-3213.JPG);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 80vh;
+}
+.card-img-new {
+width: 354px;
+height: 190px;
+border-radius: 20px;
+}
+.card-img-n {
+  width: 274px;
+  height: 350px;
 }
 /* student dashboard */
 .dash-card {

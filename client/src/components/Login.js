@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate }  from 'react-router-dom'
 import { NavLink, useNavigate }  from 'react-router-dom'
 
 
@@ -12,7 +13,7 @@ function Login() {
     localStorage.setItem("token", token);
     localStorage.setItem("lastLoginTime", new Date(Date.now()).getTime());
   }
-
+console.log(email)
   function getToken() {
     let now = new Date(Date.now()).getTime();
     let thirtyMinutes = 1000 * 60 * 30;
@@ -22,11 +23,13 @@ function Login() {
     }
   }
   
+  
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/users/sign_in", {
       method: "POST",
       headers: {
+        Accepts: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({user:{ email, password },}),
@@ -63,7 +66,7 @@ function Login() {
     navigate(`/courses`)
     
   }
-
+  
   return (
     <div>
     <section className="top-header">
