@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate }  from 'react-router-dom'
+
 
 function SignUp() {
+  const navigate = useNavigate()
   const [data, setData] = useState({
     role:"",
     username:"",
@@ -36,10 +39,13 @@ function SignUp() {
         return res.json();
       } else {
         throw new Error(res);
+
       }
     })
     .then((json) => console.dir(json))
     .catch((err) => console.error(err));
+    console.log(data.role)
+    navigate(`/login`)
      
   };
       
@@ -96,11 +102,11 @@ function SignUp() {
                       onChange={(e) => handleChange(e)}
                       value={data.role}>
                         <option value="">Role</option>
-                        <option onChange={(e) => handleChange(e)} value="Teacher">
-                          Teacher
+                        <option onChange={(e) => handleChange(e)} value="teacher">
+                          teacher
                         </option>
-                        <option onChange={(e) => handleChange(e)} value="Student">
-                          Student
+                        <option onChange={(e) => handleChange(e)} value="student">
+                          student
                         </option>
                       </select>
                     </div>
