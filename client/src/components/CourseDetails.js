@@ -3,33 +3,33 @@ import Navbar from "./Navbar"
 import Books from "./Books";
 
 function CourseDetails () {
-    const [videos, setVideos] = useState([])
+    // const [videos, setVideos] = useState([])
    
 
-    const fetchVideo = () => {
-        fetch("/videos")
-          .then(response => {
-            return response.json()
-          })
-          .then(data => {
-            setVideos(data)
-          })
-      }
+    // const fetchVideo = () => {
+    //     fetch("/videos")
+    //       .then(response => {
+    //         return response.json()
+    //       })
+    //       .then(data => {
+    //         setVideos(data)
+    //       })
+    //   }
     
-      useEffect(() => {
-        fetchVideo()
-      }, [])
+    //   useEffect(() => {
+    //     fetchVideo()
+    //   }, [])
 
-      if (videos=== undefined) {
-        return null;
-      }
-       console.log(videos)
+    //   if (videos=== undefined) {
+    //     return null;
+    //   }
+    //    console.log(videos)
     
       
 
     return (
         <div className="">
-               <section className="course-details">
+               {/* <section className="course-details">
             <div className="bg-coursedetails">
                 <Navbar/> <br/> <br/><br/> <br/> <br/><br/><br/> 
             <div className="row">
@@ -72,7 +72,7 @@ function CourseDetails () {
       </div> <br/> 
       <Books/>  
 
-            </div>
+            </div> */}
         </div>
     )
 }
