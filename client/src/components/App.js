@@ -11,7 +11,7 @@ import Courses from "../pages/Courses";
 // import ContactUs from "./ContactUs";
 // import Courses from "./Courses";
 // import Course from "./Course";
-
+import SignUp from "./SignUp";
 import Dashboard from "./Dashboard"
 import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";
@@ -31,7 +31,7 @@ function App() {
 
       <Routes>
           <Route path="/" element={<Home/>}/>
-          {/* <Route path="/signup" element={<SignUp />} /> */}
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
             {/* <Route path="/contact" element={<ContactUs />} />     */}
           <Route path="/courses" element={<Courses/>} /> 
