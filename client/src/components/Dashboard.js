@@ -15,13 +15,14 @@ import DashboardNav from "./DashboardNav";
 const Dashboard = () => {
   return (
     <section className="dashboard">
-      <DashboardNav/>
-      <h3><b>Courses</b></h3>
+      <DashboardNav />
+      <h3 className="dash-text-center mt-4">Courses</h3>
+        
       <div className="dashboard-text">
-      <strong>All Courses</strong> 
-      <strong>My Courses</strong>
+        <strong>All Courses</strong>
+        <strong>My Courses</strong>
       </div>
-      <div className="search-container">
+      <div className="dash-search-container">
         <form>
           <i className="fa-sharp fa-solid fa-magnifying-glass"></i>
           <input
@@ -39,9 +40,9 @@ const Dashboard = () => {
             Sort By <i class="fa-solid fa-caret-down"></i>
           </button>
         </div>
-       </div> 
-       <div className="text-container">
-        <div className="text-block">
+      </div>
+      <div className="dash-text-container">
+        <div className="dash-text-block">
           <p>
             <strong>All Courses</strong>
           </p>
@@ -56,147 +57,118 @@ const Dashboard = () => {
           <p>Digital Marketing(382)</p>
         </div>
       </div>
-
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={cup} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={cup} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Become a Social Media Expert</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={cap} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={cap} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Learn Logo Design</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={cep} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={cep} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Become a Web Developer</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={cop} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={cop} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Get Weekly Shopping Tips</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={coup} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={coup} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>3 Weeks Photography Bootcamp</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={bup} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={bup} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Advance Your 3D Modelling Skills</p>
           </div>
         </div>
       </div>
-
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={bop} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={bop} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Learn Organization Management</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={bep} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={bep} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Skills Needed To Become A Designer</p>
           </div>
         </div>
       </div>
-
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={boup} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={boup} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>2 in 1 Course On Becoming A Makeup Artist</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={cip} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={cip} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>Embark on the Journey of Becoming an Artist</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={bip} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={bip} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>How To Have A Good Listening Ear For Music</p>
           </div>
         </div>
       </div>
       <div className="col-md-3">
-        <div className="card">
-          
-            <img src={bap} alt="" className="card-img-top"></img>
-          
-          <div className="card-body">
+        <div className="dash-card">
+          <img src={bap} alt="" className="dash-card-img-top"></img>
+          <div className="dash-card-body">
             <p>The Art Of Growing A Relationship</p>
           </div>
         </div>
       </div>
       <div className="number-btn-i">
-         <p>01</p>
+        <p>01</p>
       </div>
       <div className="number-btn-i">
-         <p>02</p>
+        <p>02</p>
       </div>
       <div className="number-btn-i">
-         <p>03</p>
+        <p>03</p>
       </div>
       <div className="number-btn-i">
-         <p>-</p>
+        <p>-</p>
       </div>
       <div className="number-btn-i">
-         <p>next</p>
+        <p>next</p>
       </div>
-      
     </section>
   );
 };
-
-export default Dashboard; 
+export default Dashboard
