@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 // import ContactUs from "./ContactUs";
 import About from "./About";
-import Courses from "../pages/Courses";
+import Courses from "./Courses";
 // import ContactUs from "./ContactUs";
 // import Courses from "./Courses";
 // import Course from "./Course";
@@ -18,14 +18,7 @@ import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";
 
 function App() {
-  // const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
   
-  // useEffect(() => {
-  //   console.log(storedToken);
-  // }, [storedToken]);
-
-
-
   return (
 
     <div className="App">
@@ -40,7 +33,7 @@ function App() {
           <Route path="/about" element={<About/>} /> 
            {/* <Route path="/course" element={<Course/>} /> */}
           <Route path="/courses/:courseId" element={<CourseDetails/>} /> 
-          <Route path= "teacherdashboard"  element={<TeacherDashboard/>}
+          <Route path= "teacherdashboard"  element={<TeacherDashboard/>} />
         
        
           <Route path= "/Dashboard" element={<Dashboard/>}/>
