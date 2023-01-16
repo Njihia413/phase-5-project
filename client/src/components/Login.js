@@ -12,7 +12,7 @@ function Login() {
     localStorage.setItem("token", token);
     localStorage.setItem("lastLoginTime", new Date(Date.now()).getTime());
   }
-
+console.log(email)
   function getToken() {
     let now = new Date(Date.now()).getTime();
     let thirtyMinutes = 1000 * 60 * 30;
@@ -21,6 +21,7 @@ function Login() {
       return localStorage.getItem("token");
     }
   }
+  
   
   function handleSubmit(e) {
     e.preventDefault();
