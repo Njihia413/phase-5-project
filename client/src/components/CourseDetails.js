@@ -13,7 +13,7 @@ function CourseDetails() {
       .then((course) => setCourse(course));
   }, [courseId]);
 
-  if (!course) return <h2>Loading game data...</h2>;
+  if (!course) return <h2>Loading  data...</h2>;
 
   return (
     <div className='container'>
