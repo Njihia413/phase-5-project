@@ -793,6 +793,29 @@ form.fa-sharp fa-solid fa-magnifying-glass{
 }
 
 /*==================End of Courses page=======================*/
+/*DashboardNav*/
+.header{
+  background-color: #102437;
+  
+}
+.navbar-brand, .navbar-brand:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+span {
+  color: #9085D1;
+}
+
+
+.nav-link, .nav-link:hover {
+  color: #fff;
+}
+
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+  color: #9085D1;
+}
 
 /* Beginning of Course Details page*/
 .bg-coursedetails {
@@ -806,6 +829,15 @@ form.fa-sharp fa-solid fa-magnifying-glass{
   background-repeat: no-repeat;
   height: 90vh;
 }
+/* student dashboard */
+.dash-card {
+  border: none;
+  margin-bottom: 25px;
+  
+  
+  
+}
+.dash-card-img-top 
 .courses-text-container {
   float: left;
   width: 20%; 
@@ -868,15 +900,63 @@ form.fa-sharp fa-solid fa-magnifying-glass{
     height: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+}
+
+.dash-card-body {
+
 }
 .card-body {
+
   color: #fff;
   background-color: #9085d1;
   padding-bottom: 0;
   padding-top: 10;
+  /* padding-left: 10px; */
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 70px;
   width: 80%;
+}
+
+.dash-text-container {
+  float: right;
+  width: 20%;
+}
+
+.dash-text-block p {
+  display: block;
+}
+
+.dash-search-container {
+  background-color: #9085D1;
+  padding: 10px;
+  height: 80%;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+.dash-search-container input {
+  border: none;
+  padding: 10px;
+  width: 80%;
+  background-color: #9085D1;
+}
+
+.dash-search-container i {
+  
+  font-size: 20px;
+}
+
+.dashboard{
+  background-color: rgb(218, 218, 248);
+}
+
+hr {
+  margin: 1rem 0;
+  color: white;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.25;
 }

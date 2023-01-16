@@ -9,7 +9,6 @@ function SignUp() {
     username:"",
     email: "",
     password:"",
-    
     password_confirmation: ""
   });
   // const formObject = {}
