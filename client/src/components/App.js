@@ -10,7 +10,7 @@ import Footer from "./Footer";
 //  import Courses from "./Courses";
 import About from "./About";
 // import Course from "./Course";
-// import CourseDetails from "./CourseDetails";
+import CourseDetails from "./CourseDetails";
 
 function App() {
 
@@ -25,8 +25,8 @@ function App() {
            {/* <Route path="/contact" element={<ContactUs />} />    */}
           <Route path="/courses" element={<Courses/>} /> 
           <Route path="/about" element={<About/>} />
-          {/* <Route path="/course" element={<Course/>} />
-          <Route path="/courses/:courseId" element={<CourseDetails/>} /> */}
+           {/* <Route path="/course" element={<Course/>} /> */}
+          <Route path="/courses/:courseId" element={<CourseDetails/>} /> 
       </Routes>
       <Footer/>
     </div>

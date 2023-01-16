@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 
 function Courses() {
   const [courses, setCourses] = useState([]);
@@ -39,7 +39,7 @@ function Courses() {
                         <h3 className="card-title">{course.name}</h3>
                        
                       </div>
-                       <Link className='btn btn-success'to={`/courses/${course.id}`}> More Info</Link>
+                       <NavLink className='btn btn-success'to={`/courses/${course.id}`}> More Info</NavLink>
                     </div>
                   </div>
                 </div>
