@@ -477,3 +477,51 @@ hr {
   background-repeat: no-repeat;
   height: 90vh;
 }
+/* START REVIEW */
+.star-rating {
+  background-color: #9085D1;
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.star-rating .foreground {
+  color: var(--theme-primary);
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+}
+
+.star-rating .background {
+  display: flex;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  
+}
+
+form input,
+form textarea {
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+
+}
+
+form button[type="submit"] {
+  width: 150px;
+  border-radius: 35px;
+  color: #ffffff;
+  background-color: #102437;
+
+}
+.review {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
