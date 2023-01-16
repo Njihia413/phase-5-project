@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 // import Books from "./Books";
 import { useParams } from 'react-router-dom'
 // import ReactPlayer from 'react-video-js-player';
+import { Link} from 'react-router-dom'
 
 function CourseDetails() {
   const {courseId} = useParams();
@@ -35,7 +36,9 @@ function CourseDetails() {
           <div className="col-md-3" key={book.id}>
             <div className="card">
           <img src={book.image_url}/>
+          <Link className='btn btn-success'to={`/bookdetails`}> More Info</Link>
         </div>
+
         </div>
       ))}
     </div>
