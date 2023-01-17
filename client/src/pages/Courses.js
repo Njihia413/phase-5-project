@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from "../components/Navbar";
 import { NavLink} from 'react-router-dom'
 
 function Courses() {
@@ -23,7 +22,6 @@ function Courses() {
   return (
   <section className='courses-page'>
     <div className='bg-courses'>
-        <Navbar />
         <div className="row">
           <div className="col">
             <div className="intro">

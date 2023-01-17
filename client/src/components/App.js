@@ -14,6 +14,9 @@ import Dashboard from "./Dashboard"
 import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";
 import Enrolnow from "./enrolnow";
+import TeacherCourses from "../pages/TeacherCourses";
+import TeacherAssessments from "../pages/TeacherAssessments";
+import TeacherGrades from "../pages/TeacherGrades";
 
 function App() {
   return (
@@ -30,7 +33,13 @@ function App() {
           <Route path="/about" element={<About/>} /> 
            {/* <Route path="/course" element={<Course/>} /> */}
           <Route path="/courses/:courseId" element={<CourseDetails/>} />
+
+          
+          <Route path= "teachercourses"  element={<TeacherCourses/>} />
+          <Route path= "teacherassessments"  element={<TeacherAssessments/>} />
+          <Route path= "teachergrades"  element={<TeacherGrades/>} />
           <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
+
           <Route path= "/Dashboard" element={<Dashboard/>}/>
           <Route path= "/enrolnow" element={<Enrolnow/>}/>
           
