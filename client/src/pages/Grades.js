@@ -10,6 +10,7 @@ const Grades = () => {
       <Navbar />
       <Box/>
       <GradesForm />
+      
       </div>
     </div>
   )
