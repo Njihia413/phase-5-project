@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../css/dashboardnav.css';
 
 
@@ -14,44 +15,44 @@ const Sidebar = () => {
                 </li>
                    
                     <li className="list-item">
-                        <a href="teachercourses">
+                        < Link to="/teachercourses">
                             <span>
                             <i className="fa-solid fa-school"></i>
                             </span>
                             <span className="text">Courses</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item">
-                        <a href="teacherassessments">
+                        <Link to="/teacherassessments">
                             <span>
                             <i className="fa-solid fa-server"></i>
                             </span>
                             <span className="text">Assessment</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item">
-                        <a href="teachergrades">
+                        <Link to="/teachergrades">
                             <span>
                             <i className="fa-solid fa-user-group"></i>
                             </span>
                             <span className="text">Grades</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item">
-                        <a href="profile">
+                        <Link to="/profile">
                             <span>
                             <i className="fa-solid fa-user"></i>
                             </span>
                             <span className="text">Profile</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item" id="logout">
-                        <a href="/">
+                        <Link to="/">
                             <span>
                             <i className="fa-solid fa-arrow-right-from-bracket" ></i>
                             </span>
                             <span className="text">Log Out</span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
         </div>
