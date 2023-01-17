@@ -795,3 +795,95 @@ border-radius: 20px;
   color: #fff;
 }
 
+/* styling for grades page */
+.grades {
+  background-image: url('./assets/IMG-3216.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+.bg-grades {
+  background-color: #102437c1;
+  height: 90vh;
+}
+.box{
+  background-color: lavender;
+  width: 700px;
+  height: 800px;
+  margin-left: 25px;
+  margin-top: 50%;
+  border-radius: 25px;
+}
+.button btn btn-primary{
+  margin: 25px;
+}
+.content{
+  width: 100%;
+} 
+.logo{
+  color: #000000;
+  font-size: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 80%;
+  
+}
+.table{
+  width: 80%;
+  border-collapse: collapse;
+  text-align: centre;
+  margin-top: 5%;
+  margin-left: 60%;
+  position: -50%;
+  
+}
+.table thead{
+  text-align: centre; 
+  
+}
+.table thead th{
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: o.35px;
+  color: #000000;
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border: 1px solid#dddddd;
+  text-align:center;
+}
+tr:nth-child(even),table thead>tr{
+  background-color: lavendar;
+}
+.wrapall{
+  width: 100%;
+  display: flex;
+
+}
+.left{
+  width: 30%;
+  margin-top: 5%;
+
+}
+.right{
+  width: 70%;
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+} 
+ .left h4{
+  color: #000000;
+  
+} 
+ .fa-trash-can{
+  color: red;
+  margin-left: 30px;
+  cursor: pointer;
+} 
+ td{
+  text-align: center;
+}
