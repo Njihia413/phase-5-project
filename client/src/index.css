@@ -1018,7 +1018,7 @@ border-radius: 20px;
 }
 
 .dashboard{
-  background-color: rgb(218, 218, 248);
+  background-color:white;
 }
 
 hr {
@@ -1028,3 +1028,74 @@ hr {
   border-top: 1px solid;
   opacity: 0.25;
 }
+.subt{
+  text-align: center;
+  font-weight: bolder;
+}
+.item1{
+  color: #000000;
+  text-decoration: none;
+ margin-left: 500px;
+ padding-bottom: 25px;
+ 
+}
+
+.item2{
+  color: #000000;
+  text-decoration: none;
+ margin-right: 500px;
+ padding-bottom: 25px;
+}
+/* .filter-sort-container{
+  height: 120px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+}
+.filter-sort-button{
+  border-radius: 51px;
+} */
+.courses-text-block p {
+  display: block;
+  color: #fff;
+}
+.card-name {
+  width: 332px;
+  height: 72px;
+  font-family: 'OutFit';
+  font-style: normal;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 152%;
+  text-align: center;
+  color: #000000;
+}
+.card iframe {
+  border-radius: 28px;
+}
+.mebooks {
+  width: 274px;
+  height: 350px;
+}
+.detsh2 {
+width: 386px;
+height: 34px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 152.34%;
+
+}
+.ctitles {
+width: 386px;
+height: 34px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 152.34%;
+text-align: center;
+}
+
+
