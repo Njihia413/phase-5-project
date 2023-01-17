@@ -818,6 +818,7 @@ border-radius: 20px;
 .button btn btn-primary{
   margin: 25px;
 }
+
 .content{
   width: 100%;
 } 
@@ -876,8 +877,7 @@ a{
   text-decoration: none;
 } 
  .left h4{
-  color: #000000;
-  
+  color: #000000; 
 } 
  .fa-trash-can{
   color: red;
