@@ -3,11 +3,14 @@ import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { useNavigate }  from 'react-router-dom'
 
 
 function CourseDetails() {
+  const navigate = useNavigate()
   const { courseId } = useParams();
   const [course, setCourse] = useState(null);
+  const [setCourseId] = useState(null);
 
   useEffect(() => {
     fetch(`/api/v1/courses/${courseId}`)
@@ -16,7 +19,7 @@ function CourseDetails() {
   }, [courseId]);
 
   if (!course) return <h2>Loading course data...</h2>;
-
+  
   return (
     <div className="course-details">
       <section className="course-details">
@@ -39,14 +42,15 @@ function CourseDetails() {
         </div>
       </section>
       <br /> <br />
-      <Link className='btn-3'to={`/enrolnow`}><p className="course-text">Enrol Now</p></Link>
-      <Link className='btn btn-2'to={`/courses`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
+      <Link className='btn-2'to={`/enrolnow`}><button type="submit" className="course-text">Enrol Now</button></Link>
+      <Link className='btn btn-2'to={`/Dashboard`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
       <div className="container">
         <h2 className="detsh2" key={course.id}>{course.name}</h2>
 
         <h4 className="ctitles">Learning Videos</h4>
+        <div >
         {course.videos.map((video) => (
-          <div className="col-md-7" key={video.id}>
+          <div style={{display: 'flex', flexDirection: 'column'}} className="col-4" key={video.id}>
             <div className="card">
               <iframe
                 width="354px"
@@ -64,6 +68,7 @@ function CourseDetails() {
             </div>
           </div>
         ))}
+        </div>
         <h4 className="ctitles">Reading Materials</h4>
         {course.books.map((book) => (
           <div className="col-md-3" key={book.id}>
@@ -81,3 +86,5 @@ function CourseDetails() {
 }
 
 export default CourseDetails;
+
+

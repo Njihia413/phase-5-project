@@ -33,6 +33,7 @@ function App() {
           <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
           <Route path= "/Dashboard" element={<Dashboard/>}/>
           <Route path= "/enrolnow" element={<Enrolnow/>}/>
+          
       </Routes>
       {/* <Footer/> */}
     </div>

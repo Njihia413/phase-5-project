@@ -9,8 +9,7 @@ import { NavLink}  from 'react-router-dom'
 
 function Login() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
+  const [password, setPassword] = useState("");;
   const navigate = useNavigate()
  
 
@@ -43,7 +42,6 @@ console.log(email)
     }) .then((res) => {
       if (res.ok) {
         setToken(res.headers.get("Authorization"));
-        console.log(role)
         return res.json();
       } else {
         return res.text().then((text) => Promise.reject(text));
@@ -52,10 +50,8 @@ console.log(email)
     .then((json) => console.dir(json))
     .catch((err) => console.error(err));
 
-    if(role === "student") {
-      navigate(`/Dashboard`) } else {
-        navigate(`/Dashboard`)
-      }
+    
+      navigate(`/Dashboard`) 
     
   }
   
