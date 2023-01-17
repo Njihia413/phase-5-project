@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import Card from "react-bootstrap/Card";
+import CardGroup from "react-bootstrap/CardGroup";
 import { useNavigate }  from 'react-router-dom'
 
 
@@ -42,15 +44,14 @@ function CourseDetails() {
         </div>
       </section>
       <br /> <br />
-      <Link className='btn-2'to={`/enrolnow`}><button type="submit" className="course-text">Enrol Now</button></Link>
-      <Link className='btn btn-2'to={`/Dashboard`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
+      <Link className='btn btn-2'to={`/courses`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
       <div className="container">
         <h2 className="detsh2" key={course.id}>{course.name}</h2>
 
         <h4 className="ctitles">Learning Videos</h4>
-        <div >
+        <div class="watches" >
         {course.videos.map((video) => (
-          <div style={{display: 'flex', flexDirection: 'column'}} className="col-4" key={video.id}>
+          <CardGroup style={{ width: "25rem" , height: "100%"}} key={video.id}>
             <div className="card">
               <iframe
                 width="354px"
@@ -63,22 +64,27 @@ function CourseDetails() {
                 allowfullscreen
               ></iframe>
             </div>
-            <div className="card-name">
-              <p>{video.name}</p>
-            </div>
-          </div>
+            <Card.Title>
+              {video.name}
+            </Card.Title>
+          </CardGroup>
         ))}
         </div>
-        <h4 className="ctitles">Reading Materials</h4>
-        {course.books.map((book) => (
-          <div className="col-md-3" key={book.id}>
-            <Link  to={`/bookdetails`}>
-            <div className="card">
-              <img className="mebooks" src={book.image_url} />
-            </div>
-            </Link>
-          </div>
-        ))}
+        <h4 >Reading Materials</h4>
+        {course.books.map((book) => {
+              return (
+                <div className="watches">
+                <CardGroup style={{ width: "25rem" , height: "100%"}} key={course.id}>
+                <Link  to={`/bookdetails`}>
+                  <Card.Img variant="top" src={book.image_url} alt={book.name} />
+                  </Link>
+                  <br />
+                  <br />
+                </CardGroup>
+              </div>
+
+              )
+            })}
       </div>
       <Footer/>
     </div>
