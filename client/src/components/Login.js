@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { useNavigate }  from 'react-router-dom'
 import { NavLink}  from 'react-router-dom'
 
-
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
   const navigate = useNavigate()
-
-
+ 
   function setToken(token) {
     localStorage.setItem("token", token);
     localStorage.setItem("lastLoginTime", new Date(Date.now()).getTime());
@@ -36,34 +35,24 @@ console.log(email)
     }) .then((res) => {
       if (res.ok) {
         setToken(res.headers.get("Authorization"));
+      
         return res.json();
       } else {
         return res.text().then((text) => Promise.reject(text));
       }
     })
-    .then((json) => console.dir(json))
-    .catch((err) => console.error(err));
-
-    // Then wait 30 minutes and do this:
-
-// fetch("/private/test", {
-//   headers: {
-//     "Content-Type": "application/json",
-//     Authorization: getToken(),
-//   },
-// })
-//   .then((res) => {
-//     if (res.ok) {
-//       return res.json();
-//     } else if (res.status ==="401") {
-//       return res.text().then((text) => Promise.reject(text));
-//     }
-//   })
-//   .then((json) => console.dir(json))
-//   .catch((err) => console.error(err));
-  
-    navigate(`/courses`)
+    .then((json) =>{ 
+      console.log("test",json.status.data.role)
+       setRole(json.status.data.role)
+    })
     
+    .catch((err) => console.error(err));
+    
+    if(role === "student") {
+      navigate("/Dashboard")
+    }else if( role === "teacher") {
+      navigate("/teacherdashboard")
+    }
   }
   
   return (

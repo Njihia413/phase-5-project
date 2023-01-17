@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
-import { NavLink} from 'react-router-dom'
 import DashboardNav from './DashboardNav'
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const [courses, setCourses] = useState([]);
@@ -61,17 +61,23 @@ function Dashboard() {
           {
             courses.map((course) => {
               return (
+                
                 <div>
+                  
                   <div className='col-md-4' key={course.id} >
                     <div className="card text" key={course.id}>
                     <img src={course.image_url} className="card-img-top" alt="..." />
+                   
                       <div className="card-body" key={course.id}>
+                      <Link  to={`/courses/${course.id}`}>
                         <h3 className="card-title">{course.name}</h3>
-                       
+                      </Link>
                       </div>
-                       <NavLink className='btn btn-success'to={`/courses/${course.id}`}> More Info</NavLink>
+                  
                     </div>
+                    
                   </div>
+                   
                 </div>
               )
             })
