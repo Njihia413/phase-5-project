@@ -64,13 +64,11 @@ function CourseDetails() {
         <h4>Reading Materials</h4>
         {course.books.map((book) => (
           <div className="col-md-3" key={book.id}>
+            <Link  to={`/bookdetails`}>
             <div className="card">
-              <img src={book.image_url} />
-              <Link className="btn btn-success" to={`/bookdetails`}>
-                {" "}
-                More Info
-              </Link>
+              <img className="mebooks" src={book.image_url} />
             </div>
+            </Link>
           </div>
         ))}
       </div>

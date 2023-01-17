@@ -794,4 +794,22 @@ border-radius: 20px;
   display: block;
   color: #fff;
 }
+.card-name {
+  width: 332px;
+  height: 72px;
+  font-family: 'OutFit';
+  font-style: normal;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 152%;
+  text-align: center;
+  color: #000000;
+}
+.card iframe {
+  border-radius: 28px;
+}
+.mebooks {
+  width: 274px;
+  height: 350px;
+}
 
