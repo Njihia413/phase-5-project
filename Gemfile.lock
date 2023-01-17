@@ -201,6 +201,10 @@ GEM
     zeitwerk (2.6.6)
 
 PLATFORMS
+<<<<<<< HEAD
+=======
+  ruby
+>>>>>>> 257b714a3b7850a14b05500458b190d87c750367
   x86_64-linux
 
 DEPENDENCIES

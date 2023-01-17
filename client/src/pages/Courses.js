@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-// import Navbar from "./src/components/Navbar.js";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import Navbar from "../components/Navbar";
+import { NavLink} from 'react-router-dom'
 
 function Courses() {
   const [courses, setCourses] = useState([]);
@@ -21,8 +21,9 @@ function Courses() {
   console.log(courses);
 
   return (
-    <section className="courses">
-      <div className="bg-courses">
+  <section className='courses-page'>
+    <div className='bg-courses'>
+        <Navbar />
         <div className="row">
           <div className="col">
             <div className="intro">
@@ -68,36 +69,30 @@ function Courses() {
             <p>Digital Marketing(382)</p>
           </div>
         </div>
-        <div className="container my-5 py-5" key={courses.id}>
-          <div className="row d-flex justify-content-center" key={courses.id}>
-            <div class="card">
-              {courses.map((course) => {
-                return (
-                  <div>
-                    <div className="col-md-4" key={course.id}>
-                      <div className="card text" key={course.id}>
-                        <img
-                          src={course.image_url}
-                          className="card-img-top"
-                          alt="..."
-                        />
-                        <div className="card-body" key={course.id}>
-                          <h3 className="card-title">{course.name}</h3>
-                        </div>
-                        <NavLink
-                          className="btn btn-success"
-                          to={`/courses/${course.id}`}
-                        >
-                          {" "}
-                          More Info
-                        </NavLink>
+      </div>
+       <div className='container my-5 py-5' key={courses.id}>
+        
+        <div class="card" >
+          {
+            courses.map((course) => {
+              return (
+                <div>
+                  <div className='row d-flex ' key={courses.id}>
+                  <div className='col-md-4' key={course.id} >
+                    <div className="card text" key={course.id}>
+                    <img src={course.image_url} className="card-img-top" alt="..." />
+                      <div className="card-body" key={course.id}>
+                        <h3 className="card-title">{course.name}</h3>
+                       
                       </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                  </div>
+                </div>
+              )
+            })
+          }
+      
         </div>
       </div>
     </section>

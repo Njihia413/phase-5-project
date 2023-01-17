@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate }  from 'react-router-dom'
-import { NavLink }  from 'react-router-dom'
+import { NavLink}  from 'react-router-dom'
 
 
 function Login() {
@@ -43,7 +43,6 @@ console.log(email)
     })
     .then((json) => console.dir(json))
     .catch((err) => console.error(err));
-
 
     // Then wait 30 minutes and do this:
 

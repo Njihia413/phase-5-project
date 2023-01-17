@@ -1,0 +1,140 @@
+.dashboard-container{
+    width: 100%;
+   min-height: 100vh;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   background: #f2f2f2;
+   
+}
+
+.dashboard-navigation{
+    position: fixed;
+    inset: 20px 3 20px 20px;
+    width: 200px;
+    min-height: 800px;
+    background: #010133;
+    border-radius: 20px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.dashboard-navigation ul{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.dashboard-navigation ul li{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.dashboard-navigation ul li.active{
+    transform: translateX(30px);
+}
+
+.dashboard-navigation.open ul li.active{
+    transform: translateX(10px);
+}
+
+.dashboard-navigation ul li a{
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+}
+.dashboard-navigation ul li a i{
+    position: relative;
+    display: block;
+    min-width: 50px;
+    line-height: 60px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.75em;
+    transition: 0.5s;
+}
+
+.dashboard-navigation ul li a i:hover{
+    color: var(--lightblue);
+}
+
+.dashboard-navigation ul li li.active a i{
+    color: #fff;
+    background: var(--color);
+}
+
+.dashboard-navigation ul li a i ::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--color);
+    filter: blur(px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.dashboard-navigation ul li.active a i ::before{
+    opacity: 0.5;
+}
+
+.dashboard-navigation ul li a .text{
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: 0.5s;
+}
+.dashboard-navigation ul li a .text:hover{
+    font-weight: 800;
+    color: var(--lightblue);
+}
+
+.dashboard-navigation.open ul li a .text{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dashboard-navigation ul li.active a .text{
+   color: var(--color);
+}
+
+#logout a :hover{
+    color: red;
+}
+
+/* .logo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-left: -30px;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    color: var(--lightblue);
+    font-size: 30px;
+} */
