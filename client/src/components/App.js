@@ -1,5 +1,5 @@
 
-import React, { useEffect} from "react";
+import React  from "react";
 import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
@@ -10,9 +10,6 @@ import Footer from "./Footer";
 import About from "./About";
 import Courses from "./Courses";
 // import ContactUs from "./ContactUs";
-// import Courses from "./Courses";
-// import Course from "./Course";
-
 import Dashboard from "./Dashboard"
 import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";
@@ -29,7 +26,7 @@ function App() {
           <Route path="/login" element={<Login />} />
 
             {/* <Route path="/contact" element={<ContactUs />} />     */}
-          <Route path="/courses" element={<Courses/>} /> 
+           <Route path="/courses" element={<Courses/>} />  
           <Route path="/about" element={<About/>} /> 
            {/* <Route path="/course" element={<Course/>} /> */}
           <Route path="/courses/:courseId" element={<CourseDetails/>} />
