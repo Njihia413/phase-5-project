@@ -43,20 +43,24 @@ console.log(email)
     }) .then((res) => {
       if (res.ok) {
         setToken(res.headers.get("Authorization"));
-        console.log(role)
+      
         return res.json();
       } else {
         return res.text().then((text) => Promise.reject(text));
       }
     })
-    .then((json) => console.dir(json))
-    .catch((err) => console.error(err));
-
-    if(role === "student") {
-      navigate(`/Dashboard`) } else {
-        navigate(`/Dashboard`)
-      }
+    .then((json) =>{ 
+      console.log("test",json.status.data.role)
+       setRole(json.status.data.role)
+    })
     
+    .catch((err) => console.error(err));
+    
+    if(role === "student") {
+      navigate("/Dashboard")
+    }else if( role === "teacher") {
+      navigate("/teacherdashboard")
+    }
   }
   
   return (
