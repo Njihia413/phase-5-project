@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from "react";
+import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';;
+import Navbar from './Navbar';
+=======
 // import React from "react";
 // import { useForm } from 'react-hook-form';
 // import emailjs from 'emailjs-com';
@@ -5,6 +13,7 @@
 // import 'react-toastify/dist/ReactToastify.min.css';;
 // import Navbar from './Navbar';
 
+>>>>>>> 257b714a3b7850a14b05500458b190d87c750367
 
 // const ContactUs = () => {
 //   const {
@@ -103,15 +112,23 @@ const {
 
 } 
 
+<<<<<<< HEAD
+  const onSubmit = async (data) => {
+=======
 
  const onSubmit = async (data) => {
+>>>>>>> 257b714a3b7850a14b05500458b190d87c750367
     const { name, email, subject, message } = data;
 
     console.log('Name: ', name);
     console.log('Email: ', email);
     console.log('Subject: ', subject);
     console.log('Message: ', message);
+<<<<<<< HEAD
+  };
+=======
    };
+>>>>>>> 257b714a3b7850a14b05500458b190d87c750367
 
   return (
     <div>

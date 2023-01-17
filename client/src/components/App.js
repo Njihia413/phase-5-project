@@ -33,7 +33,7 @@ function App() {
           <Route path= "teacherdashboard"  element={<TeacherDashboard/>} />
           <Route path= "/Dashboard" element={<Dashboard/>}/>
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
