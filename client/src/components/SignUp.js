@@ -41,7 +41,10 @@ function SignUp() {
     .then((json) => console.dir(json))
     .catch((err) => console.error(err));
     console.log(data.role)
-    navigate(`/login`)
+    if (data.role === "student") {
+    navigate(`/Dashboard`) } else {
+      navigate(`/teacherdashboard`)
+    }
   };
   return (
     <div>

@@ -15,7 +15,6 @@ import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";
 
 function App() {
-  
   return (
 
     <div className="App">
@@ -30,7 +29,7 @@ function App() {
           <Route path="/about" element={<About/>} /> 
            {/* <Route path="/course" element={<Course/>} /> */}
           <Route path="/courses/:courseId" element={<CourseDetails/>} />
-          <Route path= "teacherdashboard"  element={<TeacherDashboard/>} />
+          <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
           <Route path= "/Dashboard" element={<Dashboard/>}/>
       </Routes>
       {/* <Footer/> */}
