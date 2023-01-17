@@ -1,14 +1,14 @@
+
 import React, { useEffect, useState } from 'react'
-import { Link} from 'react-router-dom';
-// import { useNavigate}  from 'react-router-dom'
+import DashboardNav from './DashboardNav'
+import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import Navbar from "./Navbar";
+// import { useNavigate }  from 'react-router-dom'
 import Footer from "./Footer";
 
-
-function Courses() {
-// const navigate = useNavigate()
+function Dashboard() {
+  
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     async function getCourses() {
@@ -26,31 +26,31 @@ function Courses() {
   }
    console.log(courses)
 
-   
-  return (
   
-    <div className='courses'>
-      <section className="course-page">
-      <div className="bg-courses">
-        <Navbar />
-        <div className="row">
-          <div className="col">
-            <div className="intro">
-              <h1>
-                Checkout our courses <br></br> curated for your E-<br></br>
-                Learning
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> <br/> <br/>
-           <div className='course'>
-           <Link  style={{
-                        paddingLeft: "40px",
-                      }}className='btn btn-2'to={`/Dashboard`}><p className="course-text">Dashboard <i className="fa-solid fa-arrow-left"></i></p></Link>
-          
-       <div key={courses.id}>
+
+  return (
+    <section>
+      <DashboardNav />
+      
+        <br/> <br/> <br/> <br/> <br/>
+       <ul className="">
+       <Link className='btn btn-2'to={`/courses`}><p className="course-text">All Courses</p></Link>
+       <Link className='btn btn-2'to={`/courses`}><p className="course-text">My Grades</p></Link>
+       <Link className='btn btn-2'to={`/courses`}><p className="course-text">Assesments</p></Link>
+       </ul>
+      <div className="dash-search-container">
+      <div class="form-outline mb-4">
+  <input style={{background: "#EDDFFF", color: "white"}} type="search" class="form-control" id="datatable-search-input" placeholder='Search a course here ....'/>
+</div>
+<div id="datatable">
+</div>
+        <h5   style={{
+                        paddingLeft: "10%",
+                        paddingBottom: "1%",
+                        fontWeight: "bold",
+                      }}>Available Courses</h5>
+      </div> 
+      <div key={courses.id}>
         <div key={courses.id}>
         <div class="watch" >
           {
@@ -85,15 +85,9 @@ function Courses() {
         </div>
         </div>
       </div>  
+      <Footer/>
+</section> 
 
-    </div>
-    <Footer/>
-       </div>
   )
 }
-
-export default Courses;
-
-
-
-
+export default Dashboard;

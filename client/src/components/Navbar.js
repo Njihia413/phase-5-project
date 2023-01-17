@@ -1,7 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Navbar () {
+  const navigate = useNavigate()
     function logout() {
         fetch("/users/sign_out", {
           method: "delete",
@@ -21,6 +22,7 @@ function Navbar () {
             console.dir(json);
           })
           .catch((err) => console.error(err));
+          navigate ('/login')
         }
 
   return (

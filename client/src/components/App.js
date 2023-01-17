@@ -5,15 +5,12 @@ import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import Footer from "./Footer";
-
- //import ContactUs from "./ContactUs";
 import About from "./About";
 import Courses from "./Courses";
 //import ContactUs from "./ContactUs";
-import Dashboard from "./Dashboard"
+import Dashboard from "./StudentDashboard"
 import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";
-import Enrolnow from "./enrolnow";
 import TeacherCourses from "../pages/TeacherCourses";
 import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
@@ -41,7 +38,6 @@ function App() {
           <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
 
           <Route path= "/Dashboard" element={<Dashboard/>}/>
-          <Route path= "/enrolnow" element={<Enrolnow/>}/>
           
       </Routes>
       {/* <Footer/> */}
