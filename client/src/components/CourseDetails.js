@@ -39,9 +39,9 @@ function CourseDetails() {
       <br /> <br />
       <Link className='btn btn-2'to={`/courses`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
       <div className="container">
-        <h2 key={course.id}>{course.name}</h2>
+        <h2 className="detsh2" key={course.id}>{course.name}</h2>
 
-        <h4>Videos</h4>
+        <h4 className="ctitles">Learning Videos</h4>
         {course.videos.map((video) => (
           <div className="col-md-7" key={video.id}>
             <div className="card">
@@ -61,16 +61,14 @@ function CourseDetails() {
             </div>
           </div>
         ))}
-        <h4>Reading Materials</h4>
+        <h4 className="ctitles">Reading Materials</h4>
         {course.books.map((book) => (
           <div className="col-md-3" key={book.id}>
+            <Link  to={`/bookdetails`}>
             <div className="card">
-              <img src={book.image_url} />
-              <Link className="btn btn-success" to={`/bookdetails`}>
-                {" "}
-                More Info
-              </Link>
+              <img className="mebooks" src={book.image_url} />
             </div>
+            </Link>
           </div>
         ))}
       </div>

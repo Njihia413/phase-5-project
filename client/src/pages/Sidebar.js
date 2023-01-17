@@ -3,9 +3,9 @@ import '../css/dashboardnav.css';
 
 
 
-const DashboardNav = () => {
+const Sidebar = () => {
   return (
-    <>
+    <div>
      <div className="dashboard-container">
         <div className="dashboard-navigation">
                 <ul className="list">
@@ -14,15 +14,15 @@ const DashboardNav = () => {
                 </li>
                    
                     <li className="list-item">
-                        <a href="courses">
+                        <a href="teachercourses">
                             <span>
-                            <i className="fa-solid fa-file-invoice"></i>
+                            <i className="fa-solid fa-school"></i>
                             </span>
                             <span className="text">Courses</span>
                         </a>
                     </li>
                      <li className="list-item">
-                        <a href="Assessment">
+                        <a href="teacherassessments">
                             <span>
                             <i className="fa-solid fa-server"></i>
                             </span>
@@ -30,7 +30,7 @@ const DashboardNav = () => {
                         </a>
                     </li>
                      <li className="list-item">
-                        <a href="Grades">
+                        <a href="teachergrades">
                             <span>
                             <i className="fa-solid fa-user-group"></i>
                             </span>
@@ -56,8 +56,8 @@ const DashboardNav = () => {
                 </ul>
         </div>
     </div>
-    </>
+    </div>
   )
 }
 
-export default DashboardNav
+export default Sidebar
