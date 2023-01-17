@@ -6,10 +6,10 @@ import SignUp from "./SignUp";
 import Login from "./Login";
 import Footer from "./Footer";
 
-// import ContactUs from "./ContactUs";
+ //import ContactUs from "./ContactUs";
 import About from "./About";
 import Courses from "./Courses";
-// import ContactUs from "./ContactUs";
+//import ContactUs from "./ContactUs";
 import Dashboard from "./Dashboard"
 import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";

@@ -1274,460 +1274,446 @@ puts 'ending'
     
     
 
-# puts 'Seeding Assessments'
+puts 'Seeding Assessments'
 
 
 
-# Assessment.create([
-#     {
-#          user_id: 2,
-#         assessment_name: "Logo Design Quiz",
-#         date: "April 20, 2022",
-#         questions: [
-#           {
-#             question: "What is the most important thing to consider when designing a logo?",
-#             choices: [
-#                 "The color scheme",
-#                 "The font",
-#                 "The size of the logo",
-#                 "The amount of detail in the design"
-#             ],
-#             answer: "The color scheme"
-#           },
-#           {
-#             question: "How many colors should a logo typically have?",
-#             choices: [
-#               "As many as possible",
-#               "Two or three",
-#               "One",
-#               "It doesn't matter"
-#             ],
-#             answer: "Two or three"
-#           },
-#           {
-#             question: "What is the purpose of a logo?",
-#             choices: [
-#               "To make a business look professional",
-#               "To stand out from competitors",
-#               "To convey the brand's message and values",
-#               "To be visually appealing"
-#             ],
-#             answer: "To convey the brand's message and values"
-#           },
-#           {
-#             question: "How can you ensure that a logo is effective?",
-#             choices: [
-#               "By following design trends",
-#               "By making it as simple as possible",
-#               "By adding as much detail as possible",
-#               "By using bright, bold colors"
-#             ],
-#             answer: "By making it as simple as possible"
-#           },
+Assessment.create!([user_id: 1, assessment_name: "Logo Design Quiz",date: "April 20, 2022"])
+
+Question.create!([
+          {
+            question: "What is the most important thing to consider when designing a logo?",
+            choices: [
+                "The color scheme",
+                "The font",
+                "The size of the logo",
+                "The amount of detail in the design"
+            ],
+            answer: "The color scheme",
+            assessment_id:1
+          },
+          {
+            question: "How many colors should a logo typically have?",
+            choices: [
+              "As many as possible",
+              "Two or three",
+              "One",
+              "It doesn't matter"
+            ],
+            answer: "Two or three",
+            assessment_id:1
+          },
+          {
+            question: "What is the purpose of a logo?",
+            choices: [
+              "To make a business look professional",
+              "To stand out from competitors",
+              "To convey the brand's message and values",
+              "To be visually appealing"
+            ],
+            answer: "To convey the brand's message and values",
+            assessment_id:1
+          },
+          {
+            question: "How can you ensure that a logo is effective?",
+            choices: [
+              "By following design trends",
+              "By making it as simple as possible",
+              "By adding as much detail as possible",
+              "By using bright, bold colors"
+            ],
+            answer: "By making it as simple as possible",
+            assessment_id:1
+          }
+                   
+])
+
+Assessment.create!([user_id: 1,assessment_name: "3D Modelling Quiz",date: "July 20, 2022"])
+Question.create!([
+          {
+            question: "What is UV mapping in 3D modeling?",
+            choices: [
+                "A technique for creating the texture of an object",
+                "A technique for creating the shape of an object",
+                "A technique for creating the lighting of an object",
+                "A technique for creating the shading of an object"
+            ],
+            answer: "A technique for creating the texture of an object",
+            assessment_id: 2
+          },
+          {
+            question: "What is the purpose of using a reference image in 3D modeling?",
+            choices: [
+              "To use as a texture for the model",
+              "To use as a guide for the shape of the model",
+              "To use as a guide for the lighting of the model",
+              "To use as a guide for the shading of the model"
+            ],
+            answer: "To use as a guide for the shape of the model",
+            assessment_id: 2
+          },
+          {
+            question: "What is subdivision modeling in 3D modeling?",
+            choices: [
+              "A technique for creating the texture of an object",
+              "A technique for creating the shape of an object",
+              "A technique for creating the lighting of an object",
+              "A technique for creating the shading of an object"
+            ],
+            answer: "A technique for creating the shape of an object",
+            assessment_id: 2
+          },
+          {
+            question: "What is the purpose of using a cage in 3D modeling?",
+            choices: [
+              "To create a 3D model from a 2D image",
+              "To add detail to a 3D model",
+              "To add shading to a 3D model",
+              "To add lighting to a 3D model"
+            ],
+            answer: "To add detail to a 3D model",
+            assessment_id: 2
+          }
         
-#         ]
-#       }
-# ])
-
-# Assessment.create([
-#     {
-#         user_id: 2,
-#         assessment_name: "3D Modelling Quiz",
-#         date: "July 20, 2022",
-#         questions: [
-#           {
-#             question: "What is UV mapping in 3D modeling?",
-#             choices: [
-#                 "A technique for creating the texture of an object",
-#                 "A technique for creating the shape of an object",
-#                 "A technique for creating the lighting of an object",
-#                 "A technique for creating the shading of an object"
-#             ],
-#             answer: "A technique for creating the texture of an object"
-#           },
-#           {
-#             question: "What is the purpose of using a reference image in 3D modeling?",
-#             choices: [
-#               "To use as a texture for the model",
-#               "To use as a guide for the shape of the model",
-#               "To use as a guide for the lighting of the model",
-#               "To use as a guide for the shading of the model"
-#             ],
-#             answer: "To use as a guide for the shape of the model"
-#           },
-#           {
-#             question: "What is subdivision modeling in 3D modeling?",
-#             choices: [
-#               "A technique for creating the texture of an object",
-#               "A technique for creating the shape of an object",
-#               "A technique for creating the lighting of an object",
-#               "A technique for creating the shading of an object"
-#             ],
-#             answer: "A technique for creating the shape of an object"
-#           },
-#           {
-#             question: "What is the purpose of using a cage in 3D modeling?",
-#             choices: [
-#               "To create a 3D model from a 2D image",
-#               "To add detail to a 3D model",
-#               "To add shading to a 3D model",
-#               "To add lighting to a 3D model"
-#             ],
-#             answer: "To add detail to a 3D model"
-#           },
         
-#         ]
-#       }
-# ])
+      
+])
 
-# Assessment.create([
-#     {
-#         user_id: 2,
-#         assessment_name: "Organization Mangement Quiz",
-#         date: "May 20, 2022",
-#         questions: [
-#           {
-#             question: "What is the main goal of an organization?",
-#             choices: [
-#                 "To make a profit",
-#                 "To provide good customer service",
-#                 "To hire the best employees",
-#                 "To have a strong corporate culture"
-#             ],
-#             answer: "To make a profit"
-#           },
-#           {
-#             question: "What is a mission statement in an organization?",
-#             choices: [
-#               "A statement outlining the company's goals and values",
-#               "A statement outlining the company's policies",
-#               "A statement outlining the company's products or services",
-#               "A statement outlining the company's market position"
-#             ],
-#             answer: "A statement outlining the company's goals and values"
-#           },
-#           {
-#             question: "What is a vision statement in an organization?",
-#             choices: [
-#               "A statement outlining the company's goals and values",
-#               "A statement outlining the company's policies",
-#               "A statement outlining the company's products or services",
-#               "A statement outlining the company's market position"
-#             ],
-#             answer: "A statement outlining the company's policies "
-#           },
-#           {
-#             question: "What is the main function of a human resources department in an organization?",
-#             choices: [
-#               "To manage the company's finances",
-#               "To manage the company's marketing efforts",
-#               "To manage the company's operations",
-#               "To manage the company's employees"
-#             ],
-#             answer: "To manage the company's employees"
-#           },
+Assessment.create!([ user_id: 1,assessment_name: "Organization Mangement Quiz",date: "May 20, 2022"])
+Question.create!([
+          {
+            question: "What is the main goal of an organization?",
+            choices: [
+                "To make a profit",
+                "To provide good customer service",
+                "To hire the best employees",
+                "To have a strong corporate culture"
+            ],
+            answer: "To make a profit",
+            assessment_id: 3
+          },
+          {
+            question: "What is a mission statement in an organization?",
+            choices: [
+              "A statement outlining the company's goals and values",
+              "A statement outlining the company's policies",
+              "A statement outlining the company's products or services",
+              "A statement outlining the company's market position"
+            ],
+            answer: "A statement outlining the company's goals and values",
+            assessment_id: 3
+          },
+          {
+            question: "What is a vision statement in an organization?",
+            choices: [
+              "A statement outlining the company's goals and values",
+              "A statement outlining the company's policies",
+              "A statement outlining the company's products or services",
+              "A statement outlining the company's market position"
+            ],
+            answer: "A statement outlining the company's policies ",
+            assessment_id: 3
+          },
+          {
+            question: "What is the main function of a human resources department in an organization?",
+            choices: [
+              "To manage the company's finances",
+              "To manage the company's marketing efforts",
+              "To manage the company's operations",
+              "To manage the company's employees"
+            ],
+            answer: "To manage the company's employees",
+            assessment_id: 3
+          }      
+])
+
+Assessment.create([ user_id: 1,assessment_name: "Photography Quiz",date: "May 2, 2022"])
+Question.create!([
+          {
+            question: "What is aperture in photography?",
+            choices: [
+                "The size of the lens opening",
+                "The size of the camera sensor",
+                "The speed at which the camera captures light",
+                "The amount of light in a scene"
+            ],
+            answer: "The size of the lens opening",
+            assessment_id: 4
+          },
+          {
+            question: "What is the purpose of using a tripod in photography?",
+            choices: [
+              "To increase the depth of field",
+              "To stabilize the camera",
+              "To increase the shutter speed",
+              "To decrease the aperture"
+            ],
+            answer: "To stabilize the camera",
+            assessment_id: 4
+          },
+          {
+            question: "What is the 'golden hour' in photography?",
+            choices: [
+              "The time of day when the light is the most flattering",
+              "The time of day when the sun is directly overhead",
+              "The time of day when the sun is setting",
+              "The time of day when the sky is the clearest"
+            ],
+            answer: "The time of day when the light is the most flattering",
+            assessment_id: 4
+          },
+          {
+            question: "What is the purpose of using a polarizing filter in photography?",
+            choices: [
+              "To increase the depth of field",
+              "To decrease the shutter speed",
+              "To reduce reflections and increase contrast",
+              "To increase the aperture"
+            ],
+            answer: "To reduce reflections and increase contrast",
+            assessment_id: 4
+          }
         
-#         ]
-#       }
-# ])
-
-# Assessment.create([
-#     {
-#         user_id: 2,
-#         assessment_name: "Photography Quiz",
-#         date: "May 2, 2022",
-#         questions: [
-#           {
-#             question: "What is aperture in photography?",
-#             choices: [
-#                 "The size of the lens opening",
-#                 "The size of the camera sensor",
-#                 "The speed at which the camera captures light",
-#                 "The amount of light in a scene"
-#             ],
-#             answer: "The size of the lens opening"
-#           },
-#           {
-#             question: "What is the purpose of using a tripod in photography?",
-#             choices: [
-#               "To increase the depth of field",
-#               "To stabilize the camera",
-#               "To increase the shutter speed",
-#               "To decrease the aperture"
-#             ],
-#             answer: "To stabilize the camera"
-#           },
-#           {
-#             question: "What is the 'golden hour' in photography?",
-#             choices: [
-#               "The time of day when the light is the most flattering",
-#               "The time of day when the sun is directly overhead",
-#               "The time of day when the sun is setting",
-#               "The time of day when the sky is the clearest"
-#             ],
-#             answer: "The time of day when the light is the most flattering"
-#           },
-#           {
-#             question: "What is the purpose of using a polarizing filter in photography?",
-#             choices: [
-#               "To increase the depth of field",
-#               "To decrease the shutter speed",
-#               "To reduce reflections and increase contrast",
-#               "To increase the aperture"
-#             ],
-#             answer: "To reduce reflections and increase contrast"
-#           },
         
-#         ]
-#       }
-# ])
+      
+])
 
-# Assessment.create([
-#     {
-#         user_id: 2,
-#         assessment_name: "Designer Quiz",
-#         date: "August 20, 2022",
-#         questions: [
-#           {
-#             question: "What is the design process and why is it important?",
-#             choices: [
-#                 "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think critically and systematically about their ideas, and to identify and solve problems in an organized way.",
-#                 "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think creatively and spontaneously, and to come up with new ideas quickly.",
-#                 "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think creatively and systematically, and to identify and solve problems in an organized way."
+Assessment.create!([user_id: 1, assessment_name: "Designer Quiz",date: "August 20, 2022"])
+Question.create!([
+          {
+            question: "What is the design process and why is it important?",
+            choices: [
+                "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think critically and systematically about their ideas, and to identify and solve problems in an organized way.",
+                "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think creatively and spontaneously, and to come up with new ideas quickly.",
+                "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think creatively and systematically, and to identify and solve problems in an organized way."
                 
-#             ],
-#             answer: "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think creatively and spontaneously, and to come up with new ideas quickly."
-#           },
-#           {
-#             question: "What are some common design tools and software programs that are used in the industry?",
-#             choices: [
-#               "Photoshop, Illustrator, and InDesign",
-#               "Excel, PowerPoint, and Word",
-#               "Photoshop, AutoCAD, and SketchUp"
-#             ],
-#             answer: "Photoshop, Illustrator, and InDesign"
-#           },
-#           {
-#             question: "What are some key considerations for designing for different audiences and contexts?",
-#             choices: [
-#               "The age, gender, and cultural background of the audience",
-#               "The purpose of the design and the message being communicated",
-#               "Both A and B"
+            ],
+            answer: "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think creatively and spontaneously, and to come up with new ideas quickly.",
+            assessment_id: 5
+          },
+          {
+            question: "What are some common design tools and software programs that are used in the industry?",
+            choices: [
+              "Photoshop, Illustrator, and InDesign",
+              "Excel, PowerPoint, and Word",
+              "Photoshop, AutoCAD, and SketchUp"
+            ],
+            answer: "Photoshop, Illustrator, and InDesign",
+            assessment_id: 5
+          },
+          {
+            question: "What are some key considerations for designing for different audiences and contexts?",
+            choices: [
+              "The age, gender, and cultural background of the audience",
+              "The purpose of the design and the message being communicated",
+              "Both A and B"
               
-#             ],
-#             answer: "Both A and B"
-#           },
+            ],
+            answer: "Both A and B",
+            assessment_id: 5
+          }
+])
+
+Assessment.create!([user_id: 1,assessment_name: "Makeup Artistry Quiz", date: "November 2, 2022"])
+Question.create!([
+          {
+            question: "What is the main purpose of using foundation in makeup?",
+            choices: [
+                "To cover up blemishes and imperfections",
+                "To add color to the face",
+                "To add shine to the face",
+                "To add texture to the face"
+            ],
+            answer: "To cover up blemishes and imperfections",
+            assessment_id: 6
+          },
+          {
+            question: "What is the main purpose of using highlighter in makeup?",
+            choices: [
+              "To cover up blemishes and imperfections",
+              "To add color to the face",
+              "To add shine to the face",
+              "To add texture to the face"
+            ],
+            answer: "To add shine to the face",
+            assessment_id: 6
+          },
+          {
+            question: "What is the main purpose of using blush in makeup?",
+            choices: [
+              "To cover up blemishes and imperfections",
+              "To add color to the face",
+              "To add shine to the face",
+              "To add texture to the face"
+            ],
+            answer: "To add color to the face",
+            assessment_id: 6
+          },
+          {
+            question: "What is the main purpose of using contour in makeup?",
+            choices: [
+              "To cover up blemishes and imperfections",
+              "To add color to the face",
+              "To add shine to the face",
+              "To define and shape the face"
+            ],
+            answer: "To define and shape the face",
+            assessment_id: 6
+          }     
+])
+
+
+Assessment.create!([user_id: 1,assessment_name: "Artistry Quiz",date: "October 2, 2022"])
+Question.create!([
+          {
+            question: "What is the main purpose of using line in art?",
+            choices: [
+                "To add texture to the artwork",
+                "To add color to the artwork",
+                "To add depth to the artwork",
+                "To add movement to the artwork"
+            ],
+            answer: "To add texture to the artwork ",
+            assessment_id: 7
+          },
+          {
+            question: "What is the main purpose of using shape in art?",
+            choices: [
+              "To add texture to the artwork",
+              "To add color to the artwork",
+              "To add depth to the artwork",
+              "To define the composition of the artwork"
+            ],
+            answer: "To define the composition of the artwork ",
+            assessment_id: 7
+          },
+          {
+            question: "What is the main purpose of using color in art?",
+            choices: [
+              "add texture to the artwork",
+              "To add emotion to the artwork",
+              "To add depth to the artwork",
+              "To add movement to the artwork"
+            ],
+            answer: "To add emotion to the artwork",
+            assessment_id: 7
+          },
+          {
+            question: "What is the main purpose of using texture in art?",
+            choices: [
+              "To add dimension to the artwork",
+              "To add emotion to the artwork",
+              "To add depth to the artwork",
+              "To add movement to the artwork"
+            ],
+            answer: "To add dimension to the artwork",
+            assessment_id: 7
+          },
         
-#         ]
-#       }
-# ])
-
-# Assessment.create([
-#     {
-#         user_id: 2,
-#         assessment_name: "Makeup Artistry Quiz",
-#         date: "November 2, 2022",
-#         questions: [
-#           {
-#             question: "What is the main purpose of using foundation in makeup?",
-#             choices: [
-#                 "To cover up blemishes and imperfections",
-#                 "To add color to the face",
-#                 "To add shine to the face",
-#                 "To add texture to the face"
-#             ],
-#             answer: "To cover up blemishes and imperfections"
-#           },
-#           {
-#             question: "What is the main purpose of using highlighter in makeup?",
-#             choices: [
-#               "To cover up blemishes and imperfections",
-#               "To add color to the face",
-#               "To add shine to the face",
-#               "To add texture to the face"
-#             ],
-#             answer: "To add shine to the face"
-#           },
-#           {
-#             question: "What is the main purpose of using blush in makeup?",
-#             choices: [
-#               "To cover up blemishes and imperfections",
-#               "To add color to the face",
-#               "To add shine to the face",
-#               "To add texture to the face"
-#             ],
-#             answer: "To add color to the face"
-#           },
-#           {
-#             question: "What is the main purpose of using contour in makeup?",
-#             choices: [
-#               "To cover up blemishes and imperfections",
-#               "To add color to the face",
-#               "To add shine to the face",
-#               "To define and shape the face"
-#             ],
-#             answer: "To define and shape the face"
-#           },
         
-#         ]
-#       }
-# ])
+      
+])
+
+Assessment.create([user_id: 1,assessment_name: "Growth in Relationship Quiz",date: "June 2, 2023"])
+Question.create!([
+          {
+            question: "What is the main purpose of setting goals in a relationship?",
+            choices: [
+                "To keep the relationship fresh and exciting",
+                "To keep the relationship stable and predictable",
+                "To keep the relationship one-sided",
+                "To keep the relationship distant"
+            ],
+            answer: "To keep the relationship fresh and exciting",
+            assessment_id: 8
+          },
+          {
+            question: "What is the main purpose of having open and honest communication in a relationship?",
+            choices: [
+              "To create tension and conflict",
+              "To keep secrets and hide feelings",
+              "To maintain a sense of mystery",
+              "To build trust and understanding"
+            ],
+            answer: "To build trust and understanding",
+            assessment_id: 8
+          },
+          {
+            question: "What is the main purpose of supporting each other's growth and development in a relationship?",
+            choices: [
+              "To foster dependence and co-dependence",
+              "To foster independence and distance",
+              "To foster a sense of competition",
+              "To foster a sense of insecurity"
+            ],
+            answer: "To foster independence and distance",
+            assessment_id: 8
+          },
+          {
+            question: "What is the main purpose of compromising and compromising in a relationship?",
+            choices: [
+              "To maintain a sense of equality and balance",
+              "To maintain a sense of superiority and inferiority",
+              "To maintain a sense of control and power ",
+              "To maintain a sense of resentment and resentment"
+            ],
+            answer: "To maintain a sense of control and power ",
+            assessment_id: 8
+          }     
+])
 
 
-# Assessment.create([
-#     {
-#         user_id: 2,
-#         assessment_name: "Artistry Quiz",
-#         date: "October 2, 2022",
-#         questions: [
-#           {
-#             question: "What is the main purpose of using line in art?",
-#             choices: [
-#                 "To add texture to the artwork",
-#                 "To add color to the artwork",
-#                 "To add depth to the artwork",
-#                 "To add movement to the artwork"
-#             ],
-#             answer: "To add texture to the artwork "
-#           },
-#           {
-#             question: "What is the main purpose of using shape in art?",
-#             choices: [
-#               "To add texture to the artwork",
-#               "To add color to the artwork",
-#               "To add depth to the artwork",
-#               "To define the composition of the artwork"
-#             ],
-#             answer: "To define the composition of the artwork "
-#           },
-#           {
-#             question: "What is the main purpose of using color in art?",
-#             choices: [
-#               "add texture to the artwork",
-#               "To add emotion to the artwork",
-#               "To add depth to the artwork",
-#               "To add movement to the artwork"
-#             ],
-#             answer: "To add emotion to the artwork"
-#           },
-#           {
-#             question: "What is the main purpose of using texture in art?",
-#             choices: [
-#               "To add dimension to the artwork",
-#               "To add emotion to the artwork",
-#               "To add depth to the artwork",
-#               "To add movement to the artwork"
-#             ],
-#             answer: "To add dimension to the artwork"
-#           },
+Assessment.create!([user_id: 1,assessment_name: "Musical Quiz",date: "July 2, 2023"])
+Question.create!([
+          {
+            question: "What is the musical term for the repetition of a short musical phrase or motive?",
+            choices: [
+                "Motif",
+                "Theme",
+                "Melody",
+                "Harmony"
+            ],
+            answer: "Motif",
+            assessment_id: 9
+          },
+          {
+            question: "What is the musical term for the distance between two notes in pitch?",
+            choices: [
+              "Interval ",
+              "Scale",
+              "Chord",
+              "Harmony"
+            ],
+            answer: "Interval",
+            assessment_id: 9
+          },
+          {
+            question: "What is the musical term for the structure of a piece of music, including the number of sections and the number and length of each section?",
+            choices: [
+              "Form",
+              "Melody",
+              "Harmony",
+              "Rhythm"
+            ],
+            answer: "Form",
+            assessment_id: 9
+          },
+          {
+            question: "What is the musical term for the speed or tempo of a piece of music?",
+            choices: [
+              "Rhythm",
+              "Beat",
+              "Melody",
+              "Harmony"
+            ],
+            answer: "Beat",
+            assessment_id: 9
+          }
         
-#         ]
-#       }
-# ])
-
-# Assessment.create([
-#     {
-#         user_id:2,
-#         assessment_name: "Growth in Relationship Quiz",
-#         date: "June 2, 2023",
-#         questions: [
-#           {
-#             question: "What is the main purpose of setting goals in a relationship?",
-#             choices: [
-#                 "To keep the relationship fresh and exciting",
-#                 "To keep the relationship stable and predictable",
-#                 "To keep the relationship one-sided",
-#                 "To keep the relationship distant"
-#             ],
-#             answer: "To keep the relationship fresh and exciting"
-#           },
-#           {
-#             question: "What is the main purpose of having open and honest communication in a relationship?",
-#             choices: [
-#               "To create tension and conflict",
-#               "To keep secrets and hide feelings",
-#               "To maintain a sense of mystery",
-#               "To build trust and understanding"
-#             ],
-#             answer: "To build trust and understanding"
-#           },
-#           {
-#             question: "What is the main purpose of supporting each other's growth and development in a relationship?",
-#             choices: [
-#               "To foster dependence and co-dependence",
-#               "To foster independence and distance",
-#               "To foster a sense of competition",
-#               "To foster a sense of insecurity"
-#             ],
-#             answer: "To foster independence and distance"
-#           },
-#           {
-#             question: "What is the main purpose of compromising and compromising in a relationship?",
-#             choices: [
-#               "To maintain a sense of equality and balance",
-#               "To maintain a sense of superiority and inferiority",
-#               "To maintain a sense of control and power ",
-#               "To maintain a sense of resentment and resentment"
-#             ],
-#             answer: "To maintain a sense of control and power "
-#           },
         
-#         ]
-#       }
-# ])
-
-
-# Assessment.create([
-#     {
-#         user_id: 2,
-#         assessment_name: "Musical Quiz",
-#         date: "July 2, 2023",
-#         questions: [
-#           {
-#             question: "What is the musical term for the repetition of a short musical phrase or motive?",
-#             choices: [
-#                 "Motif",
-#                 "Theme",
-#                 "Melody",
-#                 "Harmony"
-#             ],
-#             answer: "Motif"
-#           },
-#           {
-#             question: "What is the musical term for the distance between two notes in pitch?",
-#             choices: [
-#               "Interval ",
-#               "Scale",
-#               "Chord",
-#               "Harmony"
-#             ],
-#             answer: "Interval"
-#           },
-#           {
-#             question: "What is the musical term for the structure of a piece of music, including the number of sections and the number and length of each section?",
-#             choices: [
-#               "Form",
-#               "Melody",
-#               "Harmony",
-#               "Rhythm"
-#             ],
-#             answer: "Form"
-#           },
-#           {
-#             question: "What is the musical term for the speed or tempo of a piece of music?",
-#             choices: [
-#               "Rhythm",
-#               "Beat",
-#               "Melody",
-#               "Harmony"
-#             ],
-#             answer: "Beat"
-#           },
-        
-#         ]
-#       }
-# ])
-# puts 'Done Assessment'
+      
+])
+puts 'Done Assessment'
 
 
 puts 'Seeding Reviews'

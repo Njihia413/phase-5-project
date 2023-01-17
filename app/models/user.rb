@@ -14,6 +14,7 @@ class User < ApplicationRecord
          
          
          has_many :courses
+         has_many :assessments
          attribute :role, :string, default: 'student'
   
    ROLES = %w{teacher student}
