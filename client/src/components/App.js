@@ -13,6 +13,7 @@ import Courses from "./Courses";
 import Dashboard from "./Dashboard"
 import CourseDetails from "./CourseDetails";
 import TeacherDashboard from "../pages/TeacherDashboard";
+import Enrolnow from "./enrolnow";
 import TeacherCourses from "../pages/TeacherCourses";
 import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
@@ -40,6 +41,8 @@ function App() {
           <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
 
           <Route path= "/Dashboard" element={<Dashboard/>}/>
+          <Route path= "/enrolnow" element={<Enrolnow/>}/>
+          
       </Routes>
       {/* <Footer/> */}
     </div>
