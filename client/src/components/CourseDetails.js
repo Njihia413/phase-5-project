@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+
 
 function CourseDetails() {
   const { courseId } = useParams();
@@ -37,6 +39,7 @@ function CourseDetails() {
         </div>
       </section>
       <br /> <br />
+      <Link className='btn-3'to={`/enrolnow`}><p className="course-text">Enrol Now</p></Link>
       <Link className='btn btn-2'to={`/courses`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
       <div className="container">
         <h2 className="detsh2" key={course.id}>{course.name}</h2>
@@ -72,6 +75,7 @@ function CourseDetails() {
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 }
