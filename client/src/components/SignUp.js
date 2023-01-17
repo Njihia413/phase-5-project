@@ -42,10 +42,7 @@ function SignUp() {
     .catch((err) => console.error(err));
     console.log(data.role)
     navigate('/login')
-    // if (data.role === "student") {
-    // navigate(`/Dashboard`) } else {
-    //   navigate(`/teacherdashboard`)
-    // }
+    
   };
   return (
     <div>
