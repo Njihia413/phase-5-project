@@ -800,7 +800,7 @@ border-radius: 20px;
   font-family: 'OutFit';
   font-style: normal;
   font-weight: 550;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 152%;
   text-align: center;
   color: #000000;
@@ -812,4 +812,23 @@ border-radius: 20px;
   width: 274px;
   height: 350px;
 }
+.detsh2 {
+width: 386px;
+height: 34px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 152.34%;
 
+}
+.ctitles {
+width: 386px;
+height: 34px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 152.34%;
+text-align: center;
+}
