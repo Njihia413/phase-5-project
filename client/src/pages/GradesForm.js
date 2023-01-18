@@ -1,7 +1,7 @@
 import React from "react";
 
 const GradesForm = () => {
-    
+
 //     const form = document.getElementById("studentForm")
 // console.log(form);
 
@@ -90,7 +90,7 @@ const GradesForm = () => {
  
   return (
     <div className="right">
-      <div className="content">
+      {/* <div className="content">
         <h3 className="logo">Student Results Records</h3>
         <table className="table">
           <thead>
@@ -108,7 +108,7 @@ const GradesForm = () => {
 
           <tbody></tbody>
         </table>
-      </div>
+      </div> */}
     </div>
   );
 };
