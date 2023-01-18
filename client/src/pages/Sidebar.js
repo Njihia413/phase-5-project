@@ -1,63 +1,64 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../css/dashboardnav.css';
 
 
 
-const DashboardNav = () => {
+const Sidebar = () => {
   return (
-    <>
+    <div>
      <div className="dashboard-container">
         <div className="dashboard-navigation">
                 <ul className="list">
                 <li className="list-item logo">
-                 <p className="text">MasomoDigi</p>
+                 {/* <h3 className="text">MasomoDigi</h3> */}
                 </li>
                    
                     <li className="list-item">
-                        <a href="courses">
+                        < Link to="/teachercourses">
                             <span>
-                            <i className="fa-solid fa-file-invoice"></i>
+                            <i className="fa-solid fa-school"></i>
                             </span>
                             <span className="text">Courses</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item">
-                        <a href="Assessment">
+                        <Link to="/teacherassessments">
                             <span>
                             <i className="fa-solid fa-server"></i>
                             </span>
                             <span className="text">Assessment</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item">
-                        <a href="Grades">
+                        <Link to="/teachergrades">
                             <span>
                             <i className="fa-solid fa-user-group"></i>
                             </span>
                             <span className="text">Grades</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item">
-                        <a href="profile">
+                        <Link to="/profile">
                             <span>
                             <i className="fa-solid fa-user"></i>
                             </span>
                             <span className="text">Profile</span>
-                        </a>
+                        </Link>
                     </li>
                      <li className="list-item" id="logout">
-                        <a href="/">
+                        <Link to="/login">
                             <span>
                             <i className="fa-solid fa-arrow-right-from-bracket" ></i>
                             </span>
                             <span className="text">Log Out</span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
         </div>
     </div>
-    </>
+    </div>
   )
 }
 
-export default DashboardNav
+export default Sidebar

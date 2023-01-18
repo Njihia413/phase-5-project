@@ -220,8 +220,6 @@ span {
   color: #9085D1;
 }
 
-/*==================End of Homepage=======================*/
-
 /*Beginning of contact us page*/
 .contact {
   background-image: url('./assets/IMG-3239.jpg');
@@ -293,7 +291,6 @@ span {
   font-weight: 700;
   border-radius: 30px;
 }
-/*==================End of Sign up page=======================*/
 
 
 /*Beginning of Login page */
@@ -310,7 +307,6 @@ span {
   color: #9085D1;
   margin-top: 30px;
 }
-/*==================End of Login page=======================*/
 
 /*Beginning of About page */
 .about {
@@ -356,9 +352,6 @@ span {
   color: #fff;
   margin-top: 20px;
 }
-
-
-/*==================End of About page=======================*/
 
 
 /*Forms*/
@@ -416,9 +409,6 @@ span {
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-
-/*==================End of Homepage=======================*/
-
 /*Beginning of contact us page*/
 .contact {
   background-image: url('./assets/IMG-3239.jpg');
@@ -462,9 +452,6 @@ span {
   color: #102437;
 }
 
-
-/*==================End of Contact us page=======================*/
-
 /*Beginning of sign up page */
 .outer-signup-card {
   padding-top: 20px;
@@ -491,7 +478,7 @@ span {
   font-weight: 700;
   border-radius: 30px;
 }
-/*==================End of Sign up page=======================*/
+
 
 
 /*Beginning of Login page */
@@ -508,7 +495,7 @@ span {
   color: #9085D1;
   margin-top: 30px;
 }
-/*==================End of Login page=======================*/
+
 
 /*Beginning of About page */
 .about {
@@ -557,9 +544,6 @@ span {
   color: #fff;
   margin-top: 20px;
 }
-
-
-/*==================End of About page=======================*/
 
 
 /*Forms*/
@@ -631,7 +615,7 @@ hr {
   display: flex;
 }
 
-.courses-page {
+.course-page {
   background-image: url('./assets/IMG-3214.jpg');
   background-position: center;
   background-size: cover;
@@ -643,6 +627,7 @@ hr {
   background-color: #102437c1;
   height: 90vh;
 }
+
 
 .search-container {
   background-color: #b388ff;
@@ -728,7 +713,6 @@ hr {
   font-size: 20px;
 }
 
-/*==================End of Courses page=======================*/
 /*DashboardNav*/
 .header{
   background-color: #102437;
@@ -794,6 +778,7 @@ border-radius: 20px;
   display: block;
   color: #fff;
 }
+
 
 /* styling for grades page */
 .grades {
@@ -891,4 +876,60 @@ a{
 } 
  td{
   text-align: center;
+
 } */
+}
+.card-name {
+  width: 332px;
+  height: 72px;
+  font-family: 'OutFit';
+  font-style: normal;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 152%;
+  text-align: center;
+  color: #000000;
+}
+.card iframe {
+  border-radius: 28px;
+}
+.mebooks {
+  width: 274px;
+  height: 350px;
+}
+.detsh2 {
+width: 386px;
+height: 34px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 152.34%;
+
+}
+.ctitles {
+width: 386px;
+height: 34px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 152.34%;
+text-align: center;
+}
+.watch {
+  background-color: #EDDFFF;
+  height: 100vh;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding-left: 2%;
+  margin-left: 7%;
+}
+.ttitle {
+  text-decoration: none;
+}

@@ -1,10 +1,15 @@
-import React from 'react'
-import DashboardNav from './DashboardNav'
+import React,{useEffect,useState} from 'react'
+
+import Sidebar from './Sidebar'
+
 
 function TeacherDashboard() {
   return (
     <div className='Dashboard'>
-        <DashboardNav/>
+        <Sidebar/>
+     
+       
+        
     </div>
   )
 }
