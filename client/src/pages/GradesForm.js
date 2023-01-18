@@ -86,29 +86,29 @@
 
  
  
-//   return (
-//     <div className="right">
-//       <div className="content">
-//         <h3 className="logo">Student Results Records</h3>
-//         <table className="table">
-//           <thead>
-//             <tr>
-//               <th>Name</th>
-//               <th>Email</th>
-//               <th>Mark 1</th>
-//               <th>Mark 2</th>
-//               <th>Mark 3</th>
-//               <th>Total</th>
-//               <th>Average</th>
-//               <th>Grade</th>
-//             </tr>
-//           </thead>
+  return (
+    <div className="right">
+      {/* <div className="content">
+        <h3 className="logo">Student Results Records</h3>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mark 1</th>
+              <th>Mark 2</th>
+              <th>Mark 3</th>
+              <th>Total</th>
+              <th>Average</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
 
-//           <tbody></tbody>
-//         </table>
-//       </div>
-//     </div>
-//   );
-// };
+          <tbody></tbody>
+        </table>
+      </div> */}
+    </div>
+  );
+};
 
 // export default GradesForm;
