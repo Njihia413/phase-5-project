@@ -813,13 +813,13 @@ border-radius: 20px;
   height: 800px;
   margin-left: 25px;
   margin-top: 50%;
-  border-radius: 25px;
+  border-radius: 25px; 
 }
 .button btn btn-primary{
   margin: 25px;
 }
 
-.content{
+/* .content{
   width: 100%;
 } 
 .logo{
@@ -831,8 +831,8 @@ border-radius: 20px;
   margin-top: 5%;
   margin-left: 80%;
   
-}
-.table{
+} */
+/* .table{
   width: 80%;
   border-collapse: collapse;
   text-align: centre;
@@ -887,4 +887,4 @@ a{
 } 
  td{
   text-align: center;
-}
+} */
