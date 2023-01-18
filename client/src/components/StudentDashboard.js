@@ -7,7 +7,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 // import { useNavigate }  from 'react-router-dom'
 import Footer from "./Footer";
 
-function StudentDashboard() {
+function Dashboard() {
   
   const [courses, setCourses] = useState([]);
   useEffect(() => {
@@ -89,4 +89,4 @@ function StudentDashboard() {
 
   )
 }
-export default StudentDashboard;
+export default Dashboard;
