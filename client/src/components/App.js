@@ -4,7 +4,11 @@ import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
-import Footer from "./Footer";
+
+//import Footer from "./Footer";
+
+ 
+
 import About from "./About";
 import Courses from "./Courses";
 //import ContactUs from "./ContactUs";
@@ -42,7 +46,7 @@ function App() {
           <Route path= "/Dashboard" element={<Dashboard/>}/>
           
       </Routes>
-      {/* <Footer/> */}
+      {/* <Footer/>  */}
     </div>
   );
 }

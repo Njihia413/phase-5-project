@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="dashboard-navigation">
                 <ul className="list">
                 <li className="list-item logo">
-                 <p className="text">MasomoDigi</p>
+                 {/* <h3 className="text">MasomoDigi</h3> */}
                 </li>
                    
                     <li className="list-item">
