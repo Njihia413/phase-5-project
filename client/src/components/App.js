@@ -4,7 +4,7 @@ import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
-import Footer from "./Footer";
+//import Footer from "./Footer";
 
  //import ContactUs from "./ContactUs";
 import About from "./About";
@@ -46,7 +46,7 @@ function App() {
           <Route path= "/enrolnow" element={<Enrolnow/>}/>
           
       </Routes>
-      {/* <Footer/> */}
+      {/* <Footer/>  */}
     </div>
   );
 }

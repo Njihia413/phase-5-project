@@ -1,3 +1,3 @@
 class QuestionSerializer < ActiveModel::Serializer
-  attributes :id, :question, :choices, :answer, :assessment_id
+  attributes :id, :prompt, :choices, :answer, :assessment_id
 end
