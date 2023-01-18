@@ -1282,7 +1282,7 @@ Assessment.create!([user_id: 1, assessment_name: "Logo Design Quiz",date: "April
 
 Question.create!([
           {
-            question: "What is the most important thing to consider when designing a logo?",
+            prompt: "What is the most important thing to consider when designing a logo?",
             choices: [
                 "The color scheme",
                 "The font",
@@ -1293,7 +1293,7 @@ Question.create!([
             assessment_id:1
           },
           {
-            question: "How many colors should a logo typically have?",
+            prompt: "How many colors should a logo typically have?",
             choices: [
               "As many as possible",
               "Two or three",
@@ -1304,7 +1304,7 @@ Question.create!([
             assessment_id:1
           },
           {
-            question: "What is the purpose of a logo?",
+            prompt: "What is the purpose of a logo?",
             choices: [
               "To make a business look professional",
               "To stand out from competitors",
@@ -1315,7 +1315,7 @@ Question.create!([
             assessment_id:1
           },
           {
-            question: "How can you ensure that a logo is effective?",
+            prompt: "How can you ensure that a logo is effective?",
             choices: [
               "By following design trends",
               "By making it as simple as possible",
@@ -1331,7 +1331,7 @@ Question.create!([
 Assessment.create!([user_id: 1,assessment_name: "3D Modelling Quiz",date: "July 20, 2022"])
 Question.create!([
           {
-            question: "What is UV mapping in 3D modeling?",
+            prompt: "What is UV mapping in 3D modeling?",
             choices: [
                 "A technique for creating the texture of an object",
                 "A technique for creating the shape of an object",
@@ -1342,7 +1342,7 @@ Question.create!([
             assessment_id: 2
           },
           {
-            question: "What is the purpose of using a reference image in 3D modeling?",
+            prompt: "What is the purpose of using a reference image in 3D modeling?",
             choices: [
               "To use as a texture for the model",
               "To use as a guide for the shape of the model",
@@ -1353,7 +1353,7 @@ Question.create!([
             assessment_id: 2
           },
           {
-            question: "What is subdivision modeling in 3D modeling?",
+            prompt: "What is subdivision modeling in 3D modeling?",
             choices: [
               "A technique for creating the texture of an object",
               "A technique for creating the shape of an object",
@@ -1364,7 +1364,7 @@ Question.create!([
             assessment_id: 2
           },
           {
-            question: "What is the purpose of using a cage in 3D modeling?",
+            prompt: "What is the purpose of using a cage in 3D modeling?",
             choices: [
               "To create a 3D model from a 2D image",
               "To add detail to a 3D model",
@@ -1382,7 +1382,7 @@ Question.create!([
 Assessment.create!([ user_id: 1,assessment_name: "Organization Mangement Quiz",date: "May 20, 2022"])
 Question.create!([
           {
-            question: "What is the main goal of an organization?",
+            prompt: "What is the main goal of an organization?",
             choices: [
                 "To make a profit",
                 "To provide good customer service",
@@ -1393,7 +1393,7 @@ Question.create!([
             assessment_id: 3
           },
           {
-            question: "What is a mission statement in an organization?",
+            prompt: "What is a mission statement in an organization?",
             choices: [
               "A statement outlining the company's goals and values",
               "A statement outlining the company's policies",
@@ -1404,7 +1404,7 @@ Question.create!([
             assessment_id: 3
           },
           {
-            question: "What is a vision statement in an organization?",
+            prompt: "What is a vision statement in an organization?",
             choices: [
               "A statement outlining the company's goals and values",
               "A statement outlining the company's policies",
@@ -1415,7 +1415,7 @@ Question.create!([
             assessment_id: 3
           },
           {
-            question: "What is the main function of a human resources department in an organization?",
+            prompt: "What is the main function of a human resources department in an organization?",
             choices: [
               "To manage the company's finances",
               "To manage the company's marketing efforts",
@@ -1430,7 +1430,7 @@ Question.create!([
 Assessment.create([ user_id: 1,assessment_name: "Photography Quiz",date: "May 2, 2022"])
 Question.create!([
           {
-            question: "What is aperture in photography?",
+            prompt: "What is aperture in photography?",
             choices: [
                 "The size of the lens opening",
                 "The size of the camera sensor",
@@ -1441,7 +1441,7 @@ Question.create!([
             assessment_id: 4
           },
           {
-            question: "What is the purpose of using a tripod in photography?",
+            prompt: "What is the purpose of using a tripod in photography?",
             choices: [
               "To increase the depth of field",
               "To stabilize the camera",
@@ -1452,7 +1452,7 @@ Question.create!([
             assessment_id: 4
           },
           {
-            question: "What is the 'golden hour' in photography?",
+            prompt: "What is the 'golden hour' in photography?",
             choices: [
               "The time of day when the light is the most flattering",
               "The time of day when the sun is directly overhead",
@@ -1463,7 +1463,7 @@ Question.create!([
             assessment_id: 4
           },
           {
-            question: "What is the purpose of using a polarizing filter in photography?",
+            prompt: "What is the purpose of using a polarizing filter in photography?",
             choices: [
               "To increase the depth of field",
               "To decrease the shutter speed",
@@ -1481,7 +1481,7 @@ Question.create!([
 Assessment.create!([user_id: 1, assessment_name: "Designer Quiz",date: "August 20, 2022"])
 Question.create!([
           {
-            question: "What is the design process and why is it important?",
+            prompt: "What is the design process and why is it important?",
             choices: [
                 "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think critically and systematically about their ideas, and to identify and solve problems in an organized way.",
                 "The design process is the series of steps that designers follow when creating a new product or solution. It is important because it helps designers to think creatively and spontaneously, and to come up with new ideas quickly.",
@@ -1492,7 +1492,7 @@ Question.create!([
             assessment_id: 5
           },
           {
-            question: "What are some common design tools and software programs that are used in the industry?",
+            prompt: "What are some common design tools and software programs that are used in the industry?",
             choices: [
               "Photoshop, Illustrator, and InDesign",
               "Excel, PowerPoint, and Word",
@@ -1502,7 +1502,7 @@ Question.create!([
             assessment_id: 5
           },
           {
-            question: "What are some key considerations for designing for different audiences and contexts?",
+            prompt: "What are some key considerations for designing for different audiences and contexts?",
             choices: [
               "The age, gender, and cultural background of the audience",
               "The purpose of the design and the message being communicated",
@@ -1517,7 +1517,7 @@ Question.create!([
 Assessment.create!([user_id: 1,assessment_name: "Makeup Artistry Quiz", date: "November 2, 2022"])
 Question.create!([
           {
-            question: "What is the main purpose of using foundation in makeup?",
+            prompt: "What is the main purpose of using foundation in makeup?",
             choices: [
                 "To cover up blemishes and imperfections",
                 "To add color to the face",
@@ -1528,7 +1528,7 @@ Question.create!([
             assessment_id: 6
           },
           {
-            question: "What is the main purpose of using highlighter in makeup?",
+           prompt: "What is the main purpose of using highlighter in makeup?",
             choices: [
               "To cover up blemishes and imperfections",
               "To add color to the face",
@@ -1539,7 +1539,7 @@ Question.create!([
             assessment_id: 6
           },
           {
-            question: "What is the main purpose of using blush in makeup?",
+            prompt: "What is the main purpose of using blush in makeup?",
             choices: [
               "To cover up blemishes and imperfections",
               "To add color to the face",
@@ -1550,7 +1550,7 @@ Question.create!([
             assessment_id: 6
           },
           {
-            question: "What is the main purpose of using contour in makeup?",
+            prompt: "What is the main purpose of using contour in makeup?",
             choices: [
               "To cover up blemishes and imperfections",
               "To add color to the face",
@@ -1566,7 +1566,7 @@ Question.create!([
 Assessment.create!([user_id: 1,assessment_name: "Artistry Quiz",date: "October 2, 2022"])
 Question.create!([
           {
-            question: "What is the main purpose of using line in art?",
+            prompt: "What is the main purpose of using line in art?",
             choices: [
                 "To add texture to the artwork",
                 "To add color to the artwork",
@@ -1577,7 +1577,7 @@ Question.create!([
             assessment_id: 7
           },
           {
-            question: "What is the main purpose of using shape in art?",
+            prompt: "What is the main purpose of using shape in art?",
             choices: [
               "To add texture to the artwork",
               "To add color to the artwork",
@@ -1588,7 +1588,7 @@ Question.create!([
             assessment_id: 7
           },
           {
-            question: "What is the main purpose of using color in art?",
+            prompt: "What is the main purpose of using color in art?",
             choices: [
               "add texture to the artwork",
               "To add emotion to the artwork",
@@ -1599,7 +1599,7 @@ Question.create!([
             assessment_id: 7
           },
           {
-            question: "What is the main purpose of using texture in art?",
+            prompt: "What is the main purpose of using texture in art?",
             choices: [
               "To add dimension to the artwork",
               "To add emotion to the artwork",
@@ -1617,7 +1617,7 @@ Question.create!([
 Assessment.create([user_id: 1,assessment_name: "Growth in Relationship Quiz",date: "June 2, 2023"])
 Question.create!([
           {
-            question: "What is the main purpose of setting goals in a relationship?",
+            prompt: "What is the main purpose of setting goals in a relationship?",
             choices: [
                 "To keep the relationship fresh and exciting",
                 "To keep the relationship stable and predictable",
@@ -1628,7 +1628,7 @@ Question.create!([
             assessment_id: 8
           },
           {
-            question: "What is the main purpose of having open and honest communication in a relationship?",
+            prompt: "What is the main purpose of having open and honest communication in a relationship?",
             choices: [
               "To create tension and conflict",
               "To keep secrets and hide feelings",
@@ -1639,7 +1639,7 @@ Question.create!([
             assessment_id: 8
           },
           {
-            question: "What is the main purpose of supporting each other's growth and development in a relationship?",
+            prompt: "What is the main purpose of supporting each other's growth and development in a relationship?",
             choices: [
               "To foster dependence and co-dependence",
               "To foster independence and distance",
@@ -1650,7 +1650,7 @@ Question.create!([
             assessment_id: 8
           },
           {
-            question: "What is the main purpose of compromising and compromising in a relationship?",
+            prompt: "What is the main purpose of compromising and compromising in a relationship?",
             choices: [
               "To maintain a sense of equality and balance",
               "To maintain a sense of superiority and inferiority",
@@ -1666,7 +1666,7 @@ Question.create!([
 Assessment.create!([user_id: 1,assessment_name: "Musical Quiz",date: "July 2, 2023"])
 Question.create!([
           {
-            question: "What is the musical term for the repetition of a short musical phrase or motive?",
+            prompt: "What is the musical term for the repetition of a short musical phrase or motive?",
             choices: [
                 "Motif",
                 "Theme",
@@ -1677,7 +1677,7 @@ Question.create!([
             assessment_id: 9
           },
           {
-            question: "What is the musical term for the distance between two notes in pitch?",
+            prompt: "What is the musical term for the distance between two notes in pitch?",
             choices: [
               "Interval ",
               "Scale",
@@ -1688,7 +1688,7 @@ Question.create!([
             assessment_id: 9
           },
           {
-            question: "What is the musical term for the structure of a piece of music, including the number of sections and the number and length of each section?",
+            prompt: "What is the musical term for the structure of a piece of music, including the number of sections and the number and length of each section?",
             choices: [
               "Form",
               "Melody",
@@ -1699,7 +1699,7 @@ Question.create!([
             assessment_id: 9
           },
           {
-            question: "What is the musical term for the speed or tempo of a piece of music?",
+            prompt: "What is the musical term for the speed or tempo of a piece of music?",
             choices: [
               "Rhythm",
               "Beat",

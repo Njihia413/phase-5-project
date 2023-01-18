@@ -1,9 +1,11 @@
 
 import React from "react";
+//import '../css/footer.css'
 
 function Footer () {
     return (
-        <footer className="bg-secondary">
+        <div className="footer">
+           <footer className="bg-secondary">
             <div className="row">
                 <div className="col-md-12">
                     <div className="footer-wrapper d-flex flex-column min-vh-100">
@@ -53,6 +55,10 @@ function Footer () {
                 </div>
             </div>
         </footer>
+
+
+        </div>
+        
     )
 }
 

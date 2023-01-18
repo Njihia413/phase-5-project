@@ -1,4 +1,6 @@
-class  Api::V1::QuestionsController < ApplicationController
+
+class Api::V1::QuestionsController < ApplicationController
+
     load_and_authorize_resource
  
   before_action :find_question, only: [:show,  :update, :destroy]
@@ -16,6 +18,12 @@ class  Api::V1::QuestionsController < ApplicationController
       question = find_question
       render json: question
     end
+
+    # POST /birds
+  def create
+    question = Question.create(question_params)
+    render json: question, status: :created
+  end
     # PATCH 
     def update
       question = find_question
