@@ -781,7 +781,7 @@ border-radius: 20px;
 
 
 /* styling for grades page */
-.grades {
+/* .grades {
   background-image: url('./assets/IMG-3216.jpg');
   background-position: center;
   background-size: cover;
@@ -805,7 +805,7 @@ border-radius: 20px;
 }
 .button btn btn-primary{
   margin: 25px;
-}
+} */
 
 /* .content{
   width: 100%;
@@ -930,7 +930,7 @@ text-align: center;
   padding-left: 2%;
   margin-left: 7%;
 }
-.ttitle {
+.title {
   text-decoration: none;
 }
 
