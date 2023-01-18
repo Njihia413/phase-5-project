@@ -12,7 +12,7 @@ import Login from "./Login";
 import About from "./About";
 import Courses from "./Courses";
 //import ContactUs from "./ContactUs";
-import Dashboard from "./StudentDashboard"
+import StudentDashboard from "./StudentDashboard"
 import CourseDetails from "./CourseDetails";
 import Grades from "../pages/Grades";
 import TeacherDashboard from "../pages/TeacherDashboard";
@@ -43,7 +43,7 @@ function App() {
           <Route path= "teachergrades"  element={<TeacherGrades/>} />
           <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
 
-          <Route path= "/Dashboard" element={<Dashboard/>}/>
+          <Route path= "/Dashboard" element={<StudentDashboard/>}/>
           
       </Routes>
       {/* <Footer/>  */}

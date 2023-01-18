@@ -7,7 +7,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 // import { useNavigate }  from 'react-router-dom'
 import Footer from "./Footer";
 
-function Dashboard() {
+function StudentDashboard() {
   
   const [courses, setCourses] = useState([]);
   useEffect(() => {
@@ -25,8 +25,7 @@ function Dashboard() {
     return null;
   }
    console.log(courses)
-
-  
+   const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <section>
@@ -40,7 +39,7 @@ function Dashboard() {
        </ul>
       <div className="dash-search-container">
       <div class="form-outline mb-4">
-  <input style={{background: "#EDDFFF", color: "white"}} type="search" class="form-control" id="datatable-search-input" placeholder='Search a course here ....'/>
+  <input style={{background: "#EDDFFF", color: "white"}}  value={courses.name}   onChange={e => this.setState({searchValue: e.target.value})} type="text" class="form-control" id="datatable-search-input" placeholder='Search a course here ....'/>
 </div>
 <div id="datatable">
 </div>
@@ -90,4 +89,4 @@ function Dashboard() {
 
   )
 }
-export default Dashboard;
+export default StudentDashboard;

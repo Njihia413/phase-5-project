@@ -933,3 +933,39 @@ text-align: center;
 .ttitle {
   text-decoration: none;
 }
+
+
+/* watches section */
+.watches{
+  background-color: #EDDFFF;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding-left: 4%;
+  padding-right: 3%;
+
+  
+}
+.video-card-positioning{
+  padding: 12px;
+  background-color: #EDDFFF;
+}
+.cimg {
+  width: 250px;
+  height: 350px;
+  margin-top: 2%;
+}
+.videoname {
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 152.34%;
+padding-top: 4%;
+text-align: center;
+}
