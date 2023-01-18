@@ -43,7 +43,7 @@ function CourseDetails() {
           </div>
         </div>
       </section>
-      <br /> <br />
+  
       <Link className='btn btn-2'to={`/courses`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
       <div className="container">
         <h2 className="detsh2" key={course.id}>{course.name}</h2>
