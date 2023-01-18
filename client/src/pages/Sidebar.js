@@ -47,7 +47,7 @@ const Sidebar = () => {
                         </Link>
                     </li>
                      <li className="list-item" id="logout">
-                        <Link to="/">
+                        <Link to="/login">
                             <span>
                             <i className="fa-solid fa-arrow-right-from-bracket" ></i>
                             </span>
