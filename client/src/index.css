@@ -809,11 +809,14 @@ border-radius: 20px;
 }
 .box{
   background-color: lavender;
-  width: 700px;
-  height: 800px;
-  margin-left: 25px;
+  width: 800px;
+  height: 900px;
+  margin: auto;
   margin-top: 50%;
-  border-radius: 25px; 
+  border-radius: 25px;
+  margin-bottom: 70px;
+  align-items: center;
+  justify-content: center;
 }
 .button btn btn-primary{
   margin: 25px;
@@ -831,20 +834,21 @@ border-radius: 20px;
   margin-top: 5%;
   margin-left: 80%;
   
-} */
-/* .table{
+}
+.table{
   width: 80%;
   border-collapse: collapse;
   text-align: centre;
   margin-top: 5%;
   margin-left: 60%;
   position: -50%;
-  
+  display: inline;
+  padding-top: -100px;
   
 }
 .table thead{
   text-align: centre; 
-  
+  padding-top: -100px;
 }
 .table thead th{
   font-size: 20px;
