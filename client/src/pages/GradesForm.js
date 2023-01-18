@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 
-const GradesForm = () => {
+// const GradesForm = () => {
     
 //     const form = document.getElementById("studentForm")
 // console.log(form);
@@ -111,4 +111,4 @@ const GradesForm = () => {
   );
 };
 
-export default GradesForm;
+// export default GradesForm;

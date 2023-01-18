@@ -879,7 +879,7 @@ a{
 
 } */
 
-/* .card-name {
+.card-name {
   width: 332px;
   height: 72px;
   font-family: 'OutFit';
@@ -890,9 +890,9 @@ a{
   text-align: center;
   color: #000000;
 }
-.card iframe {
+/* .card iframe {
   border-radius: 28px;
-}
+} */
 .mebooks {
   width: 274px;
   height: 350px;
@@ -935,8 +935,8 @@ text-align: center;
 }
 
 
-/* watches section */
-/* .watches{
+/* wat section */
+.wat{
   background-color: #EDDFFF;
   height: 100vh;
   width: 100%;
@@ -964,8 +964,11 @@ text-align: center;
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 20px;
+font-size: 18px;
 line-height: 152.34%;
 padding-top: 4%;
 text-align: center;
-} */ 
+}
+.myvide {
+  border-radius: 20px !important;
+}

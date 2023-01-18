@@ -43,17 +43,18 @@ function CourseDetails() {
           </div>
         </div>
       </section>
-  
+      <br /> 
       <Link className='btn btn-2'to={`/courses`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
       <div className="container">
         <h2 className="detsh2" key={course.id}>{course.name}</h2>
 
         <h4 className="ctitles">Learning Videos</h4>
-        <div class="watches" >
+        <div class="wat" >
         {course.videos.map((video) => (
           <CardGroup  style={{  width: "25rem" , height: "20%"}} key={video.id}>
             <div className="card video-card-positioning">
               <iframe
+              className="myvide"
                 width="354px"
                 height="190px"
                 border-radius="20px"
@@ -72,7 +73,7 @@ function CourseDetails() {
         <br/> <br/> <br/>
         <h4 >Reading Materials</h4>
         <br/><br/><br/>
-        <div className="watches">
+        <div className="wat">
 
         
         {course.books.map((book) => {
