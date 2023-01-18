@@ -1,28 +1,26 @@
-import React,{useEffect,useState} from 'react'
+import React, { useState } from 'react'
+import Sidebar from "./Sidebar"
+import AdminNavBar from "./AdminNavBar";
+import QuestionForm from "./QuestionForm";
+import QuestionList from "./QuestionList";
+import "../css/teacherassessment.css"
 
 function TeacherAssessments() {
-  const [assessments, setAssessments] = useState([]);
-
-  useEffect(() => {
-      async function getAssessments() {
-          const request = fetch("/api/v1/assessments");
-          const response = await request;
-          const parsed = await response.json();
-          setAssessments(parsed);
-      }
-
-      getAssessments();
-  }, []);
-
-  if (assessments === undefined) {
-      return null;
-  }
-  console.log(assessments);
-  
+  const [page, setPage] = useState("List");
 
   return (
-    <div>TeacherAssessments</div>
-  )
+    <div className='question'>
+      <Sidebar />
+      <main  className='questionmain'>
+
+        <AdminNavBar onChangePage={setPage} />
+        {page === "Form" ? <QuestionForm /> : <QuestionList />}
+      </main>
+
+    </div>
+
+  );
 }
+
 
 export default TeacherAssessments

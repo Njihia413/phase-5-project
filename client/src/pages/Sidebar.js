@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="dashboard-navigation">
                 <ul className="list">
                 <li className="list-item logo">
-                 <p className="text">MasomoDigi</p>
+                 {/* <h3 className="text">MasomoDigi</h3> */}
                 </li>
                    
                     <li className="list-item">
@@ -47,7 +47,7 @@ const Sidebar = () => {
                         </Link>
                     </li>
                      <li className="list-item" id="logout">
-                        <Link to="/">
+                        <Link to="/login">
                             <span>
                             <i className="fa-solid fa-arrow-right-from-bracket" ></i>
                             </span>

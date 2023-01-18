@@ -83,9 +83,7 @@ const GradesForm = () => {
 
 // }
 
-//  document.addEventListener("DOMContentLoaded", function(){
-//     fetchRecords();
-//  })
+
  
  
   return (
