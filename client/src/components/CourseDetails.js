@@ -51,8 +51,8 @@ function CourseDetails() {
         <h4 className="ctitles">Learning Videos</h4>
         <div class="watches" >
         {course.videos.map((video) => (
-          <CardGroup style={{ width: "25rem" , height: "100%"}} key={video.id}>
-            <div className="card">
+          <CardGroup  style={{  width: "25rem" , height: "20%"}} key={video.id}>
+            <div className="card video-card-positioning">
               <iframe
                 width="354px"
                 height="190px"
@@ -63,20 +63,24 @@ function CourseDetails() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
+              <h1 className="videoname"> {video.name}</h1>
             </div>
-            <Card.Title>
-              {video.name}
-            </Card.Title>
+            
           </CardGroup>
         ))}
         </div>
+        <br/> <br/> <br/>
         <h4 >Reading Materials</h4>
+        <br/><br/><br/>
+        <div className="watches">
+
+        
         {course.books.map((book) => {
               return (
-                <div className="watches">
-                <CardGroup style={{ width: "25rem" , height: "100%"}} key={course.id}>
+                <div >
+                <CardGroup style={{  width: "20rem" , height: "100%"}}key={course.id}>
                 <Link  to={`/bookdetails`}>
-                  <Card.Img variant="top" src={book.image_url} alt={book.name} />
+                  <Card.Img variant = "top"className= "cimg" src={book.image_url} alt={book.name} />
                   </Link>
                   <br />
                   <br />
@@ -85,6 +89,7 @@ function CourseDetails() {
 
               )
             })}
+            </div>
       </div>
       <Footer/>
     </div>
