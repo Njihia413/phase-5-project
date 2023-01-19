@@ -17,7 +17,7 @@ import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
 import BookDialog from "./BookDialog";
 import StudentAssessment from "./StudentAssessment";
-import StudentDashboard from './StudentDashboard'
+import Dashboard from './StudentDashboard'
 
 
 function App() {
@@ -48,8 +48,8 @@ function App() {
          
 
 
-          <Route path= "/Dashboard" element={<Dashboard/>}/>
-          {/* <Route path= "/StudentAssessment" element={<StudentAssessment/>}/> */}
+           <Route path= "/Dashboard" element={<Dashboard/>}/> 
+           <Route path= "/StudentAssessment" element={<StudentAssessment/>}/> 
           
          
               
