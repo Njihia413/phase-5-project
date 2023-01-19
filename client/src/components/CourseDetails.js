@@ -4,13 +4,20 @@ import { useParams, Link } from "react-router-dom";
 import Footer from "./Footer";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
+import { useNavigate }  from 'react-router-dom'
+import BookDetails from "./reusable-compontents/BookDetails";
 
 
 function CourseDetails() {
   
   const { courseId } = useParams();
   const [course, setCourse] = useState(null);
-  
+  const [setCourseId] = useState(null);
+  const [courseDetails, setCourseDetails] = useState(true);
+
+  const handleCourseDetails = (e) => {
+    setCourseDetails((current) => !current)
+  }
 
   useEffect(() => {
     fetch(`/api/v1/courses/${courseId}`)
@@ -78,9 +85,7 @@ function CourseDetails() {
               return (
                 <div >
                 <CardGroup style={{  width: "20rem" , height: "100%"}}key={course.id}>
-                <Link  to={`/bookdetails`}>
-                  <Card.Img variant = "top"className= "cimg" src={book.image_url} alt={book.name} />
-                  </Link>
+               <BookDetails key = {book.course_id} props= {book}/>
                   <br />
                   <br />
                 </CardGroup>

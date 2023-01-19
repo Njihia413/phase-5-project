@@ -8,13 +8,13 @@ import Login from "./Login";
 import About from "./About";
 import Courses from "./Courses";
 //import ContactUs from "./ContactUs";
-// import Dashboard from "./StudentDashboard"
 import CourseDetails from "./CourseDetails";
 import Grades from "../pages/Grades";
 import TeacherDashboard from "../pages/TeacherDashboard";
 import TeacherCourses from "../pages/TeacherCourses";
 import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
+import BookDialog from "./BookDialog";
 import StudentAssessment from "./StudentAssessment";
 import StudentDashboard from './StudentDashboard'
 
@@ -35,6 +35,9 @@ function App() {
           <Route path="/grades" element={<Grades/>} /> 
            {/* <Route path="/course" element={<Course/>} /> */}
           <Route path="/courses/:courseId" element={<CourseDetails/>} />
+          <Route path="/courses/book/details" element={<BookDialog/>} />
+
+
 
           
           <Route path= "teachercourses"  element={<TeacherCourses/>} />
@@ -44,8 +47,8 @@ function App() {
          
 
 
-          <Route path= "/Dashboard" element={<StudentDashboard/>}/>
-          <Route path= "/StudentAssessment" element={<StudentAssessment/>}/>
+          <Route path= "/Dashboard" element={<Dashboard/>}/>
+          {/* <Route path= "/StudentAssessment" element={<StudentAssessment/>}/> */}
           
           {/* <Route path= "/Dashboard" element={<Dashboard/>}/> */}
               
