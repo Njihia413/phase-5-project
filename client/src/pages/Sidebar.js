@@ -38,14 +38,7 @@ const Sidebar = () => {
                             <span className="text">Grades</span>
                         </Link>
                     </li>
-                     <li className="list-item">
-                        <Link to="/profile">
-                            <span>
-                            <i className="fa-solid fa-user"></i>
-                            </span>
-                            <span className="text">Profile</span>
-                        </Link>
-                    </li>
+                    
                      <li className="list-item" id="logout">
                         <Link to="/">
                             <span>

@@ -7,6 +7,9 @@
   .question{
     font-family: "Press Start 2p", cursive;
     background: rgb(2, 162, 152);
+    /* position:absolute; */
+    display:flex;
+    justify-content: center;
     background: linear-gradient(
       90deg,
       rgb(237, 223, 255) 0%,

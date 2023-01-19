@@ -4,7 +4,7 @@ import Home from "./Home";
 import { Routes, Route }  from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
-import Footer from "./Footer";
+//import Footer from "./Footer";
 import About from "./About";
 import Courses from "./Courses";
 //import ContactUs from "./ContactUs";
@@ -15,7 +15,7 @@ import TeacherDashboard from "../pages/TeacherDashboard";
 import TeacherCourses from "../pages/TeacherCourses";
 import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
-import Profile from "../pages/Profile";
+
 
 
 function App() {
@@ -40,12 +40,12 @@ function App() {
           <Route path= "teacherassessments"  element={<TeacherAssessments/>} />
           <Route path= "teachergrades"  element={<TeacherGrades/>} />
           <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
-          <Route path= "/profile"  element={<Profile/>} />
+         
 
           <Route path= "/Dashboard" element={<Dashboard/>}/>
               
       </Routes>
-        <Footer/>  
+        {/* <Footer/>   */}
     </div>
   );
 }
