@@ -1,0 +1,117 @@
+:root {
+    ---primary-color:primary
+}
+.parent-container{
+    width: 70%;
+    margin: auto;
+
+}
+.top-nav-back-btn{
+    display: flex;
+    /* align-items: center; */
+}
+.top-nav-back-btn .fa-arrow-left {
+    height: 30px !important;
+}
+.top-nav-back-btn > h2{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.book-details-info{
+    padding: 20px;
+}
+
+.book-img{
+    width: 300px;
+    height: 400px;
+
+}
+.book-img > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.top-nav-bar-section{
+    display: flex;
+
+}
+.description-right > h1{
+    font-size: 20px;
+}
+.description-right > p{
+    font-size: 17px;
+}
+.description-right{
+    width: 500px;
+    margin-left: 50px;
+}
+.back-to-courses{
+    margin-top: 20px;
+    padding-top: 30px;
+}
+.btn{
+    background-color: rgb(14, 14, 75);
+    color: #fff;
+    font-weight: 700;
+}
+.button-btn{
+    justify-content: space-between;
+    display: flex;
+    width: 80%;
+    margin-top: 10px;
+}
+.title-info{
+    display: flex;
+    align-items: baseline;
+}
+.title-info > h3{
+    font-size: 18px;
+}
+.title-info > p{
+    font-size: 13px;
+    margin-left: 5px;
+}
+.render-img-book{
+    height: 400px;
+    border-radius: 5px;
+    width: 300px;
+    cursor: pointer;
+}
+.render-img-book:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 5px;
+}
+.wat{
+    position: relative !important;
+    z-index: 5;
+}
+/* Positioning */
+.book-details-info{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+    width:60% ;
+    z-index: 2;
+    margin: 0 auto;
+    top: 25%;
+    left: 25%;
+    box-shadow: rgba(113, 179, 179, 0.25) 0px 14px 28px, rgba(83, 145, 173, 0.22) 0px 10px 10px;
+    
+}
+.close-button > button{
+    background-color: rgb(14, 14, 75);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+.close-button > button:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    /* padding: 2px; */
+}
+.close-button{
+    display: flex;
+    justify-content: space-between;
+}

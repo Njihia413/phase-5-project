@@ -86,7 +86,7 @@ function CourseDetails() {
               return (
                 <div >
                 <CardGroup style={{  width: "20rem" , height: "100%"}}key={course.id}>
-               <BookDetails props= {book}/>
+               <BookDetails key = {book.course_id} props= {book}/>
                   <br />
                   <br />
                 </CardGroup>
