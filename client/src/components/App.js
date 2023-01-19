@@ -16,6 +16,7 @@ import TeacherCourses from "../pages/TeacherCourses";
 import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
 import Profile from "../pages/Profile";
+import BookDialog from "./BookDialog";
 
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
           <Route path="/grades" element={<Grades/>} /> 
            {/* <Route path="/course" element={<Course/>} /> */}
           <Route path="/courses/:courseId" element={<CourseDetails/>} />
+          <Route path="/courses/book/details" element={<BookDialog/>} />
+
+
 
           
           <Route path= "teachercourses"  element={<TeacherCourses/>} />
@@ -45,7 +49,7 @@ function App() {
           <Route path= "/Dashboard" element={<Dashboard/>}/>
               
       </Routes>
-        <Footer/>  
+        {/* <Footer/>   */}
     </div>
   );
 }
