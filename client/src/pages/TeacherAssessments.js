@@ -5,6 +5,7 @@ import QuestionForm from "./QuestionForm";
 import QuestionList from "./QuestionList";
 import "../css/teacherassessment.css"
 
+
 function TeacherAssessments() {
   const [page, setPage] = useState("List");
 
@@ -16,7 +17,7 @@ function TeacherAssessments() {
         <AdminNavBar onChangePage={setPage} />
         {page === "Form" ? <QuestionForm /> : <QuestionList />}
       </main>
-
+     
     </div>
 
   );
