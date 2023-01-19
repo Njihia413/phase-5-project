@@ -15,6 +15,7 @@ import TeacherDashboard from "../pages/TeacherDashboard";
 import TeacherCourses from "../pages/TeacherCourses";
 import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
+import StudentAssessment from "./StudentAssessment";
 
 
 
@@ -42,6 +43,10 @@ function App() {
           <Route path= "/teacherdashboard"  element={<TeacherDashboard/>} />
          
 
+
+          <Route path= "/Dashboard" element={<StudentDashboard/>}/>
+          <Route path= "/StudentAssessment" element={<StudentAssessment/>}/>
+          
           <Route path= "/Dashboard" element={<Dashboard/>}/>
               
       </Routes>

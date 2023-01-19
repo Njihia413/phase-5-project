@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Sidebar from './Sidebar'
+import Sidebar from '../pages/Sidebar'
 
 function StudentAssessment() {
-    const [assessments, setAssessment] = useState([]);
+    const [assessments, setAssessments] = useState([]);
     const [indexToEdit, setIndexToEdit] = useState(-1);
     useEffect(() => {
-        async function getAssessment() {
+        async function getAssessments() {
             const request = fetch("/api/v1/assessments");
             const response = await request;
             const parsed = await response.json();
@@ -30,11 +30,11 @@ function StudentAssessment() {
                         <table className="table table-responsive">
                             <thead >
                                 <tr>
-                                    <th>assessment_name</th>
+                                    <th>assessment</th>
                                     <th>date</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <t.body>
                                 {assessments.map((assessment, recordIdx) => {
                                     return (
                                         <tr>
@@ -44,7 +44,7 @@ function StudentAssessment() {
                                                     value={assessment.name}
                                                     disabled={recordIdx !== indexToEdit}
                                                     onChange={(val) => {
-                                                        let _assessment = [...assessments];
+                                                        let _assessments = [...assessments];
                                                         _assessments[indexToEdit] = val;
                                                         setAssessments(_assessments);
                                                     }}
@@ -57,7 +57,7 @@ function StudentAssessment() {
                                             <td>
                                             <input
                                                     type="text"
-                                                    value={assessment_name.date}
+                                                    value={assessment.date}
                                                     disabled={recordIdx !== indexToEdit}
                                                     onChange={(val) => {
                                                         let _assessments = [...assessments];
@@ -79,7 +79,7 @@ function StudentAssessment() {
                                         </tr>
                                     )
                                 })}
-                            </tbody>
+                            </t.body>
                         </table>
                     </div>
                 </div>
