@@ -1,29 +1,8 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar () {
-  const navigate = useNavigate()
-    function logout() {
-        fetch("/users/sign_out", {
-          method: "delete",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: localStorage.getItem("token"),
-          },
-        })
-          .then((res) => {
-            if (res.ok) {
-              return res.json();
-            } else {
-              return res.json().then((json) => Promise.reject(json));
-            }
-          })
-          .then((json) => {
-            console.dir(json);
-          })
-          .catch((err) => console.error(err));
-          navigate ('/login')
-        }
+  
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -51,7 +30,7 @@ function Navbar () {
                           </li>
                            
                       </ul>
-                      <button className="btn btn-primary"  id="nav-btn" onClick={logout}>Logout</button> 
+                      
                       <div>
                         <div>
                           <NavLink to="/login" className="btn btn-primary" id="nav-btn">Login</NavLink>
