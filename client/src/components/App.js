@@ -8,7 +8,7 @@ import Login from "./Login";
 import About from "./About";
 import Courses from "./Courses";
 //import ContactUs from "./ContactUs";
-// import Dashboard from "./StudentDashboard"
+
 import CourseDetails from "./CourseDetails";
 import Grades from "../pages/Grades";
 import TeacherDashboard from "../pages/TeacherDashboard";
@@ -47,7 +47,7 @@ function App() {
           <Route path= "/Dashboard" element={<StudentDashboard/>}/>
           <Route path= "/StudentAssessment" element={<StudentAssessment/>}/>
           
-          {/* <Route path= "/Dashboard" element={<Dashboard/>}/> */}
+         
               
       </Routes>
         {/* <Footer/>   */}
