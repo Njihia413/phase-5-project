@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
+import "../css/teachercourse.css"
 
 function TeacherCourses() {
     const [courses, setCourses] = useState([]);
@@ -22,9 +23,10 @@ function TeacherCourses() {
     
 
     return (
-        <div>
-            <div>
+        <div className='courses'>
+            
                 <Sidebar />
+                <div className='teachercourses' >
                 <div className="row justify-content-center ">
                     <div className="col-auto">
                         <table className="table table-responsive">
@@ -83,7 +85,11 @@ function TeacherCourses() {
                         </table>
                     </div>
                 </div>
-            </div>
+
+
+                </div>
+               
+            
 
 
         </div>

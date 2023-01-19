@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Footer from "./Footer";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import { useNavigate }  from 'react-router-dom'
 
 
 function CourseDetails() {
-  const navigate = useNavigate()
+  
   const { courseId } = useParams();
   const [course, setCourse] = useState(null);
-  const [setCourseId] = useState(null);
+  
 
   useEffect(() => {
     fetch(`/api/v1/courses/${courseId}`)
@@ -43,17 +41,18 @@ function CourseDetails() {
           </div>
         </div>
       </section>
-  
+      <br /> 
       <Link className='btn btn-2'to={`/courses`}><p className="course-text">Courses <i className="fa-solid fa-arrow-left"></i></p></Link>
       <div className="container">
         <h2 className="detsh2" key={course.id}>{course.name}</h2>
 
         <h4 className="ctitles">Learning Videos</h4>
-        <div class="watches" >
+        <div class="wat" >
         {course.videos.map((video) => (
           <CardGroup  style={{  width: "25rem" , height: "20%"}} key={video.id}>
             <div className="card video-card-positioning">
               <iframe
+              className="myvide"
                 width="354px"
                 height="190px"
                 border-radius="20px"
@@ -72,7 +71,7 @@ function CourseDetails() {
         <br/> <br/> <br/>
         <h4 >Reading Materials</h4>
         <br/><br/><br/>
-        <div className="watches">
+        <div className="wat">
 
         
         {course.books.map((book) => {

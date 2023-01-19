@@ -1,8 +1,20 @@
+.courses{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-block: hidden;
+  position: relative;
+  
+}
 .teachercourses{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
     height: 100vh;
+    background: linear-gradient(
+      90deg,
+      rgb(237, 223, 255) 0%,
+      rgb(237, 223, 255) 100%
+    );
     
   }
-  
+ 

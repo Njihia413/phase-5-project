@@ -1,10 +1,32 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import '../css/dashboardnav.css';
 
 
 
 const Sidebar = () => {
+     const navigate = useNavigate()
+    function logout() {
+        fetch("/users/sign_out", {
+          method: "delete",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: localStorage.getItem("token"),
+          },
+        })
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              return res.json().then((json) => Promise.reject(json));
+            }
+          })
+          .then((json) => {
+            console.dir(json);
+          })
+          .catch((err) => console.error(err));
+          navigate ('/login')
+        }
   return (
     <div>
      <div className="dashboard-container">
@@ -38,20 +60,13 @@ const Sidebar = () => {
                             <span className="text">Grades</span>
                         </Link>
                     </li>
-                     <li className="list-item">
-                        <Link to="/profile">
-                            <span>
-                            <i className="fa-solid fa-user"></i>
-                            </span>
-                            <span className="text">Profile</span>
-                        </Link>
-                    </li>
+                    
                      <li className="list-item" id="logout">
-                        <Link to="/login">
+                        <Link to="/">
                             <span>
                             <i className="fa-solid fa-arrow-right-from-bracket" ></i>
                             </span>
-                            <span className="text">Log Out</span>
+                            <button className='btn btn-dark' id="nav-btn" onClick={logout}>Log Out</button> 
                         </Link>
                     </li>
                 </ul>
