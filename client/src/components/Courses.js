@@ -47,7 +47,7 @@ function Courses() {
     </section> <br/> <br/>
            <div className='course'>
            <Link  style={{
-                        paddingLeft: "40px",
+                       
                       }}className='btn btn-2'to={`/Dashboard`}><p className="course-text">Dashboard <i className="fa-solid fa-arrow-left"></i></p></Link>
           
        <div key={courses.id}>
