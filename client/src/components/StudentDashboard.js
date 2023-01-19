@@ -11,21 +11,36 @@ function Dashboard() {
   
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    async function getCourses() {
-      const request = fetch('/api/v1/courses');
-      const response = await request;
-      const parsed = await response.json();
-      setCourses(parsed);
-    }
+    
 
     getCourses();
   }, []);
-
+  async function getCourses() {
+    const request = fetch('/api/v1/courses');
+    const response = await request;
+    const parsed = await response.json();
+    setCourses(parsed);
+  }
   if (courses === undefined) {
     return null;
   }
    console.log(courses)
    const [searchTerm, setSearchTerm] = useState('');
+   const handleSearchTerm = (searchTerm) =>{
+    if (searchTerm){
+      const filteredCourses = courses.filter((course) => {
+        if(course.name.toLowerCase().match(searchTerm.toLowerCase())){
+          return true
+        }else{
+          return false
+        }
+      });
+      setCourses(filteredCourses)
+      } else {
+        getCourses()
+      }
+    }
+   ;
 
   return (
     <section>
@@ -33,13 +48,17 @@ function Dashboard() {
       
         <br/> <br/> <br/> <br/> <br/>
        <ul className="">
+       <Link className='btn btn-2 m-4 'to={`/courses`}><p className="course-text ">All Courses</p></Link>
+       <Link className='btn btn-2 m-4'to={`/Studentassesment`}><p className="course-text ">Assesments</p></Link>
        <Link className='btn btn-2'to={`/courses`}><p className="course-text">All Courses</p></Link>
        <Link className='btn btn-2'to={`/courses`}><p className="course-text">My Grades</p></Link>
        <Link className='btn btn-2'to={`/StudentAssessment`}><p className="course-text">Assesments</p></Link>
        </ul>
       <div className="dash-search-container">
       <div class="form-outline mb-4">
-  <input style={{background: "#EDDFFF", color: "white"}}  value={courses.name}   onChange={e => this.setState({searchValue: e.target.value})} type="text" class="form-control" id="datatable-search-input" placeholder='Search a course here ....'/>
+  <input style={{background: "#EDDFFF", color: "white"}}  value={courses.name}   onChange={(e) => {
+    handleSearchTerm(e.target.value)
+  }} type="text" class="form-control" id="datatable-search-input" placeholder='Search a course here ....'/>
 </div>
 <div id="datatable">
 </div>
