@@ -35,7 +35,7 @@ function Dashboard() {
        <ul className="">
        <Link className='btn btn-2'to={`/courses`}><p className="course-text">All Courses</p></Link>
        <Link className='btn btn-2'to={`/courses`}><p className="course-text">My Grades</p></Link>
-       <Link className='btn btn-2'to={`/courses`}><p className="course-text">Assesments</p></Link>
+       <Link className='btn btn-2'to={`/StudentAssessment`}><p className="course-text">Assesments</p></Link>
        </ul>
       <div className="dash-search-container">
       <div class="form-outline mb-4">

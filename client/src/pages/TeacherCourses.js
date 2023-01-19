@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import "../css/teachercourse.css"
 
+
 function TeacherCourses() {
     const [courses, setCourses] = useState([]);
     const [indexToEdit, setIndexToEdit] = useState(-1);
@@ -23,7 +24,7 @@ function TeacherCourses() {
     
 
     return (
-        <div className='courses'>
+        <div className='teachercourse'>
             
                 <Sidebar />
                 <div className='teachercourses' >
@@ -89,7 +90,7 @@ function TeacherCourses() {
 
                 </div>
                
-            
+          
 
 
         </div>

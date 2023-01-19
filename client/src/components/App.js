@@ -8,7 +8,7 @@ import Login from "./Login";
 import About from "./About";
 import Courses from "./Courses";
 //import ContactUs from "./ContactUs";
-import Dashboard from "./StudentDashboard"
+// import Dashboard from "./StudentDashboard"
 import CourseDetails from "./CourseDetails";
 import Grades from "../pages/Grades";
 import TeacherDashboard from "../pages/TeacherDashboard";
@@ -16,7 +16,7 @@ import TeacherCourses from "../pages/TeacherCourses";
 import TeacherAssessments from "../pages/TeacherAssessments";
 import TeacherGrades from "../pages/TeacherGrades";
 import StudentAssessment from "./StudentAssessment";
-
+import StudentDashboard from './StudentDashboard'
 
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           <Route path= "/Dashboard" element={<StudentDashboard/>}/>
           <Route path= "/StudentAssessment" element={<StudentAssessment/>}/>
           
-          <Route path= "/Dashboard" element={<Dashboard/>}/>
+          {/* <Route path= "/Dashboard" element={<Dashboard/>}/> */}
               
       </Routes>
         {/* <Footer/>   */}

@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import Sidebar from './Sidebar'
 import "../css/teacherdashboard.css"
 
+
 function TeacherDashboard() {
   const [data, setData] = useState({});
   useEffect(() => {
@@ -30,10 +31,7 @@ function TeacherDashboard() {
         <h2>Email:{data.email}</h2>
         <h2>Role:{data.role}</h2>
       </div>
-
     
-
-
 
     </div>
   )

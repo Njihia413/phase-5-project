@@ -32,9 +32,9 @@ const Sidebar = () => {
      <div className="dashboard-container">
         <div className="dashboard-navigation">
                 <ul className="list">
-                <li className="list-item logo">
-                 {/* <h3 className="text">MasomoDigi</h3> */}
-                </li>
+
+                 <h3 className="text">MasomoDig</h3> 
+                
                    
                     <li className="list-item">
                         < Link to="/teachercourses">
@@ -53,7 +53,7 @@ const Sidebar = () => {
                         </Link>
                     </li>
                      <li className="list-item">
-                        <Link to="/teachergrades">
+                        <Link to="/">
                             <span>
                             <i className="fa-solid fa-user-group"></i>
                             </span>
