@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import Sidebar from './Sidebar'
-
+import "../css/teacherdashboard.css"
 
 function TeacherDashboard() {
   const [data, setData] = useState({});
@@ -22,15 +22,16 @@ function TeacherDashboard() {
 
 
   return (
-    <div className='Dashboard'>
-      <div >
+    <div className='dashboard'>
+            <Sidebar />
+      <div className='teacherdashboard'>
 
-        <h1>Name:{data.username}</h1>
+        <h1> Welcome: {data.username}</h1>
         <h2>Email:{data.email}</h2>
         <h2>Role:{data.role}</h2>
       </div>
 
-      <Sidebar />
+    
 
 
 

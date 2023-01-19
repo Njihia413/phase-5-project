@@ -1,6 +1,5 @@
 import React from "react";
-import { Navigate, NavLink } from "react-router-dom";
-import { useNavigate }  from 'react-router-dom'
+import {  NavLink, useNavigate } from "react-router-dom";
 
 function DashboardNav () {
   const navigate = useNavigate()

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Footer from "./Footer";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
@@ -10,7 +9,7 @@ import BookDetails from "./reusable-compontents/BookDetails";
 
 
 function CourseDetails() {
-  const navigate = useNavigate()
+  
   const { courseId } = useParams();
   const [course, setCourse] = useState(null);
   const [setCourseId] = useState(null);

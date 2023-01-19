@@ -1,0 +1,19 @@
+.dashboard{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+
+.teacherdashboard{
+    
+ margin-top: 50px;
+ height: 100vh;
+    
+}
+
+/* .teacherdashboard h1{
+    font-weight: 500;
+    font-size: 20px;    
+} */

@@ -1,54 +1,52 @@
 import React, { useEffect, useState } from 'react'
-import Sidebar from './Sidebar'
-import "../css/teachercourse.css"
+import Sidebar from '../pages/Sidebar'
 
-function TeacherCourses() {
-    const [courses, setCourses] = useState([]);
+function StudentAssessment() {
+    const [assessments, setAssessments] = useState([]);
     const [indexToEdit, setIndexToEdit] = useState(-1);
     useEffect(() => {
-        async function getCourses() {
-            const request = fetch("/api/v1/courses");
+        async function getAssessments() {
+            const request = fetch("/api/v1/assessments");
             const response = await request;
             const parsed = await response.json();
-            setCourses(parsed);
+            setAssessments(parsed);
         }
 
-        getCourses();
+        getAssessments();
     }, []);
 
-    if (courses === undefined) {
+    if (assessments === undefined) {
         return null;
     }
-    console.log(courses);
+    console.log(assessments);
     
 
     return (
-        <div className='courses'>
-            
+        <div>
+            <div>
                 <Sidebar />
-                <div className='teachercourses' >
                 <div className="row justify-content-center ">
                     <div className="col-auto">
                         <table className="table table-responsive">
                             <thead >
                                 <tr>
-                                    <th>Courses</th>
-                                    <th>Image_url</th>
+                                    <th>assessment</th>
+                                    <th>date</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                {courses.map((course, recordIdx) => {
+                            <t.body>
+                                {assessments.map((assessment, recordIdx) => {
                                     return (
                                         <tr>
                                             <td>
                                                 <input
                                                     type="text"
-                                                    value={course.name}
+                                                    value={assessment.name}
                                                     disabled={recordIdx !== indexToEdit}
                                                     onChange={(val) => {
-                                                        let _courses = [...courses];
-                                                        _courses[indexToEdit] = val;
-                                                        setCourses(_courses);
+                                                        let _assessments = [...assessments];
+                                                        _assessments[indexToEdit] = val;
+                                                        setAssessments(_assessments);
                                                     }}
                                                     onBlur={() => {
                                                         setIndexToEdit(-1);
@@ -59,12 +57,12 @@ function TeacherCourses() {
                                             <td>
                                             <input
                                                     type="text"
-                                                    value={course.image_url}
+                                                    value={assessment.date}
                                                     disabled={recordIdx !== indexToEdit}
                                                     onChange={(val) => {
-                                                        let _courses = [...courses];
-                                                        _courses[indexToEdit] = val;
-                                                        setCourses(_courses);
+                                                        let _assessments = [...assessments];
+                                                        _assessments[indexToEdit] = val;
+                                                        setAssessments(_assessments);
                                                     }}
                                                     onBlur={() => {
                                                         setIndexToEdit(-1);
@@ -81,19 +79,15 @@ function TeacherCourses() {
                                         </tr>
                                     )
                                 })}
-                            </tbody>
+                            </t.body>
                         </table>
                     </div>
                 </div>
-
-
-                </div>
-               
-            
+            </div>
 
 
         </div>
     )
 }
 
-export default TeacherCourses
+export default StudentAssessment;
