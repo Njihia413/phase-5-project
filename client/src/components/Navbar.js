@@ -25,9 +25,9 @@ function Navbar () {
                           <li className="nav-item">
                               <NavLink to="/about"  className="nav-link">About Us</NavLink>
                           </li>
-                          <li className="nav-item">
+                          {/* <li className="nav-item">
                               <NavLink to="/contact"  className="nav-link">Contact Us</NavLink>
-                          </li>
+                          </li> */}
                            
                       </ul>
                       
